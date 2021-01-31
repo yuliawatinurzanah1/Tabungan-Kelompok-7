@@ -14,14 +14,11 @@ class CreateSavingsTable extends Migration
     public function up()
     {
         Schema::create('savings', function (Blueprint $table) {
-           $table->unsignedBigInteger('saving_id');
-           $table->unsignedBigInteger('nisn');
-           $table->string('name');
-           $table->string('school_year');
-           $table->string('nominal_amount');
-           $table->string('date');
-
-          
+           $table->unsignedBigInteger('sav_id');
+           $table->unsignedBigInteger('sav_student_id');
+           $table->unsignedBigInteger('sav_class_id');
+           $table->string('sav_amount');
+           $table->string('sav_date');
         });
     }
 

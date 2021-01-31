@@ -14,14 +14,11 @@ class CreateStudentsTable extends Migration
     public function up()
     {
         Schema::create('students', function (Blueprint $table) {
-           $table->unsignedBigInteger('nisn');
-           $table->string('name');
-           $table->string('school_year');
-           $table->string('place_of_birth');
-           $table->string('date_of_birth');
-           $table->string('religion');
-           $table->string('address');
-
+           $table->unsignedBigInteger('stu_id');
+           $table->unsignedBigInteger('stu_usr_id');
+           $table->unsignedBigInteger('stu_class_id');
+           $table->string('stu_nis');
+           $table->string('stu_school_year');
         });
     }
 

@@ -79,9 +79,12 @@ Route::group(['middleware' => ['role:student']], function () {
     Route::get('/student/list-tabungan' , 'StudentController@listTabungan');
     
 });
-
+//walikelas
 Route::group(['middleware' => ['role:walikelas']], function () {
 	Route::get('/walikelas' , 'WalikelasController@dashboard');
+	Route::get('/walikelas/list-tabungan' , 'WalikelasController@listTabungan');
+	Route::get('/walikelas/list-students' , 'WalikelasController@listStudent');
+	Route::get('/walikelas/list-pemakaian-tabungan' , 'WalikelasController@listPemakaianTabungan');
     
 });
 

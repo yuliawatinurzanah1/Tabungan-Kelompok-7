@@ -11,10 +11,11 @@ class ClassSeeder extends Seeder
      */
     public function run()
     {
-         DB::table('clases')->insert([
-         	'class_id'   => '5',
-         	'class_name' => 'XII Rekayasa Perangkat Lunak'
-         	
-         ]);   
-     }
+          DB::table('classes')->insert([
+        	'class_id'          => '1',
+        	'class_grade_id' 	=> '1',
+        	'class_major_id'    => '1',
+        	'class_description' => 'X Rekayasa Perangkat Lunak' 
+        	]);
+    }
 }

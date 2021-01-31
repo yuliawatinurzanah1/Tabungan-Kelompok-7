@@ -12,12 +12,11 @@ class SavingSeeder extends Seeder
     public function run()
     {
           DB::table('savings')->insert([
-         	'saving_id'       => '1',
-         	'nisn'            => '315913',
-         	'name'            => 'Yuliawati Nur Zanah',
-         	'school_year'     => '2019/2021',
-         	'nominal_amount'  => '500.000,00',
-         	'date'            => '10-10-2020'
+         	'sav_id'         => '1',
+         	'sav_student_id' => '1',
+         	'sav_class_id'   => '1',
+         	'sav_amount'     => 'Rp. 10.000,00',
+         	'sav_date'       => '01-03-2021'        	
          ]);
     }
 }

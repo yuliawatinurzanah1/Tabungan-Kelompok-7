@@ -26,30 +26,22 @@
                             <td>XII  RPL 1</td>
                             <td>10.000.000</td>
                             <td>
-                                <a  href="{{URL::to('/admin/list-tabungan/detail')}}" class= "btn btn-primary btn-sm">Detail</a>
+                                <a  href="{{URL::to('/walikelas/list-tabungan/detail')}}" class= "btn btn-primary btn-sm">Detail</a>
                             </td>
 
                         </tr>
 
                          <tr>
                             <td>2</td>
-                            <td>XII  RPL 2</td>
+                            <td>XII  RPL 1</td>
                             <td>30.000.000</td>
                             <td>
-                                <a  href="{{URL::to('/admin/list-tabungan/detail')}}" class="btn btn-primary btn-sm">Detail</a>
+                                <a  href="{{URL::to('/walikelas/list-tabungan/detail')}}" class="btn btn-primary btn-sm">Detail</a>
                             </td>
 
                         </tr>
 
-                         <tr>
-                            <td>1</td>
-                            <td>XII  RPL 3</td>
-                            <td>20.000.000</td>
-                            <td>
-                                <a  href="{{URL::to('/admin/list-tabungan/detail')}}" class="btn btn-primary btn-sm">Detail</a>
-                            </td>
-
-                        </tr>
+                        
 
 
                         </tbody>
