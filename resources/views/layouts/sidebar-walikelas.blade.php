@@ -10,24 +10,23 @@
 
             <ul class="metismenu" id="side-menu">
 
-                <li class="menu-title">Navigation</li>
+                <li class="menu-title">Walikelas</li>
 
                 <li>
                     <a href="{{URL::to('/admin')}}">
                         <i class="la la-home"></i>
-                        <span> Tampilan Walikelas </span>
+                        <span> Dashboard </span>
                     </a>
                 </li>
 
-                <li>
-                    <a href="{{URL::to('/Walikelas/list-student')}}">
+                 <li>
+                    <a href="{{URL::to('/walikelas/list-student')}}">
                         <i class="la la-edit"></i>
                         <span> Kelola Siswa </span>
                     </a>
                 </li>
 
-                
-                <li>
+                   <li>
                     <a href="{{URL::to('/Walikelas/list-tabungan')}}">
                         <i class="la la-edit"></i>
                         <span> Kelola Tabungan </span>

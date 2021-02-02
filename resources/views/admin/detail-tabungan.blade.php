@@ -1,7 +1,7 @@
 @extends('layouts.admin-master')
 
 @section('judul')
-    List tabungan Kelas XII RPL 1
+    List tabungan Kelas X Rekayasa Perangkat Lunak
 @endsection
 
 @section('content')
@@ -17,7 +17,6 @@
                             <th>Nis</th>
                             <th>Nama</th>
                             <th>Total Tabungaan</th>
-                            <th>Total Pengambilan</th>
                             <th>Aksi</th>
                         </tr>
                         </thead>
@@ -26,22 +25,20 @@
                         <tr>
                             <td>1</td>
                             <td>12345</td>
-                            <td>Yulia</td>
+                            <td>Alifa</td>
                             <td>500.000</td>
-                            <td>100.000</td>
                             <td>
-                                <a href="{{URL::to('/admin/list-tabungan/detail/siswa')}}" class="btn btn-primary btn-sm">Detail</a>
+                                <a href="{{URL::to('/admin/list-tabungan/detail')}}" class="btn btn-primary btn-sm">Detail</a>
                             </td>
                         </tr>
 
                         <tr>
                             <td>2</td>
-                            <td>23456</td>
-                            <td>fahri</td>
+                            <td>12345</td>
+                            <td>Fina</td>
                             <td>500.000</td>
-                            <td>100.000</td>
                             <td>
-                                <a href="{{URL::to('/admin/list-tabungan/detail/siswa')}}" class="btn btn-primary btn-sm">Detail</a>
+                                <a href="{{URL::to('/admin/list-tabungan/detail')}}" class="btn btn-primary btn-sm">Detail</a>
                             </td>
                         </tr>
 

@@ -1,63 +1,58 @@
 @extends('layouts.admin-master')
 
 @section('judul')
-    Tambah  Kelas
+    Tambah Siswa
 @endsection
 
 @section('content')
     <div class="row">
         <div class="col-12">
             <div class="card">
+
+            	<a href="/students/Tambah" class="btn btn-success"> + Tambah Siswa</a>
+            	
                 <div class="card-body">
-                    <form action="" method="post">
-                        @csrf
-                        <div class="row">
+                    <h4 class="header-title">Tambah Siswa</h4>
+                   
 
-                            <div class="col-lg-12">
-                                <div class="form-group mb-3">
-                                    <label for="simpleinput">Nama Siswa</label>
-                                    <input type="text" id="simpleinput" name="student_name" class="form-control" required>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-12">
-                                <div class="form-group mb-3">
-                                    <label for="simpleinput">NIS</label>
-                                    <input type="number" id="simpleinput" name="nis" class="form-control" required>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-12">
-                                <div class="form-group mb-3">
-                                    <label for="simpleinput">Kelas</label>
-                                    <select type="text" id="simpleinput" name="class_id" class="form-control"
-                                            required>
-                                        <option value="XII RPL 1">XII RPL 1</option>
-                                        <option value="XII RPL 2">XII RPL 2</option>
-                                        <option value="XII MM 1">XII MM 1</option>
-                                        <option value="XI RPL 1">XI RPL 1</option>
-                                        <option  value="XI MM 1">XI MM 1</option>
-                                        <option value="XI MM 2">XI MM 2</option>
-                                        <option value="X TKI 1">X TKI 1</option>
-                                        <option value="X TKI 2">X TKI 2</option>
-                                        <option value="X TKI 3">X TKI 3</option>
-
-                                    </select>
-                                </div>
-                            </div>
+                    <table id="basic-datatable" class="table dt-responsive nowrap">
+                        <thead>
+                        <tr>
+                            <th>Nis</th>
+                            <th>Nama</th>
+                            <th>Kelas</th>
+                            <th>Jenis Kelamin</th>
+                            <th>Tempat Lahir</th>
+                            <th>Tanggal Lahir</th>
+                            <th>Agama</th>
+                            <th>Alamat</th>
+                        </tr>
+                        </thead>
 
 
-                            <div class="col-lg-12">
-                                <div class="form-group mb-3">
-                                    <input type="submit" value="Simpan" class="btn btn-primary">
-                                </div>
-                            </div>
-                            
-                        </div> <!-- end card-body -->
-                    </form>
-                </div> <!-- end card -->
-            </div><!-- end col -->
-        </div>
-    </div> 
-        <!-- end row -->
+                        <tbody>
+                        	@foreach($students as $s)
+                        <tr>
+                            <td>{{ $i->stu_id }}</td>
+                            <td>{{ $i->stu_nis }}</td>
+                            <td>{{ $i->stu_school_year }}</td>
+                       
+                            <td>
+                            	<a href="/students/edit/{{ $s->stu_id }}">Edit</a>
+                            	<a href="/students/hapus/{{ $s->stu_id }}">Hapus</a> 
+
+                            </td>
+                        </tr>
+                       
+                        </tbody>
+                    </table>
+
+                </div> <!-- end card body-->
+            </div> <!-- end card -->
+        </div><!-- end col-->
+    </div>
+    <!-- end row-->
+
+
+
 @endsection

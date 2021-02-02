@@ -10,17 +10,29 @@ class WalikelasController extends Controller
 	{
 		return view ('walikelas.dashboard');
 	}
+	 public function listStudent()
+	{
+		return view ('walikelas.list-student');
+	}
+	 public function detailStudent ()
+	{
+        return view ('walikelas.detail-student');
+    }
+     public function listsClass()
+	{
+		return view ('walikelas.list-class');
+	}
 	 public function listTabungan()
 	{
 		return view ('walikelas.list-tabungan');
 	}
-	 public function listStudent()
-	{
-		return view ('walikelas.list-students');
-	}
+
 	 public function listSPemakaianTabungan()
 	{
 		return view ('walikelas.list-pemakaian-tabungan');
 	}
   	
 }
+  
+
+   

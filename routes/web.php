@@ -50,11 +50,18 @@ Route::group(['middleware' => ['role:admin']], function () {
 
 	//ADmin
 	Route::get('/admin/dashboard' , 'AdminController@dashboard');
-    Route::get('/admin/list-students' , 'AdminController@listStudents');
+
+    Route::get('/admin/list-student' , 'AdminController@listStudent');
+    Route::get('/admin/list-student/detail' , 'AdminController@detailStudent');
+    //route CRUD
+	Route::get('/admin' , 'AdminController@addStudent');
+     //Route Create student
+    Route::get('/admin' , 'AdminController@addClass');
+
+
     Route::get('/admin/list-class' , 'AdminController@listClass');
 
-    Route::get('/admin/add-class' , 'AdminController@addClass');
-    Route::get('/admin/add-student' , 'AdminController@addStudent');
+   
 
     Route::get('/admin/list-tabungan'  , 'AdminController@listTabungan');
     Route::get('/admin/list-tabungan/detail' , 'AdminController@detailTabungan');
@@ -65,8 +72,9 @@ Route::group(['middleware' => ['role:admin']], function () {
     Route::post('/admin/add-class' , 'AdminController@SaveAddClass');
     Route::post('/admin/add-student' , 'AdminController@SaveAddStudent');
     
-    Route::get('/admin/list-student' , 'AdminController@listStudent'); 
+   
     Route::get('/admin/list-teacher' , 'AdminController@listsTeacher'); 
+    Route::get('/admin/list-teacher/detail' , 'AdminController@detailTeacher'); 
     Route::get('/admin/list-class' , 'AdminController@listsClass'); 
        
     
@@ -82,8 +90,14 @@ Route::group(['middleware' => ['role:student']], function () {
 //walikelas
 Route::group(['middleware' => ['role:walikelas']], function () {
 	Route::get('/walikelas' , 'WalikelasController@dashboard');
+
+	Route::get('/walikelas/list-student' , 'WalikelasController@listStudent');
+	Route::get('/walikelas/list-student/detail' , 'WalikelasController@detailStudent');
+
+	Route::get('/walikelas/list-class' , 'WalikelasController@listClass');
+
 	Route::get('/walikelas/list-tabungan' , 'WalikelasController@listTabungan');
-	Route::get('/walikelas/list-students' , 'WalikelasController@listStudent');
+	
 	Route::get('/walikelas/list-pemakaian-tabungan' , 'WalikelasController@listPemakaianTabungan');
     
 });

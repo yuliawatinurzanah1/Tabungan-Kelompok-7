@@ -5,9 +5,11 @@ namespace App\Http\Controllers;
 use Session;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
 {
+	
 	public function dashboard()
 	{
 		return view ('admin.dashboard');
@@ -20,7 +22,21 @@ class AdminController extends Controller
 
 	public function listStudent()
 	{
-		return view ('admin.list-students');
+		return view ('admin.list-student');
+	}
+
+	public function detailStudent()
+	{
+		return view ('admin.detail-student');
+	}
+	 //Create siswa
+
+	public function addStudent()
+	{
+		//mengambil data dari tabel siswa
+		$siswa = DB::table('students')->get();
+		//mengirim data siswa ke view index
+		return view ('admin.add-student',['students' => $siswa]);
 	}
 
 	public function listsClass()
@@ -31,6 +47,10 @@ class AdminController extends Controller
 	public function listsTeacher()
 	{
 		return view ('admin.list-teacher');
+	}
+	public function detailTeacher()
+	{
+		return view ('admin.detail-teacher');
 	}
 	
 
@@ -43,10 +63,6 @@ class AdminController extends Controller
         return back();
     }
 
-	public function addStudent()
-	{
-		return view ('admin.add-Student');
-	}
 	public function SaveAddStudent(Request $request){
             Session::flash('sukses','Data Berhasil disimpan');
         return back();
@@ -71,4 +87,6 @@ class AdminController extends Controller
     public function form (){
         return view ('admin.form');
     }
+
+ 
 }
