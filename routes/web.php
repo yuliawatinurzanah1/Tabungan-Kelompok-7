@@ -59,6 +59,11 @@ Route::group(['middleware' => ['role:admin']], function () {
     Route::get('/admin/create-student' , 'AdminController@addStudent');
     Route::post('/admin/create-student' , 'AdminController@saveStudent');
     
+    Route::get('/admin/edit-student/{id}' , 'AdminController@editStudent');
+    Route::post('/admin/update/{id}' , 'AdminController@updateStudent');
+
+ 	Route::get('/admin/student/hapus/{id}' , 'AdminController@hapusStudent');
+   
      //Route Create student
     //Route::get('/admin' , 'AdminController@addClass');
 

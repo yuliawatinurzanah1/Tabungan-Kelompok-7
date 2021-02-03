@@ -54,26 +54,68 @@ class AdminController extends Controller
 	public function saveStudent(Request $request)
 	{
 		$user=new User;
-		$user -> usr_name = $request -> student_name;
-		$user -> usr_email = $request -> email;
-		$user -> usr_phone = $request -> nomor_telepon;
-		$user -> usr_password = Hash::make('12345678');
-		$user -> assignRole('student');
-		$user -> usr_email_verified_at = now();
+		$user->usr_name              = $request->student_name;
+		$user->usr_email             = $request->email;
+		$user->usr_phone             = $request->nomor_telepon;
+		$user->usr_password          = Hash::make('12345678');
+		$user->assignRole('student');
+		$user->usr_is_active         = 1;
+		$user->usr_email_verified_at = now();
 			if($user->save()) {
 				$student = new Student;
-				$student->stu_usr_id = $user->usr_id;
-				$student->stu_class_id = $request->grade;
+				$student->stu_usr_id       = $user->usr_id;
+				$student->stu_class_id     = $request->grade;
+				$student ->stu_nis         = $request ->nis;
+				$student ->stu_school_year = $request ->tahun_ajaran;
 				$student->save();
 
 			}
 		
 
 		//mengirim data siswa ke view index
-		return redirect('add-student');
+		return redirect('admin/list-student');
 	}
 
-	
+	public function editStudent($id)
+	{
+		//mengambil data siswa sesuai id yg dipilih
+		$student = DB::table('students')
+		->join('users','students.stu_usr_id','=','users.usr_id')
+		->where('stu_id',$id)
+		->first();
+		$classes = Classes::all();
+		
+		//passingg data siswa yg di dapat ke view edit-student.blade.php
+		return view('admin.edit-student',['student' => $student,'classes' => $classes]);
+	}
+	public function updateStudent(Request $request,$id)
+	{
+		//dd($request);
+		//update data siswa
+		$student = DB::table('students')
+		->join('users','students.stu_usr_id','=','users.usr_id')
+		->where('stu_id',$id)
+		->update([
+			'stu_nis'		  => $request->nis,
+			'usr_name'		  => $request->student_name,
+			'stu_class_id'	  => $request->grade,
+			'stu_school_year' => $request->tahun_ajaran,
+			'usr_email'		  => $request->email,
+			'usr_phone'       => $request->nomor_telepon
+		]); 
+
+
+		return redirect('admin/list-student');
+	}
+	public function hapusStudent($id)
+	{
+		//menghapus data pegawai berdasarkan id
+		DB::table('students')
+		->where('stu_id',$id)
+		->delete();
+
+		return redirect('admin/list-student');
+	}
 
 
 	public function listsClass()

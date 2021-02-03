@@ -34,7 +34,7 @@
                             <td>
                             	<a href="/admin/list-student/detail/{{ $student->stu_id }}">detail</a>
                             	<a href="/students/edit/{{ $student->stu_id }}">Edit</a>
-                            	<a href="/students/hapus/{{ $student->stu_id }}">Hapus</a> 
+                            	<a href="/admin/student/hapus/{{ $student->stu_id }}">Hapus</a> 
 
                             </td>
                         </tr>

@@ -18,6 +18,13 @@
                         @csrf
                         <div class="row">
 
+                        	 <div class="col-lg-12">
+                                <div class="form-group mb-3">
+                                    <label for="simpleinput">Nis </label>
+                                    <input type="text" id="simpleinput" name="nis" class="form-control" required>
+                                </div>
+                            </div>
+
                             <div class="col-lg-12">
                                 <div class="form-group mb-3">
                                     <label for="simpleinput">Nama </label>
@@ -34,6 +41,14 @@
                                             <option value="{{$data->class_id}}">{{$data->class_name}}</option>
                                             @endforeach
                                         </select>
+                                </div>
+                            </div>
+
+                           
+                            <div class="col-lg-12">
+                                <div class="form-group mb-3">
+                                    <label for="simpleinput">Tahun Ajaran</label>
+                                    <input type="text" id="simpleinput" name="tahun_ajaran" class="form-control" required>
                                 </div>
                             </div>
 
