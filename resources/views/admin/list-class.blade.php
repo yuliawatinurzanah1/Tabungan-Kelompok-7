@@ -1,15 +1,15 @@
 @extends('layouts.admin-master')
-
+@section('judul')
+    List Kelas
+@endsection
 @section('content')
     <div class="row">
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
                   
-                  <button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal"
-                            data-target="#con-close-modal"> List Kelas 
-                    </button>
-
+                 
+                    <a href="{{URL::to('admin/add-class')}}" class="btn btn-primary">Tambah</a>
                     <table id="basic-datatable" class="table dt-responsive nowrap">
                         <thead>
                         <tr>
@@ -68,38 +68,5 @@
 
     <!-- Modal -->
 
-    
-    <button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target="#con-close-modal">Tambah Kelas</button>
-    <div id="con-close-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                </div>
-                <div class="modal-body p-4">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="field-1" class="control-label">Kelas</label>
-                                <input type="text" class="form-control" id="field-1" placeholder="Kelas">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="field-2" class="control-label">Jurusan</label>
-                                <input type="text" class="form-control" id="field-2" placeholder="Jurusan">
-                            </div>
-                        </div>
-                    </div>
-                
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-info waves-effect waves-light">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div><!-- /.modal -->
 
 @endsection

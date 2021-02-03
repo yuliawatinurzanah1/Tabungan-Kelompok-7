@@ -1,14 +1,14 @@
 @extends('layouts.admin-master')
-
+@section('judul')
+    List Tabungan
+@endsection
 @section('content')
      <div class="row">
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
 
-                	<button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal"
-                            data-target="#con-close-modal"> List Tabungan Setiap kelas
-                    </button>
+                
 
                     <table id="basic-datatable" class="table dt-responsive nowrap">
                         <thead>

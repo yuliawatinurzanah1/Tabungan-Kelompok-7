@@ -14,11 +14,16 @@ class CreateTeachersTable extends Migration
     public function up()
     {
         Schema::create('teachers', function (Blueprint $table) {
-            $table->unsignedBigInteger('tcr_id');
+            $table->bigIncrements('tcr_id');
             $table->unsignedBigInteger('tcr_usr_id');
             $table->unsignedBigInteger('tcr_class_id');
             $table->string('tcr_nik');
             $table->string('tcr_marital_status');
+
+
+            $table->foreign('tcr_usr_id')->references('usr_id')->on('users');
+            $table->foreign('tcr_class_id')->references('class_id')->on('classes');
+            $table->timestamps();
         });
     }
 

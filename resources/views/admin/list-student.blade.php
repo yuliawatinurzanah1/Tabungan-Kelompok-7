@@ -10,7 +10,9 @@
             <div class="card">
                 <div class="card-body">
 
+                   
                     <table id="basic-datatable" class="table dt-responsive nowrap">
+                        <a href="/admin/create-student" class="btn btn-primary">Tambah</a>
                         <thead>
                         <tr>
                             <th>N0</th>
@@ -27,7 +29,7 @@
                             <td>{{ $student->stu_class_id }}</td>
                             <td>{{ $student->stu_nis }}</td>
                             <td>{{ $student->usr_name }}</td>
-                            <td>{{ $student->class_description }}</td>
+                            <td>{{ $student->class_name }}</td>
                        
                             <td>
                             	<a href="/admin/list-student/detail/{{ $student->stu_id }}">detail</a>

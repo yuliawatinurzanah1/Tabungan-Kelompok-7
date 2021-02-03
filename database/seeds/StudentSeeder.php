@@ -13,7 +13,7 @@ class StudentSeeder extends Seeder
     {
           DB::table('students')->insert([
          	'stu_id'          => '1',
-         	'stu_usr_id'      => '1',
+         	'stu_usr_id'      => '2',
          	'stu_class_id'    => '1',
          	'stu_nis'         => '31595913',
          	'stu_school_year' => '06-09-2003'

@@ -13,7 +13,7 @@ class TeacherSeeder extends Seeder
     {
         DB::table('teachers')->insert([
         	'tcr_id'        	 => '1',
-        	'tcr_usr_id'		 => '1',
+        	'tcr_usr_id'		 => '3',
         	'tcr_class_id'  	 => '1',
         	'tcr_nik'			 => '123456789',
         	'tcr_marital_status' => 'Belum Menikah'

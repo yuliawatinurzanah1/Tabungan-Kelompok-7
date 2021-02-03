@@ -37,20 +37,6 @@
                                 </div>
                             </div>
 
-                            <div class="col-lg-12">
-                                <div class="form-group mb-3">
-                                    <label for="simpleinput">Email </label>
-                                    <input type="text" id="simpleinput" name="email" class="form-control" required>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-12">
-                                <div class="form-group mb-3">
-                                    <label for="simpleinput">Nomor telepon </label>
-                                    <input type="text" id="simpleinput" name="nomor_telepon" class="form-control" required>
-                                </div>
-                            </div>
-
                        		
 
                            	<div class="col-lg-12">

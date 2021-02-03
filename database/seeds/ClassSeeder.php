@@ -15,7 +15,23 @@ class ClassSeeder extends Seeder
         	'class_id'          => '1',
         	'class_grade_id' 	=> '1',
         	'class_major_id'    => '1',
-        	'class_description' => 'X Rekayasa Perangkat Lunak' 
-        	]);
+        	'class_name' => 'X Rekayasa Perangkat Lunak' 
+          ]);
+          
+          DB::table('classes')->insert([
+            'class_id'          => '2',
+            'class_grade_id' 	=> '2',
+            'class_major_id'    => '2',
+            'class_name' => 'XI Multimedia' 
+            ]);
+
+            DB::table('classes')->insert([
+              'class_id'          => '3',
+              'class_grade_id' 	=> '3',
+              'class_major_id'    => '1',
+              'class_name' => 'XII Rekayasa Perangkat Lunak' 
+              ]);
+              
+            
     }
 }

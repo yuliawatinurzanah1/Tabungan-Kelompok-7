@@ -14,10 +14,15 @@ class CreateClassesTable extends Migration
     public function up()
     {
         Schema::create('classes', function (Blueprint $table) {
-            $table->unsignedBigInteger('class_id');
+            $table->bigIncrements('class_id');
             $table->unsignedBigInteger('class_grade_id');
             $table->unsignedBigInteger('class_major_id');
-            $table->string('class_description');
+            $table->string('class_name');
+            $table->timestamps();
+
+            $table->foreign('class_grade_id')->references('grade_id')->on('grades');
+            $table->foreign('class_major_id')->references('major_id')->on('majors');
+
         });
     }
 
