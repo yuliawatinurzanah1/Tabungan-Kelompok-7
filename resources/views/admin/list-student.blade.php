@@ -21,73 +21,23 @@
                         </tr>
                         </thead>
 
-                        <tbody>
-
+                       <tbody>
+                        	@foreach($students as $student)
                         <tr>
-                            <td>1</td>
-                            <td>12345</td>
-                            <td>Alika</td>
-                            <td>X Rekayasa Perangkat</td>
-        
-                             <td>
-                                <a  href="{{URL::to('/admin/list-student/detail')}}" class= "btn btn-primary btn-sm">Detail</a>
-                             </td>
-                        </tr>
+                            <td>{{ $student->stu_class_id }}</td>
+                            <td>{{ $student->stu_nis }}</td>
+                            <td>{{ $student->usr_name }}</td>
+                            <td>{{ $student->class_description }}</td>
                        
-                        <tr>
-                            <td>2</td>
-                            <td>12345</td>
-                            <td>Hania</td>
-                            <td>X Multimedia</td>
-        
-                             <td>
-                                <a  href="{{URL::to('/admin/list-student/detail')}}" class= "btn btn-primary btn-sm">Detail</a>
+                            <td>
+                            	<a href="/admin/list-student/detail/{{ $student->stu_id }}">detail</a>
+                            	<a href="/students/edit/{{ $student->stu_id }}">Edit</a>
+                            	<a href="/students/hapus/{{ $student->stu_id }}">Hapus</a> 
+
                             </td>
                         </tr>
 
-                        <tr>
-                           <td>3</td>
-                            <td>12345</td>
-                            <td>Amelia</td>
-                            <td>XI Rekayasa Perangkat</td>
-        
-                             <td>
-                                <a  href="{{URL::to('/admin/list-student/detail')}}" class= "btn btn-primary btn-sm">Detail</a>
-                            </td>
-                        </tr>
-
-                        <tr>
-                             <td>4</td>
-                            <td>12345</td>
-                            <td>Yuliawati</td>
-                            <td>XI Multimedia</td>
-        
-                             <td>
-                                <a  href="{{URL::to('/admin/list-student/detail')}}" class= "btn btn-primary btn-sm">Detail</a>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>5</td>
-                            <td>12345</td>
-                            <td>Tania</td>
-                            <td>XI Rekayasa Perangkat</td>
-        
-                             <td>
-                                <a  href="{{URL::to('/admin/list-student/detail')}}" class= "btn btn-primary btn-sm">Detail</a>
-                            </td>
-                        </tr>
-
-                        <tr>
-                           <td>5</td>
-                            <td>12345</td>
-                            <td>Jeni</td>
-                            <td>XII Multimedia</td>
-                            
-                             <td>
-                                <a  href="{{URL::to('/admin/list-student/detail')}}" class= "btn btn-primary btn-sm">Detail</a>
-                            </td>
-                        </tr>
+                        @endforeach
                        
                         </tbody>
                     </table>

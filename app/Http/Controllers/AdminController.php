@@ -22,7 +22,18 @@ class AdminController extends Controller
 
 	public function listStudent()
 	{
-		return view ('admin.list-student');
+		//mengambil data dari tabel siswa
+		$students = DB::table('students')->select([
+			'stu_class_id',
+			'stu_nis',
+			'usr_name',
+			'class_description'
+		])->join('users','stu_usr_id','=','usr_id') 
+		->join('classes','stu_class_id','=','class_id')
+		->get()
+		;
+
+		return view ('admin.list-student',['students' => $students]);
 	}
 
 	public function detailStudent()
@@ -33,10 +44,9 @@ class AdminController extends Controller
 
 	public function addStudent()
 	{
-		//mengambil data dari tabel siswa
-		$siswa = DB::table('students')->get();
+		
 		//mengirim data siswa ke view index
-		return view ('admin.add-student',['students' => $siswa]);
+		return view ('admin.add-student');
 	}
 
 	public function listsClass()
