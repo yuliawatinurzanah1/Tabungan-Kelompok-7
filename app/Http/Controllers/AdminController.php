@@ -12,6 +12,8 @@ use Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Student;
+use App\Teacher;
+
 
 
 class AdminController extends Controller
@@ -27,6 +29,7 @@ class AdminController extends Controller
 		return view ('admin.profile');
 	}
 
+//Management Siswa
 	public function listStudent()
 	{
 		//mengambil data dari tabel siswa
@@ -109,7 +112,7 @@ class AdminController extends Controller
 	}
 	public function hapusStudent($id)
 	{
-		//menghapus data pegawai berdasarkan id
+		//menghapus data siswa berdasarkan id
 		DB::table('students')
 		->where('stu_id',$id)
 		->delete();
@@ -118,6 +121,96 @@ class AdminController extends Controller
 	}
 
 
+//Managemen Guru
+	public function listTeacher()
+	{
+		//mengambil data dari tabel guru
+		$teachers = Teacher::join('users','tcr_usr_id','=','usr_id') 
+		->join('classes','tcr_class_id','=','class_id')
+		->get();
+			
+
+		return view ('admin.list-teacher',['teachers' => $teachers]);
+	}
+	public function detailTeacher()
+	{
+		return view ('admin.detail-teacher');
+	}
+
+	//CRUD Guru
+	public function addTeacher()
+	{
+		$classes = Classes::all();
+		//mengirim data guru ke view index
+		return view ('admin.add-teacher', compact('classes'));
+	}
+
+	public function saveTeacher(Request $request)
+	{
+		$user=new User;
+		$user->usr_name              = $request->teacher_name;
+		$user->usr_email             = $request->email;
+		$user->usr_phone             = $request->nomor_telepon;
+		$user->usr_password          = Hash::make('12345678');
+		$user->assignRole('walikelas');
+		$user->usr_is_active         = 1;
+		$user->usr_email_verified_at = now();
+			if($user->save()) {
+				$teacher = new Teacher;
+				$teacher->tcr_usr_id       = $user->usr_id;
+				$teacher->tcr_class_id     = $request->grade;
+				$teacher->tcr_nik          = $request ->nis;
+				$teacher->save();
+
+			}
+		
+
+		//mengirim data guru ke view index
+		return redirect('admin/list-teacher');
+	}
+
+	public function editTeacher($id)
+	{
+		//mengambil data guru sesuai id yg dipilih
+		$student = DB::table('teachers')
+		->join('users','teachers.tcr_usr_id','=','users.usr_id')
+		->where('tcr_id',$id)
+		->first();
+		$classes = Classes::all();
+		
+		//passingg data guru yg di dapat ke view edit-teacher.blade.php
+		return view('admin.edit-teacher',['teacher' => $teacher,'classes' => $classes]);
+	}
+	public function updateTeacher(Request $request,$id)
+	{
+		//dd($request);
+		//update data guru
+		$student = DB::table('teachers')
+		->join('users','teachers.tcr_usr_id','=','users.usr_id')
+		->where('tcr_id',$id)
+		->update([
+			'tcr_nik'		  => $request->nik,
+			'usr_name'		  => $request->teacher_name,
+			'tcr_class_id'	  => $request->grade,
+			'usr_email'		  => $request->email,
+			'usr_phone'       => $request->nomor_telepon
+		]); 
+
+
+		return redirect('admin/list-teacher');
+	}
+	public function hapusTeacher($id)
+	{
+		//menghapus data guru berdasarkan id
+		DB::table('teacher')
+		->where('tcr_id',$id)
+		->delete();
+
+		return redirect('admin/list-teacher');
+	}
+	
+
+//Managemen Kelas
 	public function listsClass()
 	{
 		$majors = Major::all();
@@ -131,17 +224,6 @@ class AdminController extends Controller
 		$grades = Grade::all();
 		return view ('admin.add-class', compact('majors','grades'));
 	}
-
-	public function listsTeacher()
-	{
-		return view ('admin.list-teacher');
-	}
-	public function detailTeacher()
-	{
-		return view ('admin.detail-teacher');
-	}
-	
-
 	
 	public function SaveAddClass(Request $request){
 			$class = new Classes();

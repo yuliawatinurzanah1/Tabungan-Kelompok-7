@@ -1,85 +1,46 @@
 @extends('layouts.admin-master')
+
 @section('judul')
-    list Walikelas
+    List Walikelas
 @endsection
+
 @section('content')
      <div class="row">
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                	 
+
+                   
                     <table id="basic-datatable" class="table dt-responsive nowrap">
+                        <a href="/admin/create-teacher" class="btn btn-primary">Tambah</a>
                         <thead>
-                       	 <tr>
-                            <th>No</th>
-                            <th>Nama Guru</th>
+                        <tr>
+                            <th>N0</th>
+                            <th>Nik</th>
+                            <th>Nama</th>
                             <th>Kelas</th>
                             <th>Aksi</th>
-                       	 </tr>
+                        </tr>
                         </thead>
 
-                        <tbody>
-                          <tr>
-                            <td>1</td>
-                            <td>Siti Robiah</td>
-                            <td>X Rekayasa Perangkat Lunak</td>
-                            
-                            <td>
-                                <a  href="{{URL::to('/admin/list-teacher/detail')}}" class= "btn btn-primary btn-sm">Detail</a>
-                            </td>                        
-                          </tr>
-
-                           <tr>
-                            <td>2</td>
-                            <td>Leni Maulani</td>
-                            <td>X Multimedia</td>
-                            
-                            <td>
-                                <a  href="{{URL::to('/admin/teacher/detail-teacher')}}" class= "btn btn-primary btn-sm">Detail</a>
-                            </td>                        
-                           </tr>
-
+                       <tbody>
+                        	@foreach($teachers as $teacher)
                         <tr>
-                            <td>3</td>
-                            <td>Agfie Nur Hanifah</td>
-                            <td>XI Rekayasa Perangkat Lunak</td>
-                            
+                            <td>{{ $teacher->tcr_class_id }}</td>
+                            <td>{{ $teacher->tcr_nik }}</td>
+                            <td>{{ $teacher->usr_name }}</td>
+                            <td>{{ $teacher->class_name }}</td>
+                       
                             <td>
-                                <a  href="{{URL::to('/admin/teacher/detail-teacher')}}" class= "btn btn-primary btn-sm">Detail</a>
-                            </td>                        
+                            	<a href="/admin/list-teacher/detail/{{ $teacher->tcr_id }}">detail</a>
+                            	<a href="/teacher/edit/{{ $teacher->tcr_id }}">Edit</a>
+                            	<a href="/admin/teacher/hapus/{{ $teacher->tcr_id }}">Hapus</a> 
+
+                            </td>
                         </tr>
 
-                          <tr>
-                            <td>4</td>
-                            <td>Mia Garmianti</td>
-                            <td>XI Multimedia</td>
-                            
-                            <td>
-                                <a  href="{{URL::to('/admin/teacher/detail-teacher')}}" class= "btn btn-primary btn-sm">Detail</a>
-                            </td>                        
-                        </tr>
-
-                         <tr>
-                            <td>5</td>
-                            <td>Essa Amalia</td>
-                            <td>XII Rekayasa Perangkat Lunak</td>
-                            
-                            <td>
-                                <a  href="{{URL::to('/admin/teacher/detail-teacher')}}" class= "btn btn-primary btn-sm">Detail</a>
-                            </td>                        
-                        </tr>
-
-                        <tr>
-                            <td>6</td>
-                            <td>Dewi Astri Indriani</td>
-                            <td>XII Multimedia</td>
-                            
-                            <td>
-                                <a  href="{{URL::to('/admin/teacher/detail-teacher')}}" class= "btn btn-primary btn-sm">Detail</a>
-                            </td>                        
-                        </tr>
-
-
+                        @endforeach
+                       
                         </tbody>
                     </table>
 
@@ -87,5 +48,6 @@
             </div> <!-- end card -->
         </div><!-- end col-->
     </div>
-   
+    <!-- end row-->
+
 @endsection
