@@ -157,9 +157,10 @@ class AdminController extends Controller
 		$user->usr_email_verified_at = now();
 			if($user->save()) {
 				$teacher = new Teacher;
-				$teacher->tcr_usr_id       = $user->usr_id;
-				$teacher->tcr_class_id     = $request->grade;
-				$teacher->tcr_nik          = $request ->nis;
+				$teacher->tcr_usr_id          = $user->usr_id;
+				$teacher->tcr_class_id        = $request->grade;
+				$teacher->tcr_nik             = $request ->nik;
+				$teacher->tcr_marital_status  = $request ->marital_status;
 				$teacher->save();
 
 			}
@@ -192,8 +193,10 @@ class AdminController extends Controller
 			'tcr_nik'		  => $request->nik,
 			'usr_name'		  => $request->teacher_name,
 			'tcr_class_id'	  => $request->grade,
+			'tcr_marital_status' => $request->marital_status,
 			'usr_email'		  => $request->email,
 			'usr_phone'       => $request->nomor_telepon
+
 		]); 
 
 

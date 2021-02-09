@@ -12,7 +12,9 @@
 
                    
                     <table id="basic-datatable" class="table dt-responsive nowrap">
-                        <a href="/admin/create-student" class="btn btn-primary">Tambah</a>
+
+                    	<a href="/admin/create-student" class="btn btn-primary">Tambah</a>
+                        
                         <thead>
                         <tr>
                             <th>N0</th>
@@ -32,9 +34,10 @@
                             <td>{{ $student->class_name }}</td>
                        
                             <td>
-                            	<a href="/admin/list-student/detail/{{ $student->stu_id }}">detail</a>
-                            	<a href="/students/edit/{{ $student->stu_id }}">Edit</a>
-                            	<a href="/admin/student/hapus/{{ $student->stu_id }}">Hapus</a> 
+                            	
+                            	<a href="/admin/list-student/detail/{{ $student->stu_id }}"  class="btn btn-primary">detail</a>
+                            	<a href="/students/edit/{{ $student->stu_id }}"  class="btn btn-primary">Edit</a>
+                            	<a href="/admin/student/hapus/{{ $student->stu_id }}"  class="btn btn-primary">Hapus</a> 
 
                             </td>
                         </tr>
