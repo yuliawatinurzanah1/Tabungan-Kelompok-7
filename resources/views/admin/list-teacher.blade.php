@@ -5,6 +5,8 @@
 @endsection
 
 @section('content')
+
+
      <div class="row">
         <div class="col-12">
             <div class="card">
@@ -26,15 +28,15 @@
                        <tbody>
                         	@foreach($teachers as $teacher)
                         <tr>
-                            <td>{{ $teacher->tcr_class_id }}</td>
+                            <td>{{ ++$count}}</td>
                             <td>{{ $teacher->tcr_nik }}</td>
                             <td>{{ $teacher->usr_name }}</td>
                             <td>{{ $teacher->class_name }}</td>
                        
                             <td>
-                            	<a href="/admin/list-teacher/detail/{{ $teacher->tcr_id }}">detail</a>
-                            	<a href="/teacher/edit/{{ $teacher->tcr_id }}">Edit</a>
-                            	<a href="/admin/teacher/hapus/{{ $teacher->tcr_id }}">Hapus</a> 
+                            	<a href="/admin/list-teacher/detail/{{ $teacher->tcr_id }}" class="btn btn-success btn-sm">detail</a>
+                            	<a href="/admin/edit-teacher/{{ $teacher->tcr_id }}" class="btn btn-warning btn-sm">Edit</a>
+                            	<a href="/admin/teacher/hapus/{{ $teacher->tcr_id }}" class="btn btn-danger btn-sm">Hapus</a> 
 
                             </td>
                         </tr>

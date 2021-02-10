@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+
     <div class="row">
         <div class="col-12">
             <div class="card">
@@ -21,7 +22,7 @@
                         	 <div class="col-lg-12">
                                 <div class="form-group mb-3">
                                     <label for="simpleinput">Nis </label>
-                                    <input type="text" id="simpleinput" name="nis" class="form-control" required>
+                                    <input type="number" id="simpleinput" name="nis" class="form-control" required>
                                 </div>
                             </div>
 
@@ -48,21 +49,21 @@
                             <div class="col-lg-12">
                                 <div class="form-group mb-3">
                                     <label for="simpleinput">Tahun Ajaran</label>
-                                    <input type="text" id="simpleinput" name="tahun_ajaran" class="form-control" required>
+                                    <input type="number" id="simpleinput" name="tahun_ajaran" class="form-control" required>
                                 </div>
                             </div>
 
                             <div class="col-lg-12">
                                 <div class="form-group mb-3">
                                     <label for="simpleinput">Email </label>
-                                    <input type="text" id="simpleinput" name="email" class="form-control" required>
+                                    <input type="email" id="simpleinput" name="email" class="form-control" required>
                                 </div>
                             </div>
 
                             <div class="col-lg-12">
                                 <div class="form-group mb-3">
                                     <label for="simpleinput">Nomor telepon </label>
-                                    <input type="text" id="simpleinput" name="nomor_telepon" class="form-control" required>
+                                    <input type="number" id="simpleinput" name="nomor_telepon" class="form-control" required>
                                 </div>
                             </div>
 
@@ -73,6 +74,7 @@
                                		<input type="submit" value="Simpan" class="btn btn-primary">
                                	</div>
                            	</div>
+                            
 
                        </div> <!-- end card-body -->
                     </form>

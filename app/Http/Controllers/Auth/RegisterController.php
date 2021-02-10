@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\SendMail;
 use Illuminate\Support\Str;
+use Auth;
 
 class RegisterController extends Controller
 {
@@ -29,9 +30,9 @@ class RegisterController extends Controller
         return view('auth.register-student');
     }
 
-    public function registerTeacher()
+    public function registerWalikelas()
     {
-        return view('auth.register-teacher');
+        return view('auth.register-walikelas');
     }
 
     public function registerStaff()
@@ -46,7 +47,13 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    public function redirectTo() {
+        if (Auth()->user()->hasRole('student')) {
+            return '/student';
+        }else{
+            return '/walikelas';
+        }
+    }
 
     /**
      * Create a new controller instance.
@@ -70,7 +77,7 @@ class RegisterController extends Controller
             'usr_name' => ['required', 'string', 'max:255'],
             'usr_email' => ['required', 'string', 'max:255', 'unique:users,usr_email'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'usr_phone' => ['required', 'min:11', 'max:14'],
+            'usr_phone' => ['required', 'min:11'],
         ]);
     }
 
@@ -82,6 +89,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        // dd($data);
         $user = User::create([
             'usr_name' => $data['usr_name'],
             'usr_email' => $data['usr_email'],
@@ -95,7 +103,7 @@ class RegisterController extends Controller
             $user->assignRole('student');
             $user->created_by = $user->usr_id;
         } elseif ($data['role'] == 2) {
-            $user->assignRole('teacher');
+            $user->assignRole('walikelas');
             $user->created_by = $user->usr_id;
         } elseif ($data['role'] == 3) {
             $user->assignRole('staff');

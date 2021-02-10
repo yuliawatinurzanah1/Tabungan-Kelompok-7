@@ -29,8 +29,8 @@ Route::post('/account/reset-password', 'Auth\AccountController@updatePassword')-
 //Route untuk register teacher dan staff
 
 Route::get('/register-student', 'Auth\RegisterController@registerStudent');
-Route::get('/register-teacher', 'Auth\RegisterController@registerTeacher');
-Route::get('/register-staff', 'Auth\RegisterController@registerStaff');
+Route::get('/register-walikelas', 'Auth\RegisterController@registerWalikelas');
+// Route::get('/register-staff', 'Auth\RegisterController@registerStaff');
 
 //Login 
 
@@ -52,21 +52,20 @@ Route::group(['middleware' => ['role:admin']], function () {
 	Route::get('/admin/dashboard' , 'AdminController@dashboard');
 
     Route::get('/admin/list-student' , 'AdminController@listStudent');
-    Route::get('/admin/list-student/detail' , 'AdminController@detailStudent');
-    Route::get('/students/edit/{id}' , 'AdminController@editStudent');
+    Route::get('/admin/list-student/detail/{id}' , 'AdminController@detailStudent');
     
     //route CRUD student
     Route::get('/admin/create-student' , 'AdminController@addStudent');
     Route::post('/admin/create-student' , 'AdminController@saveStudent');
     
     Route::get('/admin/edit-student/{id}' , 'AdminController@editStudent');
-    Route::post('/admin/update/{id}' , 'AdminController@updateStudent');
+    Route::post('/admin/update-student/{id}' , 'AdminController@updateStudent');
 
  	Route::get('/admin/student/hapus/{id}' , 'AdminController@hapusStudent');
 
  	//route teacher
     Route::get('/admin/list-teacher' , 'AdminController@listTeacher'); 
-    Route::get('/admin/list-teacher/detail' , 'AdminController@detailTeacher');
+    Route::get('/admin/list-teacher/detail/{id}' , 'AdminController@detailTeacher');
 
  	Route::get('/admin/create-teacher' , 'AdminController@addTeacher');
     Route::post('/admin/create-teacher' , 'AdminController@saveTeacher');
@@ -105,13 +104,13 @@ Route::group(['middleware' => ['role:admin']], function () {
 });
 
 //student
-Route::group(['middleware' => ['role:student']], function () {
+Route::group(['middleware' => ['role:student', 'verified']], function () {
 	Route::get('/student' , 'StudentController@dashboard');
     Route::get('/student/list-tabungan' , 'StudentController@listTabungan');
     
 });
 //walikelas
-Route::group(['middleware' => ['role:walikelas']], function () {
+Route::group(['middleware' => ['role:walikelas', 'verified']], function () {
 	Route::get('/walikelas' , 'WalikelasController@dashboard');
 
 	Route::get('/walikelas/list-student' , 'WalikelasController@listStudent');

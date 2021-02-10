@@ -36,19 +36,14 @@ class AdminController extends Controller
 		$students = Student::join('users','stu_usr_id','=','usr_id') 
 		->join('classes','stu_class_id','=','class_id')
 		->get();
-		$count=0;
 			//dd($students);
 
-		return view ('admin.list-student',['students' => $students,'count'=> $count]);
+		return view ('admin.list-student',['students' => $students]);
 	}
 
 	public function detailStudent($id)
 	{
-		$student = Student::join('users', 'students.stu_usr_id', '=', 'users.usr_id') 
-		->where('stu_id',$id)
-		->get();
-		
-		return view ('admin.detail-student',['student'=>$student]);
+		return view ('admin.detail-student');
 	}
 	 //Create siswa
 
@@ -133,17 +128,13 @@ class AdminController extends Controller
 		$teachers = Teacher::join('users','tcr_usr_id','=','usr_id') 
 		->join('classes','tcr_class_id','=','class_id')
 		->get();
-		$count=0;	
+			
 
-		return view ('admin.list-teacher',['teachers' => $teachers,'count'=>$count]);
+		return view ('admin.list-teacher',['teachers' => $teachers]);
 	}
-	public function detailTeacher($id)
+	public function detailTeacher()
 	{
-		$teachers = Teacher::join('users', 'teachers.tcr_usr_id', '=', 'usr_id') 
-		->join('classes','tcr_class_id','=','class_id')
-		->where('tcr_id',$id)
-		->get();
-		return view ('admin.detail-teacher',['teachers'=>$teachers]);
+		return view ('admin.detail-teacher');
 	}
 
 	//CRUD Guru
@@ -167,9 +158,8 @@ class AdminController extends Controller
 			if($user->save()) {
 				$teacher = new Teacher;
 				$teacher->tcr_usr_id       = $user->usr_id;
-				$teacher->tcr_nik          = $request ->nik;
 				$teacher->tcr_class_id     = $request->grade;
-				$teacher->tcr_marital_status   = $request->marital_status;
+				$teacher->tcr_nik          = $request ->nis;
 				$teacher->save();
 
 			}
@@ -182,7 +172,7 @@ class AdminController extends Controller
 	public function editTeacher($id)
 	{
 		//mengambil data guru sesuai id yg dipilih
-		$teacher = DB::table('teachers')
+		$student = DB::table('teachers')
 		->join('users','teachers.tcr_usr_id','=','users.usr_id')
 		->where('tcr_id',$id)
 		->first();
@@ -190,22 +180,20 @@ class AdminController extends Controller
 		
 		//passingg data guru yg di dapat ke view edit-teacher.blade.php
 		return view('admin.edit-teacher',['teacher' => $teacher,'classes' => $classes]);
-			
 	}
 	public function updateTeacher(Request $request,$id)
 	{
 		//dd($request);
 		//update data guru
-		$teacher = DB::table('teachers')
+		$student = DB::table('teachers')
 		->join('users','teachers.tcr_usr_id','=','users.usr_id')
 		->where('tcr_id',$id)
 		->update([
-			'tcr_nik'		  	 => $request->nik,
-			'usr_name'		  	 => $request->teacher_name,
-			'tcr_class_id'	  	 => $request->grade,
-			'tcr_marital_status' => $request->marital_status,
-			'usr_email'		  	 => $request->email,
-			'usr_phone'       	 => $request->nomor_telepon
+			'tcr_nik'		  => $request->nik,
+			'usr_name'		  => $request->teacher_name,
+			'tcr_class_id'	  => $request->grade,
+			'usr_email'		  => $request->email,
+			'usr_phone'       => $request->nomor_telepon
 		]); 
 
 
@@ -214,7 +202,7 @@ class AdminController extends Controller
 	public function hapusTeacher($id)
 	{
 		//menghapus data guru berdasarkan id
-		DB::table('teachers')
+		DB::table('teacher')
 		->where('tcr_id',$id)
 		->delete();
 

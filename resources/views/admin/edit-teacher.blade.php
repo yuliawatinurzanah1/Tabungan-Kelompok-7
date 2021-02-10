@@ -22,7 +22,7 @@
                         	 <div class="col-lg-12">
                                 <div class="form-group mb-3">
                                     <label for="simpleinput">Nik</label>
-                                    <input value="{{ $teacher->tcr_nik }}" type="text" id="simpleinput" name="nik" class="form-control" required>
+                                    <input value="{{ $teacher->tcr_nik }}" type="number" id="simpleinput" name="nik" class="form-control" required>
                                 </div>
                             </div>
 
@@ -36,7 +36,7 @@
                        		<div class="col-lg-12">
                                 <div class="form-group mb-3">
                                     <label for="simpleinput">Kelas</label>
-                                     <input value="{{ $teacher->tcr_class_id}}">
+                                
                                         <select type="text" id="simpleinput" name="grade" class="form-control" required>
                                             <option value="">Pilih---</option>
                                             @foreach($classes as $data)
@@ -49,21 +49,21 @@
                              <div class="col-lg-12">
                                 <div class="form-group mb-3">
                                     <label for="simpleinput">Status Pernikahan </label>
-                                    <input value="{{ $teacher->tcr_marital_status }}" type="text" id="simpleinput" name="teacher_name" class="form-control" required>
+                                    <input value="{{ $teacher->tcr_marital_status }}" type="text" id="simpleinput" name="marital_status" class="form-control" required>
                                 </div>
                             </div>
 
                             <div class="col-lg-12">
                                 <div class="form-group mb-3">
                                     <label for="simpleinput">Email </label>
-                                    <input value="{{ $teacher->usr_email}}"  type="text" id="simpleinput" name="email" class="form-control" required>
+                                    <input value="{{ $teacher->usr_email}}"  type="email" id="simpleinput" name="email" class="form-control" required>
                                 </div>
                             </div>
 
                             <div class="col-lg-12">
                                 <div class="form-group mb-3">
                                     <label for="simpleinput">Nomor telepon </label>
-                                    <input value="{{ $teacher->usr_phone }}"  type="text" id="simpleinput" name="nomor_telepon" class="form-control" required>
+                                    <input value="{{ $teacher->usr_phone }}"  type="number" id="simpleinput" name="nomor_telepon" class="form-control" required>
                                 </div>
                             </div>
 

@@ -10,7 +10,7 @@
         <meta content="Coderthemes" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="assets/images/favicon.ico">
+        
 
         <!-- App css -->
         <link href="{{URL::to('assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
@@ -31,7 +31,7 @@
                                 
                                 <div class="text-center w-75 m-auto">
                                     <a href="index.html">
-                                        <span><img src="assets/images/logo-dark.png" alt="" height="26"></span>
+                                        <span><img src="assets/images/" alt="" height="26"></span>
                                     </a>
                                     <p class="text-muted mb-4 mt-3">Silahkan Login Terlebih Dahulu</p>
                                 </div>
@@ -86,7 +86,8 @@
                         <div class="row mt-3">
                             <div class="col-12 text-center">
                                 <p> <a href="pages-recoverpw.html" class="text-muted ml-1">Forgot your password?</a></p>
-                                <p class="text-muted">Don't have an account? <a href="{{URL::to('/register-student')}}" class="text-muted ml-1"><b class="font-weight-semibold">Register</b></a></p>
+                                <p class="text-muted">Register sebagai siswa <a href="{{URL::to('/register-student')}}" class="text-muted ml-1"><b class="font-weight-semibold">Register</b></a></p>
+                                <p class="text-muted">Register sebagai walikelas <a href="{{URL::to('/register-walikelas')}}" class="text-muted ml-1"><b class="font-weight-semibold">Register</b></a></p>
                             </div> <!-- end col -->
                         </div>
                         <!-- end row -->

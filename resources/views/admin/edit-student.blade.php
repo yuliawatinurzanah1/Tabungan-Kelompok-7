@@ -14,7 +14,7 @@
                     <h4 class="header-title">Edit Siswa</h4>
                    
 
-                    <form action="{{ url('admin/update/'.$student->stu_id) }}" method="post">
+                    <form action="{{ url('admin/update-student/'.$student->stu_id) }}" method="post">
                         @csrf
                         <div class="row">
 
@@ -35,7 +35,6 @@
                        		<div class="col-lg-12">
                                 <div class="form-group mb-3">
                                     <label for="simpleinput">Kelas</label>
-                                     <input value="{{ $student->stu_class_id}}">
                                         <select type="text" id="simpleinput" name="grade" class="form-control" required>
                                             <option value="">Pilih---</option>
                                             @foreach($classes as $data)
@@ -49,7 +48,7 @@
                             <div class="col-lg-12">
                                 <div class="form-group mb-3">
                                     <label for="simpleinput">Tahun Ajaran</label>
-                                    <input value="{{ $student->stu_school_year }}"  type="text" id="simpleinput" name="tahun_ajaran" class="form-control" required>
+                                    <input value="{{ $student->stu_school_year }}"  type="number" id="simpleinput" name="tahun_ajaran" class="form-control" required>
                                 </div>
                             </div>
 
