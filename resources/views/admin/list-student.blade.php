@@ -14,7 +14,9 @@
 
                    
                     <table id="basic-datatable" class="table dt-responsive nowrap">
-                        <a href="/admin/create-student" class="btn btn-primary">Tambah</a>
+
+                    	<a href="/admin/create-student" class="btn btn-primary">Tambah</a>
+                        
                         <thead>
                         <tr>
                             <th>N0</th>
@@ -34,9 +36,11 @@
                             <td>{{ $student->class_name }}</td>
                        
                             <td>
+
                             	<a href="/admin/list-student/detail/{{ $student->stu_id }}" class="btn btn-success btn-sm">detail</a>
                             	<a href="/admin/edit-student/{{ $student->stu_id }}" class="btn btn-warning btn-sm">Edit</a>
                             	<a href="/admin/student/hapus/{{ $student->stu_id }}" class="btn btn-danger btn-sm">Delete</a> 
+
 
                             </td>
                         </tr>
