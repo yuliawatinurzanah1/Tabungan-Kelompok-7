@@ -14,14 +14,14 @@
                     <h4 class="header-title">Edit Siswa</h4>
                    
 
-                    <form action="{{ url('admin/update-student/'.$student->stu_id) }}" method="post">
+                    <form action="{{ url('admin/update-student/'.$student->stu_usr_id) }}" method="post">
                         @csrf
                         <div class="row">
 
                         	 <div class="col-lg-12">
                                 <div class="form-group mb-3">
                                     <label for="simpleinput">Nis</label>
-                                    <input value="{{ $student->stu_nis }}" type="text" id="simpleinput" name="nis" class="form-control" required>
+                                    <input value="{{ $student->stu_nis }}" type="number" id="simpleinput" name="nis" class="form-control" required>
                                 </div>
                             </div>
 
@@ -35,7 +35,7 @@
                        		<div class="col-lg-12">
                                 <div class="form-group mb-3">
                                     <label for="simpleinput">Kelas</label>
-                                        <select type="text" id="simpleinput" name="grade" class="form-control" required>
+                                        <select type="number" id="simpleinput" name="grade" class="form-control" required>
                                             <option value="">Pilih---</option>
                                             @foreach($classes as $data)
                                             <option value="{{$data->class_id}}">{{$data->class_name}}</option>
@@ -55,14 +55,14 @@
                             <div class="col-lg-12">
                                 <div class="form-group mb-3">
                                     <label for="simpleinput">Email </label>
-                                    <input value="{{ $student->usr_email}}"  type="text" id="simpleinput" name="email" class="form-control" required>
+                                    <input value="{{ $student->usr_email}}"  type="email" id="simpleinput" name="email" class="form-control" required>
                                 </div>
                             </div>
 
                             <div class="col-lg-12">
                                 <div class="form-group mb-3">
                                     <label for="simpleinput">Nomor telepon </label>
-                                    <input value="{{ $student->usr_phone }}"  type="text" id="simpleinput" name="nomor_telepon" class="form-control" required>
+                                    <input value="{{ $student->usr_phone }}"  type="number" id="simpleinput" name="nomor_telepon" class="form-control" required>
                                 </div>
                             </div>
 

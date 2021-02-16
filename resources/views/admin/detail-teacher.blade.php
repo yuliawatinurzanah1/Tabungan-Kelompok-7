@@ -40,12 +40,19 @@
                                     <td>{{$teacher->class_name}}</td>
                                 </tr>
 
+                                <tr>    
+                                    <td>Status</td>
+                                    <td>:</td>     
+                                    <td>{{$teacher->tcr_marital_status}}</td>        
+
+                                </tr>    
+
                                 <tr>
                                     <td>Nomor Telepon</td>
                                     <td>:</td>
                                     <td>{{$teacher->usr_phone}}</td>
                                 </tr>
-
+                                    
                                 <tr>
                                     <td></td>
                                     <td></td>

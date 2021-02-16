@@ -13,49 +13,32 @@
                     <table id="basic-datatable" class="table dt-responsive nowrap">
                         <thead>
                         <tr>
-                        	<th>No</th>
-                            <th>Kelas</th>
-                            <th>Jurusan</th>
+                        	
+                            <th>No</th>
+                            <th>KELAS</th>
+                            <th>JURUSAN</th>
+                            <th>NAMA KELAS</th>
+                            <th>ACTION</th>
+                            
                         </tr>
                         </thead>
 
                         <tbody>
+                        @foreach($classes as $classes)
                         <tr>
-                        	<td>1</td>
-                            <td>X</td>
-                            <td>Rekayasa Perangkat Lunak</td>
-                        </tr>
-
-                         <tr>
-                         	<td>2</td>
-                            <td>X</td>
-                            <td>Multimedia</td>
-                        </tr>
-
-                         <tr>
-                         	<td>3</td>
-                            <td>XI</td>
-                            <td>Rekayasa Perangkat Lunak</td>
-                        </tr>
-
-                        <tr>
-                        	<td>4</td>
-                            <td>XI</td>
-                            <td>Multimedia</td>
-                        </tr>
-
-                         <tr>
-                         	<td>5</td>
-                            <td>XII</td>
-                            <td>Rekayasa Perangkat Lunak</td>
-                        </tr>
-
-                         <tr>
-                         	<td>6</td>
-                            <td>XII</td>
-                            <td>Multimedia</td>
-                        </tr>
-                       
+                        	
+                            <td>{{++$count}}</td>
+                            <td>{{$classes->class_grade_id}}</td>
+                            <td>{{$classes->class_major_id}}</td>
+                            <td>{{$classes->class_name}}</td>
+                            <td>
+                                <a href="/admin/list-class/detail/{{ $classes->class_id }}" class="btn btn-success btn-sm">detail</a>
+                                <a href="/admin/edit-class/{{ $classes->class_id }}" class="btn btn-warning btn-sm">Edit</a>
+                                <a href="/admin/class/hapus/{{ $classes->class_id }}" class="btn btn-danger btn-sm">Delete</a>
+                            </td>
+                        
+                        </tr>       
+                        @endforeach
                         </tbody>
                     </table>
 

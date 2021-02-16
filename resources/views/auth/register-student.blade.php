@@ -44,7 +44,7 @@
 
                                     <div class="form-group">
                                         <label for="fullname">Full Name</label>
-                                        <input id="usr_name" type="text" class="form-control @error('usr_name') is-invalid @enderror" name="usr_name" value="{{ old('usr_name') }}" autocomplete="usr_name" autofocus>
+                                        <input id="usr_name" type="text" class="form-control @error('usr_name') is-invalid @enderror" name="usr_name" value="{{ old('usr_name') }}" autocomplete="usr_name" autofocus required>
 
 		                                @error('usr_name')
 		                                <span class="invalid-feedback" role="alert">
@@ -54,7 +54,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="emailaddress">Email address</label>
-                                         <input id="usr_email" type="email" class="form-control @error('usr_email') is-invalid @enderror" name="usr_email" value="{{ old('usr_email') }}" autocomplete="usr_email">
+                                         <input id="usr_email" type="email" class="form-control @error('usr_email') is-invalid @enderror" name="usr_email" value="{{ old('usr_email') }}" autocomplete="usr_email" required>
 
 		                                @error('usr_email')
 		                                <span class="invalid-feedback" role="alert">
@@ -65,10 +65,10 @@
 
                                     <div class="form-group">
                                         <label for="emailaddress">Phone Number</label>
-                                          <input id="usr_phone" value="{{ old('usr_phone') }}" type="text" class="form-control @error('usr_phone') is-invalid @enderror" name="usr_phone" autocomplete="off">
+                                          <input id="usr_phone" value="{{ old('usr_phone') }}" type="number" class="form-control @error('usr_phone') is-invalid @enderror" name="usr_phone" autocomplete="off" required>
 
 		                                @error('usr_phone')
-		                                <span class="invalid-feedback" role="alert">
+		                                <span class="invalid-feedback" role="alert" >
 		                                    <strong>{{ $message }}</strong>
 		                                </span>
 		                                @enderror
@@ -77,7 +77,7 @@
                                     
                                     <div class="form-group">
                                         <label for="password">Password</label>
-                                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" autocomplete="new-password">
+                                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" autocomplete="new-password" required>
 
 		                                @error('usr_password')
 		                                <span class="invalid-feedback" role="alert">
@@ -88,7 +88,7 @@
 
                                     <div class="form-group">
                                         <label for="password">Confrim Password</label>
-                                         <input id="password-confirm" type="password" class="form-control" name="password_confirmation" autocomplete="new-password">
+                                         <input id="password-confirm" type="password" class="form-control" name="password_confirmation" autocomplete="new-password" required>
                                     </div>
 
                                     <div class="form-group row">

@@ -22,7 +22,7 @@
                         	 <div class="col-lg-12">
                                 <div class="form-group mb-3">
                                     <label for="simpleinput">Nik </label>
-                                    <input type="text" id="simpleinput" name="nik" class="form-control" required>
+                                    <input type="number" id="simpleinput" name="nik" class="form-control" required>
                                 </div>
                             </div>
 
@@ -55,14 +55,14 @@
                             <div class="col-lg-12">
                                 <div class="form-group mb-3">
                                     <label for="simpleinput">Email </label>
-                                    <input type="text" id="simpleinput" name="email" class="form-control" required>
+                                    <input type="email" id="simpleinput" name="email" class="form-control" required>
                                 </div>
                             </div>
 
                             <div class="col-lg-12">
                                 <div class="form-group mb-3">
                                     <label for="simpleinput">Nomor telepon </label>
-                                    <input type="text" id="simpleinput" name="nomor_telepon" class="form-control" required>
+                                    <input type="number" id="simpleinput" name="nomor_telepon" class="form-control" required>
                                 </div>
                             </div>
 

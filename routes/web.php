@@ -80,9 +80,17 @@ Route::group(['middleware' => ['role:admin']], function () {
 
  	//route kelas
     Route::get('/admin/list-class' , 'AdminController@listClass');
+    Route::get('/admin/list-class/detail/{id}' , 'AdminController@detailClass');
+
+   
     Route::get('admin/add-class','AdminController@addClass');
     Route::post('admin/add-class' , 'AdminController@saveClass');
-    
+
+    Route::get('/admin/edit-class/{id}' , 'AdminController@editClass');
+    Route::post('/admin/update-class/{id}' , 'AdminController@updateClass');
+
+    Route::get('admin/class/hapus/{id}','AdminController@hapusClass');
+
 
    
 
@@ -96,8 +104,8 @@ Route::group(['middleware' => ['role:admin']], function () {
     Route::post('/admin/add-student' , 'AdminController@SaveAddStudent');
     
    
-   
-    Route::get('/admin/list-class' , 'AdminController@listsClass'); 
+    Route::get('/admin/edit-class/{id}' , 'AdminController@editClass');
+    Route::get('/admin/list-class' , 'AdminController@listClass'); 
        
     
     

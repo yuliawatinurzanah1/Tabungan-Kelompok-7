@@ -77,6 +77,9 @@ class AdminController extends Controller
 				$student ->stu_school_year = $request ->tahun_ajaran;
 				$student->save();
 
+				Session::flash('sukses','Data Berhasil disimpan');
+        return back();
+
 			}
 		
 
@@ -111,7 +114,8 @@ class AdminController extends Controller
 			'usr_email'		  => $request->email,
 			'usr_phone'       => $request->nomor_telepon
 		]); 
-
+		Session::flash('sukses','Data Berhasil disimpan');
+        return back();
 
 		return redirect('admin/list-student');
 	}
@@ -173,6 +177,9 @@ class AdminController extends Controller
 				$teacher->tcr_marital_status   = $request->marital_status;
 				$teacher->save();
 
+				Session::flash('sukses','Data Berhasil disimpan');
+        return back();
+
 			}
 		
 
@@ -222,11 +229,11 @@ class AdminController extends Controller
 	
 
 //Managemen Kelas
-	public function listsClass()
+	public function listClass()
 	{
-		$majors = Major::all();
-		$grades = Grade::all();
-		return view ('admin.list-class', compact('majors','grades'));
+		$classes = Classes::all();
+		$count=0;
+		return view ('admin.list-class',['classes'=>$classes,'count'=>$count]);
 	}
 
 	public function addClass()
@@ -236,6 +243,7 @@ class AdminController extends Controller
 		return view ('admin.add-class', compact('majors','grades'));
 	}
 	
+
 	public function SaveAddClass(Request $request){
 			$class = new Classes();
 			$class->class_grade_id    = $request->grade;
@@ -246,6 +254,46 @@ class AdminController extends Controller
             Session::flash('sukses','Data Berhasil disimpan');
         return back();
     }
+    public function detailClass($id)
+	{
+		$classes = Classes::where('class_id',$id)->get();
+		$count=0;
+		return view ('admin.detail-class',['classes'=>$classes,'count'=>$count]);
+
+		
+	}
+
+    public function editClass($id)
+    {
+    	$classes = DB::table('classes')->where('class_id',$id)->get();
+    	return view ('admin.edit-class',['classes' => $classes]);
+    }
+
+    public function updateClass(Request $request,$class_id)
+    {
+    	$class = Classes::find($class_id);
+    		
+    		$class->class_id = $request->id;
+    		$class->class_grade_id = $request->$grade;
+    		$class->class_major_id = $request->$major;
+    		$class->class_name = $request->$class_name;
+    		$class->save();
+    
+    	return redirect('admin/list-class');
+    }
+
+	public function hapusClass($id)
+	{
+		//menghapus data siswa berdasarkan id
+		DB::table('classes')
+		->where('class_id',$id)
+		->delete();
+
+		Session::flash('sukses','Data Berhasil disimpan');
+        return back();
+
+		return redirect('admin/list-class');
+	}
 
 	public function SaveAddStudent(Request $request){
             Session::flash('sukses','Data Berhasil disimpan');

@@ -65,7 +65,7 @@
 
                                     <div class="form-group">
                                         <label for="emailaddress">Phone Number</label>
-                                          <input id="usr_phone" value="{{ old('usr_phone') }}" type="text" class="form-control @error('usr_phone') is-invalid @enderror" name="usr_phone" autocomplete="off">
+                                          <input id="usr_phone" value="{{ old('usr_phone') }}" type="number" class="form-control @error('usr_phone') is-invalid @enderror" name="usr_phone" autocomplete="off">
 
                                         @error('usr_phone')
                                         <span class="invalid-feedback" role="alert">
