@@ -154,8 +154,9 @@ class AdminController extends Controller
 	public function addTeacher()
 	{
 		$classes = Classes::all();
+		$teacher = DB::table('teachers')->get();	 
 		//mengirim data guru ke view index
-		return view ('admin.add-teacher', compact('classes'));
+		return view ('admin.add-teacher', compact('classes','teacher'));
 	}
 
 	public function saveTeacher(Request $request)
@@ -265,18 +266,22 @@ class AdminController extends Controller
 
     public function editClass($id)
     {
-    	$classes = DB::table('classes')->where('class_id',$id)->get();
-    	return view ('admin.edit-class',['classes' => $classes]);
+    	$classes = DB::table('classes')->where('class_id',$id)->first();
+    	// dd($classes)
+    	// ;
+    	$grade=DB::table('grades')->get();
+    	$class = DB::table('classes')->get();
+
+    	return view ('admin.edit-class',['classes' => $classes,'class'=> $class,'grade'=>$grade]);
     }
 
     public function updateClass(Request $request,$class_id)
     {
     	$class = Classes::find($class_id);
-    		
-    		$class->class_id = $request->id;
-    		$class->class_grade_id = $request->$grade;
-    		$class->class_major_id = $request->$major;
-    		$class->class_name = $request->$class_name;
+    	
+    		$class->class_grade_id = $request->input('grade');
+    		$class->class_major_id = $request->input('major');
+    		$class->class_name = $request->input('class_name');
     		$class->save();
     
     	return redirect('admin/list-class');

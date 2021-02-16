@@ -15,11 +15,44 @@
                    
 
                     <form action="{{ url('admin/update-class/'.$classes->class_id) }}" method="post">
-                        
-                        
+                        @csrf
+                        <div class="row">
 
-                            
+                             <div class="col-lg-12">
+                                <div class="form-group mb-3">
+                                    <label for="simpleinput">Kelas</label>
+                                    <select type="number" id="simpleinput" name="grade" class="form-control" required>
+                                        <option value="">Pilih---</option>
+                                            @foreach($grade as $data)
+                                            <option value="{{$data->grade_id}}">{{$data->grade_name}}</option>
+                                            @endforeach    
+                                    </select>                                   
+                                </div>
+                            </div>
 
+                            <div class="col-lg-12">
+                                <div class="form-group mb-3">
+                                    <label for="simpleinput">Jurusan</label>
+                                    <select type="number" id="simpleinput" name="major" class="form-control" required>
+                                        <option value="">Pilih---</option>
+                                            @foreach($class as $data)
+                                            <option value="{{$data->class_major_id}}">{{$data->class_major_id}}</option>
+                                            @endforeach    
+                                    </select>                                   
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="form-group mb-3">
+                                    <label for="simpleinput">Nama Kelas</label>
+                                        <select type="number" id="simpleinput" name="class_name" class="form-control" required>
+                                            <option value="">Pilih---</option>
+                                            @foreach($class as $data)
+                                            <option value="{{$data->class_name}}">{{$data->class_name}}</option>
+                                            @endforeach
+                                        </select>
+                                </div>
+                            </div>
 
                            
 

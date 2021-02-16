@@ -48,7 +48,14 @@
                               <div class="col-lg-12">
                                 <div class="form-group mb-3">
                                     <label for="simpleinput">Status Pernikahan </label>
-                                    <input type="text" id="simpleinput" name="marital_status" class="form-control" required>
+
+                                    <select type="text" id="simpleinput" name="marital_status" class="form-control" required>
+                                        <option value="">Pilih---</option>
+                                            @foreach($teacher as $data)
+                                            <option value="{{$data->tcr_marital_status}}">{{$data->tcr_marital_status}}</option>
+                                            @endforeach
+
+                                    </select>
                                 </div>
                             </div>
 
