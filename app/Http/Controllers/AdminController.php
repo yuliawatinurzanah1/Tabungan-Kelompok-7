@@ -278,7 +278,8 @@ class AdminController extends Controller
     public function updateClass(Request $request,$class_id)
     {
     	$class = Classes::find($class_id);
-    	
+    	   
+
     		$class->class_grade_id = $request->input('grade');
     		$class->class_major_id = $request->input('major');
     		$class->class_name = $request->input('class_name');
