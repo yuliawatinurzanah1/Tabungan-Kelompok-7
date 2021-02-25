@@ -262,12 +262,15 @@ class AdminController extends Controller
     
     	return redirect('admin/list-class');
     }
-    public function detailClass($id)
+    public function detailClass()
 	{
-		$classes = Classes::join('users','class_id','=','usr_id') 
-		->join('majors','major_id','=','class_major_id')->get();
+		$user= DB::table('users')->get();
+		$students = Student::join('users','stu_usr_id','=','usr_id') 
+		->join('classes','stu_class_id','=','class_id')
+		->join('majors','major_id','=','class_major_id')
+		->get();
 		$count=0;
-		return view ('admin.detail-class',['classes'=>$classes,'count'=>$count]);
+		return view ('admin.detail-class',['students'=>$students,'count'=>$count]);
 
 		
 	}
@@ -335,6 +338,7 @@ class AdminController extends Controller
 		->join('classes','stu_class_id','=','class_id')
 		->join('majors','major_id','=','class_major_id')
 		->join('savings','sav_class_id','=','sav_id')
+		
 		
 		->get();
 		$count=0;

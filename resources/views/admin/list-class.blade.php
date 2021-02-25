@@ -15,7 +15,7 @@
                         <tr>
                         	
                             <th>No</th>
-                            <th>KELAS</th>
+                            <th>ANGKATAN</th>
                             <!-- <th>JURUSAN</th> -->
                             <th>NAMA KELAS</th>
                             <th>ACTION</th>

@@ -15,30 +15,30 @@
                     <hr>
                     <div class="table-responsive">
                         <table class="table">
-                        @foreach ($classes as $classes)
+                        @foreach ($students as $students)
                             <tbody>
                                 <tr>
-                                    <td>Kelas</td>
+                                    <td>Angkatan</td>
                                     <td>:</td>
-                                    <td>{{$classes->class_grade_id}}</td>
+                                    <td>{{$students->class_grade_id}}</td>
                                 </tr>    
                                     
                                 <tr>
                                 
                                     <td>Jurusan</td>
                                     <td>:</td>
-                                    <td>{{$classes->major_name}}</td>
+                                    <td>{{$students->major_name}}</td>
                                 </tr>
                                     
                                 <tr>
                                     <td>Nama Kelas</td>
                                     <td>:</td>
-                                    <td>{{$classes->class_name}}</td>
+                                    <td>{{$students->class_name}}</td>
                                 </tr>
 
-                                
+                              
                             </tbody>
-                        @endforeach
+                          @endforeach
                         </table>
                     </div>
                 </div> <!-- end card body-->
