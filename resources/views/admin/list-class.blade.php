@@ -29,9 +29,6 @@
                         	
                             <td>{{++$count}}</td>
                             <td>{{$classes->class_grade_id}}</td>
-                            <!-- @foreach($majors as $majors) -->
-                            <!-- <td>{{$majors->major_name}}</td>   -->
-                            <!-- @endforeach -->
                             <td>{{$classes->class_name}}</td>
                             <td>
                                 <a href="/admin/list-class/detail/{{ $classes->class_id }}" class="btn btn-success btn-sm">detail</a>

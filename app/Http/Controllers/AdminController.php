@@ -232,17 +232,13 @@ class AdminController extends Controller
 //Managemen Kelas
 	public function listClass()
 	{
-		$classes = Classes::all();
+		
 
-		// $user= DB::table('users')->get();
-		// DB::table('classes')->get();
-		// $majors=DB::table('majors')->get();
-		// $classes = Classes::join('users','class_id','=','usr_id') 
-		// ->join('majors','major_id','=','class_major_id')
-		// ->get();
+		$user= DB::table('users')->get();
+		$classes= DB::table('classes')->get();
 		$count=0;
 		return view ('admin.list-class',['classes'=>$classes,'count'=>$count]);
-		// return view ('admin.list-class',['classes'=>$classes,'majors'=>$majors,'count'=>$count]);
+		
 	}
 
 	public function addClass()
