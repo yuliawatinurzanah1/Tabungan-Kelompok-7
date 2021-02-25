@@ -14,73 +14,25 @@
                         <thead>
                         <tr>
                             <th>No</th>
-                            <th>Kelas</th>
-                            <th>Jumlah Tabungan</th>
+                            <th>Kelas</th>                            
                             <th>Aksi</th>
                         </tr>
                         </thead>
 
                         <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>X Rekayasa Perangkat Lunak</td>
-                            <td>10.000.000</td>
-                            <td>
-                                <a  href="{{URL::to('/admin/list-tabungan/detail')}}" class= "btn btn-primary btn-sm">Detail</a>
-                            </td>
-
-                        </tr>
-
                          <tr>
-                            <td>2</td>
-                            <td>X Multimedia</td>
-                            <td>30.000.000</td>
+                         @foreach($students as $classes)   
+                            <td>{{++$count}}</td>
+                            <td>{{$classes->class_name}}</td>
+
+                            
+                            
                             <td>
                                 <a  href="{{URL::to('/admin/list-tabungan/detail')}}" class="btn btn-primary btn-sm">Detail</a>
                             </td>
 
                         </tr>
-
-                         <tr>
-                            <td>3</td>
-                            <td>XI Rekayasa Perangkat Lunak</td>
-                            <td>20.000.000</td>
-                            <td>
-                                <a  href="{{URL::to('/admin/list-tabungan/detail')}}" class="btn btn-primary btn-sm">Detail</a>
-                            </td>
-
-                        </tr>
-
-                         <tr>
-                            <td>4</td>
-                            <td>XI Multimedia</td>
-                            <td>20.000.000</td>
-                            <td>
-                                <a  href="{{URL::to('/admin/list-tabungan/detail')}}" class="btn btn-primary btn-sm">Detail</a>
-                            </td>
-
-                        </tr>
-
-                         <tr>
-                            <td>5</td>
-                            <td>XII Rekayasa Perangkat Lunak</td>
-                            <td>20.000.000</td>
-                            <td>
-                                <a  href="{{URL::to('/admin/list-tabungan/detail')}}" class="btn btn-primary btn-sm">Detail</a>
-                            </td>
-
-                        </tr>
-
-                         <tr>
-                            <td>6</td>
-                            <td>XII Multimedia</td>
-                            <td>20.000.000</td>
-                            <td>
-                                <a  href="{{URL::to('/admin/list-tabungan/detail')}}" class="btn btn-primary btn-sm">Detail</a>
-                            </td>
-
-                        </tr>
-
+                          @endforeach  
 
                         </tbody>
                     </table>

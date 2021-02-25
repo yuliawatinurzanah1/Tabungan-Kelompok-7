@@ -24,11 +24,12 @@
                                 </tr>    
                                     
                                 <tr>
+                                
                                     <td>Jurusan</td>
                                     <td>:</td>
-                                    <td>{{$classes->class_major_id}}</td>
+                                    <td>{{$classes->major_name}}</td>
                                 </tr>
-
+                                    
                                 <tr>
                                     <td>Nama Kelas</td>
                                     <td>:</td>

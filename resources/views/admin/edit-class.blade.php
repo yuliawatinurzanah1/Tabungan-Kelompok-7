@@ -35,8 +35,8 @@
                                     <label for="simpleinput">Jurusan</label>
                                     <select type="number" id="simpleinput" name="major" class="form-control" required>
                                         <option value="">Pilih---</option>
-                                            @foreach($class as $data)
-                                            <option value="{{$data->class_major_id}}">{{$data->class_major_id}}</option>
+                                            @foreach($major as $data)
+                                            <option value="{{$data->major_id}}">{{$data->major_name}}</option>
                                             @endforeach    
                                     </select>                                   
                                 </div>

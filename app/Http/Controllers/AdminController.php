@@ -33,6 +33,7 @@ class AdminController extends Controller
 	public function listStudent()
 	{
 		//mengambil data dari tabel siswa
+		$user= DB::table('users')->get();
 		$students = Student::join('users','stu_usr_id','=','usr_id') 
 		->join('classes','stu_class_id','=','class_id')
 		->get();
@@ -119,12 +120,12 @@ class AdminController extends Controller
 
 		return redirect('admin/list-student');
 	}
-	public function hapusStudent($id)
+	public function hapusStudent($stu_id)
 	{
 		//menghapus data siswa berdasarkan id
-		DB::table('students')
-		->where('stu_id',$id)
-		->delete();
+
+		$students= Student::where('stu_id',$stu_id);
+		$students->delete();
 
 		return redirect('admin/list-student');
 	}
@@ -218,12 +219,11 @@ class AdminController extends Controller
 			'usr_phone'       	 => $request->nomor_telepon]); 
 		return redirect('admin/list-teacher');
 	}
-	public function hapusTeacher($id)
+	public function hapusTeacher($tcr_id)
 	{
 		//menghapus data guru berdasarkan id
-		DB::table('teachers')
-		->where('tcr_id',$id)
-		->delete();
+		$teacher= Teacher::where('tcr_id',$tcr_id);
+		$teacher->delete();
 
 		return redirect('admin/list-teacher');
 	}
@@ -233,8 +233,16 @@ class AdminController extends Controller
 	public function listClass()
 	{
 		$classes = Classes::all();
+
+		// $user= DB::table('users')->get();
+		// DB::table('classes')->get();
+		// $majors=DB::table('majors')->get();
+		// $classes = Classes::join('users','class_id','=','usr_id') 
+		// ->join('majors','major_id','=','class_major_id')
+		// ->get();
 		$count=0;
 		return view ('admin.list-class',['classes'=>$classes,'count'=>$count]);
+		// return view ('admin.list-class',['classes'=>$classes,'majors'=>$majors,'count'=>$count]);
 	}
 
 	public function addClass()
@@ -246,6 +254,7 @@ class AdminController extends Controller
 	
 
 	public function SaveAddClass(Request $request){
+		
 			$class = new Classes();
 			$class->class_grade_id    = $request->grade;
 			$class->class_major_id 	  = $request->major;
@@ -254,10 +263,13 @@ class AdminController extends Controller
 			$class->save();
             Session::flash('sukses','Data Berhasil disimpan');
         return back();
+    
+    	return redirect('admin/list-class');
     }
     public function detailClass($id)
 	{
-		$classes = Classes::where('class_id',$id)->get();
+		$classes = Classes::join('users','class_id','=','usr_id') 
+		->join('majors','major_id','=','class_major_id')->get();
 		$count=0;
 		return view ('admin.detail-class',['classes'=>$classes,'count'=>$count]);
 
@@ -271,29 +283,31 @@ class AdminController extends Controller
     	// ;
     	$grade=DB::table('grades')->get();
     	$class = DB::table('classes')->get();
-
-    	return view ('admin.edit-class',['classes' => $classes,'class'=> $class,'grade'=>$grade]);
+    	$major=DB::table('majors')->get();	
+    	return view ('admin.edit-class',['classes' => $classes,'class'=> $class,'grade'=>$grade,'major'=>$major]);
     }
 
     public function updateClass(Request $request,$class_id)
     {
-    	$class = Classes::find($class_id);
-    	   
+  
+    	$classes = DB::table('classes')
+		->join('users','class_id','=','usr_id') 
+		->where('class_id',$class_id)
+		->update([	    	   
 
-    		$class->class_grade_id = $request->input('grade');
-    		$class->class_major_id = $request->input('major');
-    		$class->class_name = $request->input('class_name');
-    		$class->save();
-    
+    	'class_grade_id' => $request->input('grade'),
+    	'class_major_id' => $request->input('major'),
+    	'class_name' => $request->input('class_name')
+    		
+   		]); 
     	return redirect('admin/list-class');
     }
 
-	public function hapusClass($id)
+	public function hapusClass($class_id)
 	{
 		//menghapus data siswa berdasarkan id
-		DB::table('classes')
-		->where('class_id',$id)
-		->delete();
+		$classes= Classes::where('class_id',$class_id);
+		$classes->delete();
 
 		Session::flash('sukses','Data Berhasil disimpan');
         return back();
@@ -308,11 +322,27 @@ class AdminController extends Controller
 
 	public function listTabungan()
 	{
-		return view ('admin.list-tabungan');
+		$user= DB::table('users')->get();
+		$students = Student::join('users','stu_usr_id','=','usr_id') 
+		->join('classes','stu_class_id','=','class_id')
+		//->join('majors','major_id','=','class_major_id')
+		//->join('savings','sav_class_id','=','sav_id')
+		
+		->get();
+		$count=0;
+		return view ('admin.list-tabungan',['students'=>$students,'count'=>$count]);	
 	}
 	public function detailTabungan()
 	{
-		return view ('admin.detail-tabungan');
+		$user= DB::table('users')->get();
+		$students = Student::join('users','stu_usr_id','=','usr_id') 
+		->join('classes','stu_class_id','=','class_id')
+		->join('majors','major_id','=','class_major_id')
+		->join('savings','sav_class_id','=','sav_id')
+		
+		->get();
+		$count=0;
+		return view ('admin.detail-tabungan',['students'=>$students,'count'=>$count]);
 	}
 	public function detailTabunganSiswa()
 	{

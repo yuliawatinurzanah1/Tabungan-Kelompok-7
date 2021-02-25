@@ -19,11 +19,11 @@ class CreateStudentsTable extends Migration
            $table->unsignedBigInteger('stu_class_id');
            $table->string('stu_nis');
            $table->string('stu_school_year');
-
+           
            $table->foreign('stu_usr_id')->references('usr_id')->on('users');
            $table->foreign('stu_class_id')->references('class_id')->on('classes');
            $table->timestamps();
-           
+           $table->softdeletes();
         });
     }
 

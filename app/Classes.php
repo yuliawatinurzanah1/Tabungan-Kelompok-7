@@ -3,9 +3,13 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Classes extends Model
 {
-    protected $guarded = [];
-    protected $primaryKey = 'class_id';
+	use SoftDeletes;
+    protected $table='classes';
+    protected $primarykey ='class_id';
+    protected $dates = ['deleted_at'];
+    protected $guarded=[];
 }

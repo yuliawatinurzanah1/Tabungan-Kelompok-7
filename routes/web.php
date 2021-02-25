@@ -61,7 +61,7 @@ Route::group(['middleware' => ['role:admin']], function () {
     Route::get('/admin/edit-student/{id}' , 'AdminController@editStudent');
     Route::post('/admin/update-student/{id}' , 'AdminController@updateStudent');
 
- 	Route::get('/admin/student/hapus/{id}' , 'AdminController@hapusStudent');
+ 	Route::get('/admin/student/hapus/{stu_id}' , 'AdminController@hapusStudent');
 
  	//route teacher
     Route::get('/admin/list-teacher' , 'AdminController@listTeacher'); 
@@ -73,7 +73,7 @@ Route::group(['middleware' => ['role:admin']], function () {
     Route::get('/admin/edit-teacher/{id}' , 'AdminController@editTeacher');
     Route::post('/admin/update/{id}' , 'AdminController@updateTeacher');
 
- 	Route::get('/admin/teacher/hapus/{id}' , 'AdminController@hapusTeacher');
+ 	Route::get('/admin/teacher/hapus/{tcr_id}' , 'AdminController@hapusTeacher');
    
     
     //Route::get('/admin' , 'AdminController@addClass');
@@ -89,7 +89,7 @@ Route::group(['middleware' => ['role:admin']], function () {
     Route::get('/admin/edit-class/{id}' , 'AdminController@editClass');
     Route::post('/admin/update-class/{id}' , 'AdminController@updateClass');
 
-    Route::get('admin/class/hapus/{id}','AdminController@hapusClass');
+    Route::get('admin/class/hapus/{class_id}','AdminController@hapusClass');
 
 
    

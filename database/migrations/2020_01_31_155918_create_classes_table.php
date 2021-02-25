@@ -18,10 +18,11 @@ class CreateClassesTable extends Migration
             $table->unsignedBigInteger('class_grade_id');
             $table->unsignedBigInteger('class_major_id');
             $table->string('class_name');
-            $table->timestamps();
 
             $table->foreign('class_grade_id')->references('grade_id')->on('grades');
             $table->foreign('class_major_id')->references('major_id')->on('majors');
+            $table->timestamps();
+            $table->softdeletes();
 
         });
     }
