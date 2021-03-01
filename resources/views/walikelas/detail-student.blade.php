@@ -1,110 +1,61 @@
-@extends('layouts.admin-master')
+@extends('layouts.walikelas-master')
+
+@section('judul')
+    Detail Student
+@endsection
 
 @section('content')
+
     <div class="row">
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
 
-                	<button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal"
-                            data-target="#con-close-modal"> Detail Siswa 
-                    </button>
+                    <h3 class="text-primary"> Data Student </h3>
+                    <hr>
+                    <div class="table-responsive">
+                        <table class="table">
+                        @foreach($student as $student)
+                            <tbody>
+                                <tr>
+                                    <td>Nama</td>
+                                    <td>:</td>
+                                    <td>{{$student->usr_name}}</td>
+                                </tr>    
+                                    
+                                <tr>
+                                    <td>Email</td>
+                                    <td>:</td>
+                                    <td>{{$student->usr_email}}</td>
+                                </tr>
 
-                    <table id="basic-datatable" class="table dt-responsive nowrap">
-                        <thead>
-                        <tr>
-                            <th>No</th>
-                            <th>Nis</th>
-                            <th>Nama</th>
-                            <th>Kelas</th>
-                            <th>Jenis Kelamin</th>       
-                            <th>Tempat Lahir</th>
-                            <th>Tanggal Lahir</th>
-                            <th>Agama</th>
-                            <th>Alamat</th>
-                        </tr>
-                        </thead>
+                                <tr>
+                                    <td>NIS</td>
+                                    <td>:</td>
+                                    <td>{{$student->stu_nis}}</td>
+                                </tr>
 
-                        <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>12345</td>
-                            <td>Alika</td>
-                            <td>X Rekayasa Perangkat</td>
-                            <td>Perempuan</td>
-                            <td>Bandung</td>
-                            <td>18-11-2002</td>
-                            <td>Islam</td>
-                            <td>Junti</td>
+                                <tr>
+                                    <td>Tahun</td>
+                                    <td>:</td>
+                                    <td>{{$student->stu_school_year}}</td>
+                                </tr>
 
-                        </tr>
+                                <tr>
+                                    <td>Nomor Telepon</td>
+                                    <td>:</td>
+                                    <td>{{$student->usr_phone}}</td>
+                                </tr>
 
-                        <tr>
-                            <td>2</td>
-                            <td>12345</td>
-                            <td>Hania</td>
-                            <td>X Multimedia</td>
-                            <td>Perempuan</td>
-                            <td>Bandung</td>
-                            <td>18-11-2002</td>
-                            <td>Islam</td>
-                            <td>Junti</td>      
-                        </tr>
-
-                         <tr>
-                            <td>3</td>
-                            <td>12345</td>
-                            <td>Amelia</td>
-                            <td>XI Rekayasa Perangkat</td>
-                            <td>Perempuan</td>
-                            <td>Bandung</td>
-                            <td>18-11-2002</td>
-                            <td>Islam</td>
-                            <td>Junti</td>      
-                        </tr>
-
-                        <tr>
-                            <td>4</td>
-                            <td>12345</td>
-                            <td>Yuliawati</td>
-                            <td>XI Multimedia</td>
-                            <td>Perempuan</td>
-                            <td>Bandung</td>
-                            <td>18-11-2002</td>
-                            <td>Islam</td>
-                            <td>Junti</td>      
-                        </tr>
-
-                        <tr>
-                            <td>5</td>
-                            <td>12345</td>
-                            <td>Tania</td>
-                            <td>XI Rekayasa Perangkat</td>
-                            <td>Perempuan</td>
-                            <td>Bandung</td>
-                            <td>18-11-2002</td>
-                            <td>Islam</td>
-                            <td>Junti</td>      
-                        </tr>
-
-
-                        <tr>
-                            <td>5</td>
-                            <td>12345</td>
-                            <td>Jeni</td>
-                            <td>XII Multimedia</td>
-                            <td>Perempuan</td>
-                            <td>Bandung</td>
-                            <td>18-11-2002</td>
-                            <td>Islam</td>
-                            <td>Junti</td>      
-                        </tr>
-              
-
-
-                        </tbody>
-                    </table>
-
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        @endforeach
+                        </table>
+                    </div>
                 </div> <!-- end card body-->
             </div> <!-- end card -->
         </div><!-- end col-->

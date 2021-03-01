@@ -24,10 +24,10 @@ class AdminController extends Controller
 		return view ('admin.dashboard');
 	}
 	
-	public function profile()
-	{
-		return view ('admin.profile');
-	}
+	//public function profile()
+	//{
+	//	return view ('admin.profile');
+	//}
 
 //Management Siswa
 	public function listStudent()

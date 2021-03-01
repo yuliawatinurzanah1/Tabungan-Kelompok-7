@@ -27,22 +27,11 @@
                 </li>
 
                    <li>
-                    <a href="{{URL::to('/Walikelas/list-tabungan')}}">
+                    <a href="{{URL::to('/walikelas/list-tabungan')}}">
                         <i class="la la-edit"></i>
                         <span> Kelola Tabungan </span>
                     </a>
                 </li>
-
-                <li>
-                    <a href="{{URL::to('/walikelas/list-pemakaian-tabungan')}}">
-                        <i class="la la-edit"></i>
-                        <span> Kelola Pemakaian Rekening Tabungan </span>
-                    </a>
-                </li>
-                
-               
-
-                
 
                 <li>
 					 <a href="{{ route('logout') }}" class="dropdown-item notify-item" 

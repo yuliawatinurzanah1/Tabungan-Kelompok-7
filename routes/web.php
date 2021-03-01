@@ -40,15 +40,15 @@ Route::get('/account/profile/Staff', 'Auth\LoginController@LoginStaff');
 
 //Edit profile
 
-Route::get('/account/profile/Student/edit', 'Auth\EditController@EditStudent');
-Route::get('/account/profile/Teacher/edit', 'Auth\EditController@EditTeacher');
-Route::get('/account/profile/Staff/edit', 'Auth\EditController@EditStaff');
+//Route::get('/account/profile/Student/edit', 'Auth\EditController@EditStudent');
+//Route::get('/account/profile/Teacher/edit', 'Auth\EditController@EditTeacher');
+//Route::get('/account/profile/Staff/edit', 'Auth\EditController@EditStaff');
 
 //Route Untuk Student jika register dan login maka akan ke halaman ini
 Route::group(['middleware' => ['role:admin']], function () {
 	Route::get('/admin' , 'AdminController@dashboard');
 
-	//ADmin
+//ADmin
 	Route::get('/admin/dashboard' , 'AdminController@dashboard');
 
     Route::get('/admin/list-student' , 'AdminController@listStudent');
@@ -110,25 +110,22 @@ Route::group(['middleware' => ['role:admin']], function () {
     
     
 });
-
 //student
-Route::group(['middleware' => ['role:student', 'verified']], function () {
+	Route::group(['middleware' => ['role:student', 'verified']], function () {
 	Route::get('/student' , 'StudentController@dashboard');
     Route::get('/student/list-tabungan' , 'StudentController@listTabungan');
+    Route::get('/student/list-tabungan/detail/{id}' , 'StudentController@detailTabungan');
     
 });
 //walikelas
-Route::group(['middleware' => ['role:walikelas', 'verified']], function () {
+	Route::group(['middleware' => ['role:walikelas', 'verified']], function () {
 	Route::get('/walikelas' , 'WalikelasController@dashboard');
 
 	Route::get('/walikelas/list-student' , 'WalikelasController@listStudent');
-	Route::get('/walikelas/list-student/detail' , 'WalikelasController@detailStudent');
-
-	Route::get('/walikelas/list-class' , 'WalikelasController@listClass');
+	Route::get('/walikelas/list-student/detail/{id}' , 'WalikelasController@detailStudent');
 
 	Route::get('/walikelas/list-tabungan' , 'WalikelasController@listTabungan');
-	
-	Route::get('/walikelas/list-pemakaian-tabungan' , 'WalikelasController@listPemakaianTabungan');
+	Route::get('/walikelas/list-tabungan/detail/{id}' , 'WalikelasController@detailTabungan');
     
 });
 

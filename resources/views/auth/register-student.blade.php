@@ -32,7 +32,7 @@
                                 
                                 <div class="text-center w-75 m-auto">
                                     <a href="index.html">
-                                        <span><img src="assets/images/logo-dark.png" alt="" height="26"></span>
+                                        <span><img src="assets/images/mp.jpg" alt="" height="150"></span>
                                     </a>
                                     <p class="text-muted mb-4 mt-3">Apakah Kamu Belum Mempunyai Akun? <br> Buat akun terlebih dahulu</p>
                                 </div>
@@ -57,6 +57,83 @@
                                          <input id="usr_email" type="email" class="form-control @error('usr_email') is-invalid @enderror" name="usr_email" value="{{ old('usr_email') }}" autocomplete="usr_email" required>
 
 		                                @error('usr_email')
+		                                <span class="invalid-feedback" role="alert">
+		                                    <strong>{{ $message }}</strong>
+		                                </span>
+		                                @enderror
+                                    </div>
+
+                                     <div class="form-group">
+                                        <label for="nis">Nis</label>
+                                        <input id="stu_nis" type="number" class="form-control @error('stu_nis') is-invalid @enderror" name="stu_nis" value="{{ old('stu_nis') }}" autocomplete="stu_nis" autofocus required>
+
+		                                @error('stu_nis')
+		                                <span class="invalid-feedback" role="alert">
+		                                    <strong>{{ $message }}</strong>
+		                                </span>
+		                                @enderror
+                                    </div>
+
+                                     <div class="form-group">
+                                        <label for="schoolyear">School Year</label>
+                                        <input id="stu_school_year" type="text" class="form-control @error('stu_school_year') is-invalid @enderror" name="stu_school_year" value="{{ old('stu_school_year') }}" autocomplete="stu_school_year" autofocus required>
+
+		                                @error('stu_school_year')
+		                                <span class="invalid-feedback" role="alert">
+		                                    <strong>{{ $message }}</strong>
+		                                </span>
+		                                @enderror
+                                    </div>
+
+                                      <div class="form-group">
+                                        <label for="gender">Gender</label>
+                                        <input id="usr_gender" type="text" class="form-control @error('usr_gender') is-invalid @enderror" name="usr_gender" value="{{ old('usr_gender') }}" autocomplete="usr_gender" autofocus required>
+
+		                                @error('usr_gender')
+		                                <span class="invalid-feedback" role="alert">
+		                                    <strong>{{ $message }}</strong>
+		                                </span>
+		                                @enderror
+                                    </div>
+
+                                      <div class="form-group">
+                                        <label for="placeofbirth">Place Of Birth</label>
+                                        <input id="usr_place_of_birth" type="text" class="form-control @error('usr_place_of_birth') is-invalid @enderror" name="usr_place_of_birth" value="{{ old('usr_place_of_birth') }}" autocomplete="usr_place_of_birth" autofocus required>
+
+		                                @error('usr_place_of_birth')
+		                                <span class="invalid-feedback" role="alert">
+		                                    <strong>{{ $message }}</strong>
+		                                </span>
+		                                @enderror
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="dateofbirth">Date Of Birth</label>
+                                        <input id="usr_date_of_birth" type="text" class="form-control @error('usr_date_of_birth') is-invalid @enderror" name="usr_date_of_birth" value="{{ old('usr_date_of_birth') }}" autocomplete="usr_date_of_birth" autofocus required>
+
+		                                @error('usr_date_of_birth')
+		                                <span class="invalid-feedback" role="alert">
+		                                    <strong>{{ $message }}</strong>
+		                                </span>
+		                                @enderror
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="religion">Religion</label>
+                                        <input id="usr_religion" type="text" class="form-control @error('usr_religion') is-invalid @enderror" name="usr_religion" value="{{ old('usr_religion') }}" autocomplete="usr_religion" autofocus required>
+
+		                                @error('usr_religion')
+		                                <span class="invalid-feedback" role="alert">
+		                                    <strong>{{ $message }}</strong>
+		                                </span>
+		                                @enderror
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="address">Address</label>
+                                        <input id="usr_address" type="text" class="form-control @error('usr_address') is-invalid @enderror" name="usr_address" value="{{ old('usr_address') }}" autocomplete="usr_address" autofocus required>
+
+		                                @error('usr_address')
 		                                <span class="invalid-feedback" role="alert">
 		                                    <strong>{{ $message }}</strong>
 		                                </span>

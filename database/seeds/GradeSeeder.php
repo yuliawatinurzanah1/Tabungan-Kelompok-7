@@ -15,11 +15,13 @@ class GradeSeeder extends Seeder
         	'grade_id'         => '1',
         	'grade_name' 	   => 'X'
             ]); 
+
         DB::table('grades')->insert([
                 'grade_id'         => '2',
                 'grade_name' 	   => 'XI'
             ]);
-       DB::table('grades')->insert([
+        
+        DB::table('grades')->insert([
                 'grade_id'         => '3',
                 'grade_name' 	   => 'XII'
             ]);

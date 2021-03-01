@@ -1,8 +1,19 @@
 <?php
 
+
 namespace App\Http\Controllers;
+use App\User;
+use Hash;
+use Illuminate\Support\Carbon;
+use App\Classes;
+use App\Grade;
+use App\Major;
+use Session;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Student;
+use App\Teacher;
 
 class StudentController extends Controller
 {
@@ -15,9 +26,31 @@ class StudentController extends Controller
     {
     	return view('student.dashboard');
     }
-    public function listTabungan()
+
+//Managemen Tabungan    
+ 	public function listTabungan()
 	{
-		return view ('student.list-tabungan');
+		$user= DB::table('users')->get();
+		$students = Student::join('users','stu_usr_id','=','usr_id') 
+		->join('classes','stu_class_id','=','class_id')
+		//->join('majors','major_id','=','class_major_id')
+		//->join('savings','sav_class_id','=','sav_id')
+		
+		->get();
+		$count=0;
+		return view ('student.list-tabungan',['students'=>$students,'count'=>$count]);	
 	}
-  	
+	public function detailTabungan()
+	{
+		$user= DB::table('users')->get();
+		$students = Student::join('users','stu_usr_id','=','usr_id') 
+		->join('classes','stu_class_id','=','class_id')
+		->join('majors','major_id','=','class_major_id')
+		->join('savings','sav_class_id','=','sav_id')
+		
+		
+		->get();
+		$count=0;
+		return view ('student.detail-tabungan',['students'=>$students,'count'=>$count]);
+	}
 }

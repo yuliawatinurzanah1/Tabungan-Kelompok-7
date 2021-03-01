@@ -15,6 +15,7 @@ class MajorSeeder extends Seeder
         	'major_id'         => '1',
         	'major_name' 	   => 'Rekayasa Perangkat Lunak'
             ]);
+        
         DB::table('majors')->insert([
                 'major_id'         => '2',
                 'major_name' 	   => 'Multimedia'

@@ -31,8 +31,8 @@
                             <div class="card-body p-4">
                                 
                                 <div class="text-center w-75 m-auto">
-                                    <a href="index.html">
-                                        <span><img src="assets/images/logo-dark.png" alt="" height="26"></span>
+                                     <a href="index.html">
+                                        <span><img src="assets/images/mp.jpg" alt="" height="150"></span>
                                     </a>
                                     <p class="text-muted mb-4 mt-3">Apakah Kamu Belum Mempunyai Akun? <br> Buat akun terlebih dahulu</p>
                                 </div>
@@ -57,6 +57,28 @@
                                          <input id="usr_email" type="email" class="form-control @error('usr_email') is-invalid @enderror" name="usr_email" value="{{ old('usr_email') }}" autocomplete="usr_email">
 
                                         @error('usr_email')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
+                                    </div>
+
+                                     <div class="form-group">
+                                        <label for="nik">Nik</label>
+                                         <input id="tcr_nik" type="number" class="form-control @error('tcr_nik') is-invalid @enderror" name="tcr_nik" value="{{ old('tcr_nik') }}" autocomplete="tcr_nik">
+
+                                        @error('tcr_nik')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
+                                    </div>
+
+                                     <div class="form-group">
+                                        <label for="maritalstatus">Marital Status</label>
+                                         <input id="tcr_marital_status" type="text" class="form-control @error('tcr_marital_status') is-invalid @enderror" name="tcr_marital_status" value="{{ old('tcr_marital_status') }}" autocomplete="tcr_marital_status">
+
+                                        @error('tcr_marital_status')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>

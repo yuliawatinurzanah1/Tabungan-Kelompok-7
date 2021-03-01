@@ -1,4 +1,4 @@
-@extends('layouts.student-master')
+@extends('layouts.walikelas-master')
 
 @section('judul')
     Detail Tabungan

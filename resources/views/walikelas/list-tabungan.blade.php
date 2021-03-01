@@ -1,48 +1,39 @@
-@extends('layouts.admin-master')
-
+@extends('layouts.walikelas-master')
 @section('judul')
-    List tabungan
+    List Tabungan
 @endsection
-
 @section('content')
      <div class="row">
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
 
+                
+
                     <table id="basic-datatable" class="table dt-responsive nowrap">
                         <thead>
                         <tr>
                             <th>No</th>
-                            <th>Nama Kelas</th>
-                            <th>Jumlah Tabungan</th>
+                            <th>Kelas</th>                            
                             <th>Aksi</th>
                         </tr>
                         </thead>
 
                         <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>XII  RPL 1</td>
-                            <td>10.000.000</td>
-                            <td>
-                                <a  href="{{URL::to('/walikelas/list-tabungan/detail')}}" class= "btn btn-primary btn-sm">Detail</a>
-                            </td>
-
-                        </tr>
-
                          <tr>
-                            <td>2</td>
-                            <td>XII  RPL 1</td>
-                            <td>30.000.000</td>
+                         @foreach($students as $classes)   
+                            <td>{{++$count}}</td>
+                            <td>{{$classes->class_name}}</td>
+
+                            
+                            
                             <td>
-                                <a  href="{{URL::to('/walikelas/list-tabungan/detail')}}" class="btn btn-primary btn-sm">Detail</a>
+                                <a  href="{{URL::to('/walikelas/list-tabungan/detail/id')}}" class="btn btn-primary btn-sm">Detail</a>
+                                
                             </td>
 
                         </tr>
-
-                        
-
+                          @endforeach  
 
                         </tbody>
                     </table>
@@ -53,3 +44,6 @@
     </div>
    
 @endsection
+
+
+

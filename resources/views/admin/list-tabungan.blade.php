@@ -29,6 +29,7 @@
                             
                             <td>
                                 <a  href="{{URL::to('/admin/list-tabungan/detail')}}" class="btn btn-primary btn-sm">Detail</a>
+                                
                             </td>
 
                         </tr>

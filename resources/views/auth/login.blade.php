@@ -31,7 +31,7 @@
                                 
                                 <div class="text-center w-75 m-auto">
                                     <a href="index.html">
-                                        <span><img src="assets/images/" alt="" height="26"></span>
+                                        <span><img src="assets/images/mp.jpg" alt="" height="150"></span>
                                     </a>
                                     <p class="text-muted mb-4 mt-3">Silahkan Login Terlebih Dahulu</p>
                                 </div>
