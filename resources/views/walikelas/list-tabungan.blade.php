@@ -8,27 +8,31 @@
             <div class="card">
                 <div class="card-body">
 
-                
-
                     <table id="basic-datatable" class="table dt-responsive nowrap">
+
+                    	<a href="/walikelas/create-tabungan" class="btn btn-primary">Tambah</a>
+
                         <thead>
                         <tr>
                             <th>No</th>
-                            <th>Kelas</th>                            
+                            <th>Nama</th>                            
                             <th>Aksi</th>
                         </tr>
                         </thead>
 
                         <tbody>
                          <tr>
-                         @foreach($students as $classes)   
+                         @foreach($savings as $saving)   
                             <td>{{++$count}}</td>
-                            <td>{{$classes->class_name}}</td>
+                            <td>{{$saving->usr_name}}</td>
 
-                            
-                            
                             <td>
-                                <a  href="{{URL::to('/walikelas/list-tabungan/detail/id')}}" class="btn btn-primary btn-sm">Detail</a>
+                               <a href="/walikelas/list-tabungan/detail/{{ $saving->stu_id }}" class="btn btn-success btn-sm">detail</a>
+
+                               <a href="/admin/edit-tabungan/{{ $saving->stu_id }}" class="btn btn-warning btn-sm">Edit</a>
+
+                               <a href="/admin/tabungan/hapus/{{ $saving->stu_id }}" class="btn btn-danger btn-sm">Delete</a>
+                               
                                 
                             </td>
 

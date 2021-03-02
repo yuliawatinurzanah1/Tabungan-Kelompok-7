@@ -13,6 +13,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Student;
 use App\Teacher;
+use App\Saving;
+use Auth;
 
 class WalikelasController extends Controller
 {
@@ -43,33 +45,44 @@ class WalikelasController extends Controller
 		
 		return view ('walikelas.detail-student',['student'=>$student]);
 	}
+	
     
 //Managemen Tabungan    
  	public function listTabungan()
 	{
+		//dd(Auth()->user()->usr_id);
 		$user= DB::table('users')->get();
-		$students = Student::join('users','stu_usr_id','=','usr_id') 
+		$savings = Saving::join('students','sav_stu_id','=','stu_id')
 		->join('classes','stu_class_id','=','class_id')
+		->join('users','stu_usr_id','=','usr_id') 
+		
 		//->join('majors','major_id','=','class_major_id')
 		//->join('savings','sav_class_id','=','sav_id')
 		
 		->get();
 		$count=0;
-		return view ('walikelas.list-tabungan',['students'=>$students,'count'=>$count]);	
+		return view ('walikelas.list-tabungan',['savings'=>$savings,'count'=>$count]);	
 	}
-	public function detailTabungan()
+	public function detailTabungan($id)
 	{
 		$user= DB::table('users')->get();
-		$students = Student::join('users','stu_usr_id','=','usr_id') 
+		$savings = Saving::join('students','sav_stu_id','=','stu_id')
 		->join('classes','stu_class_id','=','class_id')
+		->join('users','stu_usr_id','=','usr_id') 
 		->join('majors','major_id','=','class_major_id')
-		->join('savings','sav_class_id','=','sav_id')
-		
-		
+		->where('stu_id',$id)
+
 		->get();
 		$count=0;
-		return view ('walikelas.detail-tabungan',['students'=>$students,'count'=>$count]);
+		return view ('walikelas.detail-tabungan',['savings'=>$savings,'count'=>$count]);
 	}
+
+	
+	
+
+	
+
+	
   	
 }
   

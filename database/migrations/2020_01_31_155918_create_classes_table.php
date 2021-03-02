@@ -17,7 +17,7 @@ class CreateClassesTable extends Migration
             $table->bigIncrements('class_id');
             $table->unsignedBigInteger('class_grade_id');
             $table->unsignedBigInteger('class_major_id');
-            $table->string('class_name');
+            $table->unsignedBigInteger('class_number');
 
             $table->foreign('class_grade_id')->references('grade_id')->on('grades');
             $table->foreign('class_major_id')->references('major_id')->on('majors');

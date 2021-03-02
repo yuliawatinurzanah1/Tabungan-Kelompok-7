@@ -254,7 +254,7 @@ class AdminController extends Controller
 			$class = new Classes();
 			$class->class_grade_id    = $request->grade;
 			$class->class_major_id 	  = $request->major;
-			$class->class_name 		  = $request->class_name;
+			$class->class_number 	  = $request->class_number;
 			//dd($class);
 			$class->save();
             Session::flash('sukses','Data Berhasil disimpan');
@@ -296,7 +296,7 @@ class AdminController extends Controller
 
     	'class_grade_id' => $request->input('grade'),
     	'class_major_id' => $request->input('major'),
-    	'class_name' => $request->input('class_name')
+    	'class_number'   => $request->input('class_number')
     		
    		]); 
     	return redirect('admin/list-class');

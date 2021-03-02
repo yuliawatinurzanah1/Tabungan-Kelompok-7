@@ -124,8 +124,18 @@ Route::group(['middleware' => ['role:admin']], function () {
 	Route::get('/walikelas/list-student' , 'WalikelasController@listStudent');
 	Route::get('/walikelas/list-student/detail/{id}' , 'WalikelasController@detailStudent');
 
+	//FITUR KELOLA TABUNGAN
+
 	Route::get('/walikelas/list-tabungan' , 'WalikelasController@listTabungan');
 	Route::get('/walikelas/list-tabungan/detail/{id}' , 'WalikelasController@detailTabungan');
+
+	Route::get('/walikelas/create-tabungan' , 'WalikelasController@addTabungan');
+    Route::post('/walikelas/create-tabungan' , 'WalikelasController@saveTabungan');
+    
+    Route::get('/walikelas/edit-tabungan/{id}' , 'walikelasController@editTabungan');
+    Route::post('/walikelas/update-tabungan/{id}' , 'walikelasController@updateTabungan');
+
+ 	Route::get('/walikelas/tabungan/hapus/{stu_id}' , 'WalikelasController@hapusTabungan');
     
 });
 

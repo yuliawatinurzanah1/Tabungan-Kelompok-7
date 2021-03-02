@@ -15,24 +15,37 @@
                     <hr>
                     <div class="table-responsive">
                         <table class="table">
-                        @foreach($students as $students)
+                        @foreach($savings as $savings)
                             <tbody>
+
+                            	 <tr>
+                                    <td>Nama</td>
+                                    <td>:</td>
+                                    <td>{{$savings->usr_name}}</td>
+                                </tr> 
+
                                 <tr>
                                     <td>Kelas</td>
                                     <td>:</td>
-                                    <td>{{$students->class_grade_id}}</td>
+                                    <td>{{$savings->class_grade_id}}</td>
                                 </tr>    
                                     
                                 <tr>
                                     <td>Jurusan</td>
                                     <td>:</td>
-                                    <td>{{$students->major_name}}</td>
+                                    <td>{{$savings->major_name}}</td>
                                 </tr>
 
                                 <tr>
-                                    <td>Tabungan</td>
+                                    <td>Nominal</td>
                                     <td>:</td>
-                                    <td>{{$students->sav_amount}}</td>
+                                    <td>{{$savings->sav_amount}}</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Tanggal Menabung</td>
+                                    <td>:</td>
+                                    <td>{{$savings->sav_date}}</td>
                                 </tr>
 
                             </tbody>
