@@ -34,8 +34,8 @@
                                     <td>Jurusan</td>
                                     <td>:</td>
                                     <td>{{$savings->major_name}}</td>
-                                </tr>
-
+                                </tr>    
+                             
                                 <tr>
                                     <td>Nominal</td>
                                     <td>:</td>

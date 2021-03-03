@@ -77,14 +77,75 @@ class WalikelasController extends Controller
 		return view ('walikelas.detail-tabungan',['savings'=>$savings,'count'=>$count]);
 	}
 
-	
-	
+		//CRUD TABUNGAN
+	public function addTabungan()
+	{
+		$students = Student::all();
+		$classes = Classes::all();
+		//$savings = Savings::all();
+		//$saving = DB::table('savings')->get();	 
+		//mengirim data tabungan ke view index
+		return view ('walikelas.add-tabungan', compact('classes','students'));
+	}
 
+	public function saveTabungan(Request $request)
+	{
+		
+			$saving = new Saving;
+				$saving->sav_stu_id       = $request->stu_id;
+				$saving->sav_class_id     = $request->grade;
+				$saving->sav_amount       = $request->sav_amount;
+				$saving->sav_date		  = $request->sav_date;
+				$saving->save();	
+		
+				Session::flash('sukses','Data Berhasil disimpan');
+        return back();
+        //mengirim data siswa ke view index
+		return redirect('walikelas/add-tabungan');
+	}
 	
+		public function editTabungan($id)
+	{
+		//mengambil data tabungan sesuai id yg dipilih
+		$saving = DB::table('savings')
+		->join('students','sav_stu_id','=','stu_id')
+		->join('classes','stu_class_id','=','class_id')
+		->join('users','stu_usr_id','=','usr_id') 
+		->join('majors','major_id','=','class_major_id')
+		->where('stu_id',$id)
+
+		->get();
+		
+		
+		$classes = Classes::all();
+		
+		//passingg data tabungan yg di dapat ke view edit-tabungan.blade.php
+		return view('walikelas.edit-tabungan',['saving' => $saving,'classes' => $classes]);
+			
+	}
+	public function updateTabungan(Request $request,$id)
+	{
+		//dd($request);
+		//update data tabungan
+		$saving = DB::table('savings')
+		->join('students','sav_stu_id','=','stu_id')
+		->join('classes','stu_class_id','=','class_id')
+		->join('users','stu_usr_id','=','usr_id') 
+		->join('majors','major_id','=','class_major_id')
+		->where('tcr_id',$id)
+		->update([
+
+			'sav_class_id'	 => $request->grade,
+			'sav_amount '	 => $request->sav_amount,
+			'sav_date'	  	 => $request->sav_date]);
+			
+		return redirect('walikelas/list-tabungan');
+	}
+}
 
 	
   	
-}
+
   
 
    

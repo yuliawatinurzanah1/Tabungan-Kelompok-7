@@ -29,11 +29,10 @@
                             <td>
                                <a href="/walikelas/list-tabungan/detail/{{ $saving->stu_id }}" class="btn btn-success btn-sm">detail</a>
 
-                               <a href="/admin/edit-tabungan/{{ $saving->stu_id }}" class="btn btn-warning btn-sm">Edit</a>
+                               <a href="/walikelas/edit-tabungan/{{ $saving->stu_id }}" class="btn btn-warning btn-sm">edit</a>
 
-                               <a href="/admin/tabungan/hapus/{{ $saving->stu_id }}" class="btn btn-danger btn-sm">Delete</a>
-                               
-                                
+                               <a href="/walikelas/tabungan/hapus/{{ $saving->stu_id }}" class="btn btn-danger btn-sm">detail</a>
+        
                             </td>
 
                         </tr>
