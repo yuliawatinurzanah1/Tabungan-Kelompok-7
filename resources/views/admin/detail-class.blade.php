@@ -18,25 +18,17 @@
                         @foreach ($students as $students)
                             <tbody>
                                 <tr>
-                                    <td>Angkatan</td>
+                                    <td>Kelas</td>
                                     <td>:</td>
                                     <td>{{$students->class_grade_id}}</td>
                                 </tr>    
                                     
                                 <tr>
-                                
                                     <td>Jurusan</td>
                                     <td>:</td>
                                     <td>{{$students->major_name}}</td>
                                 </tr>
-                                    
-                                <tr>
-                                    <td>Nama Kelas</td>
-                                    <td>:</td>
-                                    <td>{{$students->class_name}}</td>
-                                </tr>
-
-                              
+                                  
                             </tbody>
                           @endforeach
                         </table>

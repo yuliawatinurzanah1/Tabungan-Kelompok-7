@@ -32,11 +32,6 @@
                             <td>{{$students->major_name}}</td>
                             <td>{{$students->sav_amount}}</td>
 
-                            <td>
-                                <a  href="{{URL::to('/admin/list-tabungan/detail')}}" class="btn btn-primary btn-sm">Detail</a>
-                            </td>
-                       
-
 
                           @endforeach  
         				</tbody>

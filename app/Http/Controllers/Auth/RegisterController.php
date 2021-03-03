@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Mail\SendMail;
 use Illuminate\Support\Str;
 use Auth;
+use App\Student;
 
 class RegisterController extends Controller
 {
@@ -90,16 +91,38 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         // dd($data);
+         
+
         $user = User::create([
-            'usr_name' => $data['usr_name'],
-            'usr_email' => $data['usr_email'],
-            'usr_phone' => $data['usr_phone'],
-            'usr_password' => Hash::make($data['password']),
+            'usr_name'			 => $data['usr_name'],
+            'usr_email' 		 => $data['usr_email'],
+            'usr_phone' 		 => $data['usr_phone'],
+            'usr_password' 		 => Hash::make($data['password']),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
-            'usr_is_active' => true,
+            'usr_is_active'		 => true,
+            'usr_gender'		 => $data['usr_gender'],
+            'usr_place_of_birth' => $data['usr_place_of_birth'],
+            'usr_date_of_birth'  => $data['usr_date_of_birth'],
+            'usr_religion'		 => $data['usr_religion'],
+            'usr_addres'         => $data['usr_addres'],
+            
         ]);
 
+       
+
         if ($data['role'] == 1) {
+        	 $students = Student::create([
+        	'stu_usr_id'	  => $user->usr_id,
+        	'stu_nis'		  => $data['stu_nis'],
+        	'stu_class_id'	  => $data['stu_class_id'],	
+        	'stu_school_year' => $data['stu_school_year']
+
+        	]);
+
+        	$grades = Grade::create([
+        	'grade_name'	  => $data['grade_name']
+        	]); 
+
             $user->assignRole('student');
             $user->created_by = $user->usr_id;
         } elseif ($data['role'] == 2) {

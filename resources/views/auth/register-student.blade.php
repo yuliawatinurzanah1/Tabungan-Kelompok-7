@@ -74,6 +74,17 @@
 		                                @enderror
                                     </div>
 
+										<div class="form-group">
+											<label for="simpleinput">Kelas</label>
+												<select type="text" id="simpleinput" name="grade" class="form-control" required>
+												<option value="">Pilih kelas---</option>
+										@foreach($grades as $data)
+												<option value="{{$data->grade_id}}">{{$data->grade_id}}</option>
+										@endforeach
+												</select>
+										</div>
+									</div>
+
                                      <div class="form-group">
                                         <label for="schoolyear">School Year</label>
                                         <input id="stu_school_year" type="text" class="form-control @error('stu_school_year') is-invalid @enderror" name="stu_school_year" value="{{ old('stu_school_year') }}" autocomplete="stu_school_year" autofocus required>
@@ -130,10 +141,10 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="address">Address</label>
-                                        <input id="usr_address" type="text" class="form-control @error('usr_address') is-invalid @enderror" name="usr_address" value="{{ old('usr_address') }}" autocomplete="usr_address" autofocus required>
+                                        <label for="addres">Addres</label>
+                                        <input id="usr_addres" type="text" class="form-control @error('usr_addres') is-invalid @enderror" name="usr_addres" value="{{ old('usr_addres') }}" autocomplete="usr_addres" autofocus required>
 
-		                                @error('usr_address')
+		                                @error('usr_addres')
 		                                <span class="invalid-feedback" role="alert">
 		                                    <strong>{{ $message }}</strong>
 		                                </span>

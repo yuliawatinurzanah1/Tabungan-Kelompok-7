@@ -236,6 +236,7 @@ class AdminController extends Controller
 
 		$user= DB::table('users')->get();
 		$classes= DB::table('classes')->get();
+		
 		$count=0;
 		return view ('admin.list-class',['classes'=>$classes,'count'=>$count]);
 		

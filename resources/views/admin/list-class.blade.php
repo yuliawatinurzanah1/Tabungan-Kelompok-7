@@ -15,9 +15,9 @@
                         <tr>
                         	
                             <th>No</th>
-                            <th>ANGKATAN</th>
-                            <!-- <th>JURUSAN</th> -->
-                            <th>NAMA KELAS</th>
+                            <th>KELAS</th>
+                            <th>JURUSAN</th>
+                            <th>NOMOR KELAS</th>
                             <th>ACTION</th>
                             
                         </tr>
@@ -29,6 +29,7 @@
                         	
                             <td>{{++$count}}</td>
                             <td>{{$classes->class_grade_id}}</td>
+                            <td>{{$classes->class_major_id}}</td>
                             <td>{{$classes->class_number}}</td>
                             <td>
                                 <a href="/admin/list-class/detail/{{ $classes->class_id }}" class="btn btn-success btn-sm">detail</a>
