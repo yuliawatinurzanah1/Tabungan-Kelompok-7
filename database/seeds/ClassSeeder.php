@@ -49,7 +49,7 @@ class ClassSeeder extends Seeder
           DB::table('classes')->insert([
             'class_id'          => '6',
             'class_grade_id' 	=> '3',
-            'class_major_id'    => '2',
+            'class_major_id'    => '1',
             'class_number'      => '2' 
             ]);
 

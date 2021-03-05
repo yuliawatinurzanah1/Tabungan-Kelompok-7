@@ -12,7 +12,9 @@ use Illuminate\Support\Facades\Mail;
 use App\Mail\SendMail;
 use Illuminate\Support\Str;
 use Auth;
+use Illuminate\Support\Facades\DB;
 use App\Student;
+use App\Classes;
 
 class RegisterController extends Controller
 {
@@ -28,6 +30,7 @@ class RegisterController extends Controller
     */
     public function registerStudent()
     {
+    	$class= DB::table('classes')->get();
         return view('auth.register-student');
     }
 
@@ -118,10 +121,6 @@ class RegisterController extends Controller
         	'stu_school_year' => $data['stu_school_year']
 
         	]);
-
-        	$grades = Grade::create([
-        	'grade_name'	  => $data['grade_name']
-        	]); 
 
             $user->assignRole('student');
             $user->created_by = $user->usr_id;

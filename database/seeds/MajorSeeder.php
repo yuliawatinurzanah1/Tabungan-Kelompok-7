@@ -17,9 +17,9 @@ class MajorSeeder extends Seeder
             ]);
         
         DB::table('majors')->insert([
-                'major_id'         => '2',
-                'major_name' 	   => 'Multimedia'
-                ]);
+            'major_id'         => '2',
+            'major_name' 	   => 'Multimedia'
+            ]);
                 
     }
 }

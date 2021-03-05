@@ -71,7 +71,7 @@ class UserSeeder extends Seeder
         $admin->assignRole('admin');
 
           $walikelas = User::create([
-             'usr_name' => 'Agfue Nurani Hanifah',
+             'usr_name' => 'Agfie Nurani Hanifah',
              'usr_email' => 'agfie@gmail.com',
              'usr_phone' => '08213456783',
              'usr_password' => Hash::make('walikelas123'),
@@ -165,7 +165,7 @@ class UserSeeder extends Seeder
 
         $siswa = User::create([
             'usr_name' => 'Yuliawati Nur Zanah',
-            'usr_email' => 'yuliawatinurzanah@gmail.com',
+            'usr_email' => 'yuliawati@gmail.com',
             'usr_phone' => '08213456788',
             'usr_password' => Hash::make('yuliawati1'),
             'usr_gender' => 'Perempuan',
