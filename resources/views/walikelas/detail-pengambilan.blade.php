@@ -1,4 +1,4 @@
-@extends('layouts.admin-master')
+@extends('layouts.walikelas-master')
 
 @section('judul')
     Detail Tabungan
@@ -15,34 +15,38 @@
                     <hr>
                     <div class="table-responsive">
                         <table class="table">
-                        @foreach($students as $students) 
+                        @foreach($saving_usages as $saving_usages)
                             <tbody>
 
                             	 <tr>
-                                    <td>No</td>
+                                    <td>Nama</td>
                                     <td>:</td>
-                                    <td>{{++$count}}</td>
+                                    <td>{{$saving_usages->usr_name}}</td>
                                 </tr> 
 
                                 <tr>
                                     <td>Kelas</td>
                                     <td>:</td>
-                                    <td>{{$students->class_grade_id}}</td>
+                                    <td>{{$saving_usages->class_grade_id}}</td>
                                 </tr>    
                                     
                                 <tr>
                                     <td>Jurusan</td>
                                     <td>:</td>
-                                    <td>{{$students->major_name}}</td>
+                                    <td>{{$saving_usages->major_name}}</td>
                                 </tr>    
                              
                                 <tr>
-                                    <td>Tabungan</td>
+                                    <td>Nominal</td>
                                     <td>:</td>
-                                    <td>{{$students->sav_amount}}</td>
+                                    <td>{{$saving_usages->usa_amount}}</td>
                                 </tr>
 
-                               
+                                <tr>
+                                    <td>Tanggal Pengambilan</td>
+                                    <td>:</td>
+                                    <td>{{$saving_usages->usa_date}}</td>
+                                </tr>
 
                             </tbody>
                         @endforeach

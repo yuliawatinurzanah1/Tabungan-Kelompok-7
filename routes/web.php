@@ -136,6 +136,18 @@ Route::group(['middleware' => ['role:admin']], function () {
     Route::post('/walikelas/update-tabungan/{id}' , 'walikelasController@updateTabungan');
 
  	Route::get('/walikelas/tabungan/hapus/{stu_id}' , 'WalikelasController@hapusTabungan');
+
+ 	//FITUR PENGAMBILAN TABUNGAN
+ 	Route::get('/walikelas/list-pengambilan' , 'WalikelasController@listPengambilan');
+	Route::get('/walikelas/list-pengambilan/detail/{id}' , 'WalikelasController@detailPengambilan');
+
+	Route::get('/walikelas/create-pengambilan' , 'WalikelasController@addPengambilan');
+    Route::post('/walikelas/create-pengambilan' , 'WalikelasController@savePengambilan');
+    
+    Route::get('/walikelas/edit-pengambilan/{id}' , 'walikelasController@editPengambilan');
+    Route::post('/walikelas/update-pengambilan/{id}' , 'walikelasController@updatePengambilan');
+
+ 	Route::get('/walikelas/pengambilan/hapus/{stu_id}' , 'WalikelasController@hapusPengambilan');
     
 });
 

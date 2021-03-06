@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\DB;
 use App\Student;
 use App\Teacher;
 use App\Saving;
+use App\Saving_usage;
 use Auth;
 
 class WalikelasController extends Controller
@@ -141,6 +142,51 @@ class WalikelasController extends Controller
 			
 		return redirect('walikelas/list-tabungan');
 	}
+
+	//Managemen Pengambilan Tabungan    
+ 	public function listPengambilan()
+	{
+		$user= DB::table('users')->get();
+		$saving_usages = Saving_usage::join('students','usa_stu_id','=','stu_id')
+		->join('classes','stu_class_id','=','class_id')
+		->join('users','stu_usr_id','=','usr_id') 
+		
+		//->join('majors','major_id','=','class_major_id')
+		//->join('savings','sav_class_id','=','sav_id')
+		
+		->get();
+		$count=0;
+		return view ('walikelas.list-Pengambilan',['saving_usages'=>$saving_usages,'count'=>$count]);	
+	}
+
+	public function detailPengambilan($id)
+	{
+		$user= DB::table('users')->get();
+		$saving_usages = Saving_usage::join('students','usa_stu_id','=','stu_id')
+		->join('classes','stu_class_id','=','class_id')
+		->join('users','stu_usr_id','=','usr_id') 
+		->join('majors','major_id','=','class_major_id')
+		->where('stu_id',$id)
+
+		->get();
+		$count=0;
+		return view ('walikelas.detail-pengambilan',['saving_usages'=>$saving_usages,'count'=>$count]);
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 	

@@ -8,11 +8,11 @@
 
             <ul class="metismenu" id="side-menu">
 
-                <li class="menu-title">Navigation</li>
+                <li class="menu-title">Student</li>
 
                 <li>
-                    <a href="{{URL::to('/admin')}}">
-                        <i class="la la-home"></i>
+                    <a href="{{URL::to('/student')}}">
+                        <i class="la la-edit"></i>
                         <span> Dashboard </span>
                     </a>
                 </li>
@@ -21,11 +21,11 @@
                 <li>
                     <a href="{{URL::to('/student/list-tabungan')}}">
                         <i class="la la-edit"></i>
-                        <span> Saldo Rekening Tabungan </span>
+                        <span> Saldo Tabungan </span>
                     </a>
                 </li>
 
-                <li>
+				<li>
 					 <a href="{{ route('logout') }}" class="dropdown-item notify-item" 
                			 onclick="event.preventDefault();
                			 document.getElementById('logout-form').submit();">
@@ -33,10 +33,10 @@
                     		<span>Logout</span>
                		 </a>
 
-                		<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                		 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                 		    @csrf
                 		</form>
-				</li>       
+				</li>                
 
             </ul>
 

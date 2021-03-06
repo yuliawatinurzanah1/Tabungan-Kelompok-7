@@ -33,6 +33,13 @@
                     </a>
                 </li>
 
+                 <li>
+                    <a href="{{URL::to('/walikelas/list-pengambilan')}}">
+                        <i class="la la-edit"></i>
+                        <span> Kelola Pengambilan Tabungan </span>
+                    </a>
+                </li>
+
                 <li>
 					 <a href="{{ route('logout') }}" class="dropdown-item notify-item" 
                			 onclick="event.preventDefault();

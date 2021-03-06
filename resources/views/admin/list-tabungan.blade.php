@@ -12,7 +12,8 @@
                         <thead>
                         <tr>
                             <th>No</th>
-                            <th>Kelas</th>                            
+                            <th>Kelas</th>  
+                            <th>Jurusan</th>                           
                             <th>Aksi</th>
                         </tr>
                         </thead>
@@ -23,6 +24,7 @@
                          @foreach($students as $classes)   
                             <td>{{++$count}}</td>
                             <td>{{$classes->class_name}}</td>
+                            <td>{{$classes->major_name}}</td>
 
                             <td>
                                 <a  href="{{URL::to('/admin/list-tabungan/detail')}}" class="btn btn-primary btn-sm">Detail</a>

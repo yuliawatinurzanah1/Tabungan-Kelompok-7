@@ -47,11 +47,6 @@
                                     <td>{{$student->usr_phone}}</td>
                                 </tr>
 
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
                             </tbody>
                         @endforeach
                         </table>

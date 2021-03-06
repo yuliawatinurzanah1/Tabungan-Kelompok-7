@@ -325,7 +325,7 @@ class AdminController extends Controller
 		$user= DB::table('users')->get();
 		$students = Student::join('users','stu_usr_id','=','usr_id') 
 		->join('classes','stu_class_id','=','class_id')
-		//->join('majors','major_id','=','class_major_id')
+		->join('majors','major_id','=','class_major_id')
 		//->join('savings','sav_class_id','=','sav_id')
 		
 		->get();
