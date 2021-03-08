@@ -28,8 +28,8 @@
                         <tr>
                         	
                             <td>{{++$count}}</td>
-                            <td>{{$classes->class_grade_id}}</td>
-                            <td>{{$classes->class_major_id}}</td>
+                            <td>{{$classes->grade_name}}</td>
+                            <td>{{$classes->major_name}}</td>
                             <td>{{$classes->class_number}}</td>
                             <td>
                                 <a href="/admin/list-class/detail/{{ $classes->class_id }}" class="btn btn-success btn-sm">detail</a>

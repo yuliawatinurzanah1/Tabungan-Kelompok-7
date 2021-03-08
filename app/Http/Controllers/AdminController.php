@@ -235,8 +235,10 @@ class AdminController extends Controller
 		
 
 		$user= DB::table('users')->get();
-		$classes= DB::table('classes')->get();
-		
+		$classes= DB::table('classes')
+		->join('majors','major_id','=','class_major_id')
+		->join('grades','grade_id','=','class_grade_id')
+		->get();
 		$count=0;
 		return view ('admin.list-class',['classes'=>$classes,'count'=>$count]);
 		

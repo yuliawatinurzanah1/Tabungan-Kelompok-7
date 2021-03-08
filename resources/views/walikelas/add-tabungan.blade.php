@@ -22,7 +22,7 @@
                         	  <div class="col-lg-12">
                                 <div class="form-group mb-3">
                                     <label for="simpleinput">Nama </label>
-                                    <select type="text" id="simpleinput" name="grade" class="form-control" required>
+                                    <select type="text" id="simpleinput" name="stu_id" class="form-control" required>
                                             <option value="">Pilih---</option>
                                             @foreach($students as $data)
                                             <option value="{{$data->student_id}}">{{$data->stu_usr_id}}</option>
@@ -46,7 +46,7 @@
                             <div class="col-lg-12">
                                 <div class="form-group mb-3">
                                     <label for="simpleinput">Nominal</label>
-                                    <input type="text" id="simpleinput" name="saving" class="form-control" required>
+                                    <input type="text" id="simpleinput" name="sav_amount" class="form-control" required>
                                 </div>
                             </div>
 

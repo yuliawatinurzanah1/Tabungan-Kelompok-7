@@ -173,6 +173,71 @@ class WalikelasController extends Controller
 		return view ('walikelas.detail-pengambilan',['saving_usages'=>$saving_usages,'count'=>$count]);
 	}
 
+	//CRUD PENGAMBILAN TABUNGAN
+	public function addPengambilan()
+	{
+		$students = Student::all();
+		$classes = Classes::all();
+		//$savings = Savings::all();
+		//$saving = DB::table('savings')->get();	 
+		//mengirim data tabungan ke view index
+		return view ('walikelas.add-pengambilan', compact('classes','students'));
+	}
+
+	public function savePengambilan(Request $request)
+	{
+		
+			$saving_usage = new Saving_usage;
+				$saving_usage->usa_stu_id       = $request->stu_id;
+				$saving_usage->usa_class_id     = $request->grade;
+				$saving_usage->usa_amount       = $request->sav_amount;
+				$saving_usage->usa_date		    = $request->sav_date;
+				$saving_usage->save();	
+		
+				Session::flash('sukses','Data Berhasil disimpan');
+        return back();
+        //mengirim data siswa ke view index
+		return redirect('walikelas/add-pengambilan');
+	}
+	
+		public function editPengambilan($id)
+	{
+		//mengambil data tabungan sesuai id yg dipilih
+		$saving_usage = DB::table('saving_usages')
+		->join('students','usa_stu_id','=','stu_id')
+		->join('classes','stu_class_id','=','class_id')
+		->join('users','stu_usr_id','=','usr_id') 
+		->join('majors','major_id','=','class_major_id')
+		->where('stu_id',$id)
+
+		->get();
+		
+		
+		$classes = Classes::all();
+		
+		//passingg data tabungan yg di dapat ke view edit-tabungan.blade.php
+		return view('walikelas.edit-pengambilan',['saving_usages' => $saving_usages,'classes' => $classes]);
+			
+	}
+	public function updatePengambilan(Request $request,$id)
+	{
+		//dd($request);
+		//update data tabungan
+		$saving_usage = DB::table('saving_usagess')
+		->join('students','usa_stu_id','=','stu_id')
+		->join('classes','stu_class_id','=','class_id')
+		->join('users','stu_usr_id','=','usr_id') 
+		->join('majors','major_id','=','class_major_id')
+		->where('tcr_id',$id)
+		->update([
+
+			'usa_class_id'	 => $request->grade,
+			'usa_amount '	 => $request->usa_amount,
+			'usa_date'	  	 => $request->usa_date]);
+			
+		return redirect('walikelas/list-pengambilan');
+	}
+
 
 
 

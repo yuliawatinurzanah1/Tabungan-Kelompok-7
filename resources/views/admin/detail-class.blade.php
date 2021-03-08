@@ -20,7 +20,7 @@
                                 <tr>
                                     <td>Kelas</td>
                                     <td>:</td>
-                                    <td>{{$students->class_grade_id}}</td>
+                                    <td>{{$students->grade_name}}</td>
                                 </tr>    
                                     
                                 <tr>

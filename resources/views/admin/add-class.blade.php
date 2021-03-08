@@ -30,10 +30,11 @@
 				</select>
 		</div>
 	</div>
+
 	<div class="col-lg-12">
 		<div class="form-group mb-3">
-			<label for="simpleinput">Nama Kelas </label>
-			<input type="text" id="simpleinput" name="class_name" class="form-control" placeholder="Nama Kelas" required>
+			<label for="simpleinput">Nomor Kelas </label>
+			<input type="text" id="simpleinput" name="class_number" class="form-control" placeholder="Nomor Kelas" required>
 		</div>
 	</div>
 

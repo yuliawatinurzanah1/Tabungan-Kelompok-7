@@ -91,7 +91,7 @@ Route::group(['middleware' => ['role:admin']], function () {
 
     Route::get('admin/class/hapus/{class_id}','AdminController@hapusClass');
 
-
+//Tabungan
    
 
     Route::get('/admin/list-tabungan'  , 'AdminController@listTabungan');
@@ -104,8 +104,8 @@ Route::group(['middleware' => ['role:admin']], function () {
     Route::post('/admin/add-student' , 'AdminController@SaveAddStudent');
     
    
-    Route::get('/admin/edit-class/{id}' , 'AdminController@editClass');
-    Route::get('/admin/list-class' , 'AdminController@listClass'); 
+   // Route::get('/admin/edit-class/{id}' , 'AdminController@editClass');
+   // Route::get('/admin/list-class' , 'AdminController@listClass'); 
        
     
     
