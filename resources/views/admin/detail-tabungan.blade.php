@@ -15,7 +15,7 @@
                     <hr>
                     <div class="table-responsive">
                         <table class="table">
-                        @foreach($students as $students) 
+                         @foreach($students as $students) 
                             <tbody>
 
                             	 <tr>
@@ -27,7 +27,7 @@
                                 <tr>
                                     <td>Kelas</td>
                                     <td>:</td>
-                                    <td>{{$students->class_grade_id}}</td>
+                                    <td>{{$students->grade_name}}</td>
                                 </tr>    
                                     
                                 <tr>
@@ -41,9 +41,6 @@
                                     <td>:</td>
                                     <td>{{$students->sav_amount}}</td>
                                 </tr>
-
-                               
-
                             </tbody>
                         @endforeach
                         </table>

@@ -41,6 +41,9 @@ class WalikelasController extends Controller
 	public function detailStudent($id)
 	{
 		$student = Student::join('users', 'students.stu_usr_id', '=', 'users.usr_id') 
+		->join('classes','stu_class_id','=','class_id')
+		->join('grades','grade_id','=','class_grade_id')
+		->join('majors','major_id','=','class_major_id')
 		->where('stu_id',$id)
 		->get();
 		
@@ -49,16 +52,16 @@ class WalikelasController extends Controller
 	
     
 //Managemen Tabungan    
- 	public function listTabungan()
+ 	public function listTabungan() 
+		
 	{
 		//dd(Auth()->user()->usr_id);
 		$user= DB::table('users')->get();
 		$savings = Saving::join('students','sav_stu_id','=','stu_id')
-		->join('classes','stu_class_id','=','class_id')
-		->join('users','stu_usr_id','=','usr_id') 
+		->join('classes','stu_class_id','=','class_id') 
+		->join('users','stu_usr_id','=','usr_id')
 		
-		//->join('majors','major_id','=','class_major_id')
-		//->join('savings','sav_class_id','=','sav_id')
+		//->join('majors','classes.class_major_id','=','majors.major_id')
 		
 		->get();
 		$count=0;
@@ -68,32 +71,42 @@ class WalikelasController extends Controller
 	{
 		$user= DB::table('users')->get();
 		$savings = Saving::join('students','sav_stu_id','=','stu_id')
-		->join('classes','stu_class_id','=','class_id')
-		->join('users','stu_usr_id','=','usr_id') 
+		->join('classes','stu_class_id','=','class_id') 
+		->join('users','stu_usr_id','=','usr_id')
+		->join('grades','grade_id','=','class_grade_id')
 		->join('majors','major_id','=','class_major_id')
+		
 		->where('stu_id',$id)
 
 		->get();
 		$count=0;
 		return view ('walikelas.detail-tabungan',['savings'=>$savings,'count'=>$count]);
 	}
-
+	
 		//CRUD TABUNGAN
 	public function addTabungan()
 	{
-		$students = Student::all();
-		$classes = Classes::all();
-		//$savings = Savings::all();
-		//$saving = DB::table('savings')->get();	 
+		
+		$user= DB::table('users')->get();
+		$students = Student::join('users','stu_usr_id','=','usr_id')
+		
+
+		->get();
+		$count=0;
+		//$saving = DB::table('savings')->get();
+		
+		$grades = Grade::all();
+		
+		 
 		//mengirim data tabungan ke view index
-		return view ('walikelas.add-tabungan', compact('classes','students'));
+		return view ('walikelas.add-tabungan',['students'=>$students,'count'=>$count], compact('grades'));
 	}
 
 	public function saveTabungan(Request $request)
 	{
-		
+		//dd($request->stu_id);
 			$saving = new Saving;
-				$saving->sav_stu_id       = $request->stu_id;
+				$saving->sav_stu_id       = $request->usr_name;
 				$saving->sav_class_id     = $request->grade;
 				$saving->sav_amount       = $request->sav_amount;
 				$saving->sav_date		  = $request->sav_date;
@@ -110,12 +123,11 @@ class WalikelasController extends Controller
 		//mengambil data tabungan sesuai id yg dipilih
 		$saving = DB::table('savings')
 		->join('students','sav_stu_id','=','stu_id')
-		->join('classes','stu_class_id','=','class_id')
+		->join('classes','stu_class_id','=','class_id') 
 		->join('users','stu_usr_id','=','usr_id') 
-		->join('majors','major_id','=','class_major_id')
+		->join('majors','class_major_id','=','major_id')
 		->where('stu_id',$id)
-
-		->get();
+		->first();
 		
 		
 		$classes = Classes::all();
@@ -130,15 +142,16 @@ class WalikelasController extends Controller
 		//update data tabungan
 		$saving = DB::table('savings')
 		->join('students','sav_stu_id','=','stu_id')
-		->join('classes','stu_class_id','=','class_id')
+		->join('classes','stu_class_id','=','class_id') 
 		->join('users','stu_usr_id','=','usr_id') 
-		->join('majors','major_id','=','class_major_id')
-		->where('tcr_id',$id)
+		->join('majors','class_major_id','=','major_id')
+		->where('stu_id',$id)
 		->update([
 
 			'sav_class_id'	 => $request->grade,
 			'sav_amount '	 => $request->sav_amount,
-			'sav_date'	  	 => $request->sav_date]);
+			'sav_date'	  	 => $request->sav_date
+		]);
 			
 		return redirect('walikelas/list-tabungan');
 	}
@@ -148,14 +161,14 @@ class WalikelasController extends Controller
 	{
 		$user= DB::table('users')->get();
 		$saving_usages = Saving_usage::join('students','usa_stu_id','=','stu_id')
-		->join('classes','stu_class_id','=','class_id')
-		->join('users','stu_usr_id','=','usr_id') 
+		->join('classes','stu_class_id','=','class_id') 
+		->join('users','stu_usr_id','=','usr_id')
 		
-		//->join('majors','major_id','=','class_major_id')
-		//->join('savings','sav_class_id','=','sav_id')
+		//->join('majors','classes.class_major_id','=','majors.major_id')
 		
 		->get();
 		$count=0;
+	
 		return view ('walikelas.list-Pengambilan',['saving_usages'=>$saving_usages,'count'=>$count]);	
 	}
 
@@ -163,35 +176,44 @@ class WalikelasController extends Controller
 	{
 		$user= DB::table('users')->get();
 		$saving_usages = Saving_usage::join('students','usa_stu_id','=','stu_id')
-		->join('classes','stu_class_id','=','class_id')
-		->join('users','stu_usr_id','=','usr_id') 
+		->join('classes','stu_class_id','=','class_id') 
+		->join('users','stu_usr_id','=','usr_id')
+		->join('grades','grade_id','=','class_grade_id')
 		->join('majors','major_id','=','class_major_id')
+		
 		->where('stu_id',$id)
 
 		->get();
 		$count=0;
 		return view ('walikelas.detail-pengambilan',['saving_usages'=>$saving_usages,'count'=>$count]);
 	}
-
 	//CRUD PENGAMBILAN TABUNGAN
 	public function addPengambilan()
 	{
-		$students = Student::all();
-		$classes = Classes::all();
+		$user= DB::table('users')->get();
+		$students = Student::join('users','stu_usr_id','=','usr_id')
+		
+
+		->get();
+		$count=0;
+		$grades = Grade::all();
+		//$students = Student::all();
+		//$classes = Classes::all();
 		//$savings = Savings::all();
 		//$saving = DB::table('savings')->get();	 
 		//mengirim data tabungan ke view index
-		return view ('walikelas.add-pengambilan', compact('classes','students'));
+		return view ('walikelas.add-pengambilan',['students'=>$students,'count'=>$count], compact('grades'));
 	}
 
 	public function savePengambilan(Request $request)
 	{
 		
 			$saving_usage = new Saving_usage;
-				$saving_usage->usa_stu_id       = $request->stu_id;
+				$saving_usage->usa_stu_id       = $request->usr_name;
 				$saving_usage->usa_class_id     = $request->grade;
-				$saving_usage->usa_amount       = $request->sav_amount;
-				$saving_usage->usa_date		    = $request->sav_date;
+				$saving_usage->usa_amount       = $request->usa_amount;
+				$saving_usage->usa_date		    = $request->usa_date;
+				$saving_usage->usa_information  = $request->usa_information;
 				$saving_usage->save();	
 		
 				Session::flash('sukses','Data Berhasil disimpan');
@@ -204,10 +226,10 @@ class WalikelasController extends Controller
 	{
 		//mengambil data tabungan sesuai id yg dipilih
 		$saving_usage = DB::table('saving_usages')
-		->join('students','usa_stu_id','=','stu_id')
-		->join('classes','stu_class_id','=','class_id')
-		->join('users','stu_usr_id','=','usr_id') 
-		->join('majors','major_id','=','class_major_id')
+		->join('students','saving_usages.usa_stu_id','=','users.stu_id')
+		->join('classes','students.stu_class_id','=','classes.class_id') 
+		->join('users','students.stu_usr_id','=','users.usr_id')
+		->join('majors','classes.class_major_id','=','majors.major_id')
 		->where('stu_id',$id)
 
 		->get();
@@ -223,12 +245,12 @@ class WalikelasController extends Controller
 	{
 		//dd($request);
 		//update data tabungan
-		$saving_usage = DB::table('saving_usagess')
-		->join('students','usa_stu_id','=','stu_id')
-		->join('classes','stu_class_id','=','class_id')
-		->join('users','stu_usr_id','=','usr_id') 
-		->join('majors','major_id','=','class_major_id')
-		->where('tcr_id',$id)
+		$saving_usage = DB::table('saving_usages')
+		->join('students','saving_usages.usa_stu_id','=','users.stu_id')
+		->join('classes','students.stu_class_id','=','classes.class_id') 
+		->join('users','students.stu_usr_id','=','users.usr_id')
+		->join('majors','classes.class_major_id','=','majors.major_id')
+		->where('stu_id',$id)
 		->update([
 
 			'usa_class_id'	 => $request->grade,

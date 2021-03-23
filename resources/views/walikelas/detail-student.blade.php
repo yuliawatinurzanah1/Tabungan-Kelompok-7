@@ -35,8 +35,26 @@
                                     <td>{{$student->stu_nis}}</td>
                                 </tr>
 
+                                 <tr>
+                                    <td>Kelas</td>
+                                    <td>:</td>
+                                    <td>{{$student->grade_name}}</td>
+                                </tr>
+
+                                 <tr>
+                                    <td>Jurusan</td>
+                                    <td>:</td>
+                                    <td>{{$student->major_name}}</td>
+                                </tr>
+
+                                 <tr>
+                                    <td>Nomor Kelas</td>
+                                    <td>:</td>
+                                    <td>{{$student->class_number}}</td>
+                                </tr>
+
                                 <tr>
-                                    <td>Tahun</td>
+                                    <td>Tahun Ajaran</td>
                                     <td>:</td>
                                     <td>{{$student->stu_school_year}}</td>
                                 </tr>

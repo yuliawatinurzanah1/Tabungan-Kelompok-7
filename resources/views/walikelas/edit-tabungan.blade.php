@@ -13,7 +13,7 @@
                 <div class="card-body">
                     <h4 class="header-title">Edit Tabungan</h4>
    
-                    <form action="{{ url('walikelas/update-tabungan/'.$saving->sav_id) }}" method="post">
+                    <form action="{{ url('walikelas/update-tabungan/'.$savings->sav_id) }}" method="post">
                         @csrf
                         <div class="row">
 

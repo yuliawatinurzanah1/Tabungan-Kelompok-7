@@ -27,7 +27,7 @@
                                 <tr>
                                     <td>Kelas</td>
                                     <td>:</td>
-                                    <td>{{$savings->class_grade_id}}</td>
+                                    <td>{{$savings->grade_name}}</td>
                                 </tr>    
                                     
                                 <tr>
@@ -35,7 +35,13 @@
                                     <td>:</td>
                                     <td>{{$savings->major_name}}</td>
                                 </tr>    
-                             
+                             	
+                             	  <tr>
+                                    <td>Nomor Kelas</td>
+                                    <td>:</td>
+                                    <td>{{$savings->class_number}}</td>
+                                </tr> 
+
                                 <tr>
                                     <td>Nominal</td>
                                     <td>:</td>

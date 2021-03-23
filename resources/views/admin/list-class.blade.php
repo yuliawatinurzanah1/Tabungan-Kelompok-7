@@ -32,7 +32,7 @@
                             <td>{{$classes->major_name}}</td>
                             <td>{{$classes->class_number}}</td>
                             <td>
-                                <a href="/admin/list-class/detail/{{ $classes->class_id }}" class="btn btn-success btn-sm">detail</a>
+                               
                                 <a href="/admin/edit-class/{{ $classes->class_id }}" class="btn btn-warning btn-sm">Edit</a>
                                 <a href="/admin/class/hapus/{{ $classes->class_id }}" class="btn btn-danger btn-sm">Delete</a>
                             </td>

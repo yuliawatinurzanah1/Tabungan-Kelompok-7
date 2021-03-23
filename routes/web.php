@@ -80,7 +80,7 @@ Route::group(['middleware' => ['role:admin']], function () {
 
  	//route kelas
     Route::get('/admin/list-class' , 'AdminController@listClass');
-    Route::get('/admin/list-class/detail/{id}' , 'AdminController@detailClass');
+    //Route::get('/admin/list-class/detail/{id}' , 'AdminController@detailClass');
 
    
     Route::get('admin/add-class','AdminController@addClass');

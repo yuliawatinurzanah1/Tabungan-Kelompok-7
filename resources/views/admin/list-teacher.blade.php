@@ -21,6 +21,7 @@
                             <th>Nik</th>
                             <th>Nama</th>
                             <th>Kelas</th>
+                            <th>Jurusan</th>
                             <th>Aksi</th>
                         </tr>
                         </thead>
@@ -31,7 +32,8 @@
                             <td>{{ ++$count}}</td>
                             <td>{{ $teacher->tcr_nik }}</td>
                             <td>{{ $teacher->usr_name }}</td>
-                            <td>{{ $teacher->class_name }}</td>
+                            <td>{{ $teacher->grade_name }}</td>
+                            <td>{{ $teacher->major_name }}</td>
                        
                             <td>
                             	<a href="/admin/list-teacher/detail/{{ $teacher->tcr_id }}" class="btn btn-success btn-sm">detail</a>

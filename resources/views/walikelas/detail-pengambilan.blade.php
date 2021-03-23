@@ -1,7 +1,7 @@
 @extends('layouts.walikelas-master')
 
 @section('judul')
-    Detail Tabungan
+    Detail Pengambilan Tabungan
 @endsection
 
 @section('content')
@@ -27,14 +27,20 @@
                                 <tr>
                                     <td>Kelas</td>
                                     <td>:</td>
-                                    <td>{{$saving_usages->class_grade_id}}</td>
+                                    <td>{{$saving_usages->grade_name}}</td>
                                 </tr>    
-                                    
+
                                 <tr>
                                     <td>Jurusan</td>
                                     <td>:</td>
                                     <td>{{$saving_usages->major_name}}</td>
-                                </tr>    
+                                </tr>  
+
+                                <tr>
+                                    <td>Nomor Kelas</td>
+                                    <td>:</td>
+                                    <td>{{$saving_usages->class_number}}</td>
+                                </tr>   
                              
                                 <tr>
                                     <td>Nominal</td>
@@ -46,6 +52,12 @@
                                     <td>Tanggal Pengambilan</td>
                                     <td>:</td>
                                     <td>{{$saving_usages->usa_date}}</td>
+                                </tr>
+
+                                 <tr>
+                                    <td>Keterangan Pengambilan</td>
+                                    <td>:</td>
+                                    <td>{{$saving_usages->usa_information}}</td>
                                 </tr>
 
                             </tbody>

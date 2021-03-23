@@ -12,7 +12,7 @@
 
             	
                 <div class="card-body">
-                    <h4 class="header-title">Tambah Tabungan</h4>
+                   
                    
 
                     <form action="" method="post">
@@ -21,27 +21,27 @@
 
                         	  <div class="col-lg-12">
                                 <div class="form-group mb-3">
-                                    <label for="simpleinput">Nama </label>
-                                    <select type="text" id="simpleinput" name="stu_id" class="form-control" required>
-                                            <option value="">Pilih---</option>
-                                            @foreach($students as $data)
-                                            <option value="{{$data->student_id}}">{{$data->stu_usr_id}}</option>
-                                            @endforeach
-                                        </select>
+                                    <label for="simpleinput">Nama</label>
+                                    <select type="text" id="simpleinput" name="usr_name" class="form-control" required>
+                                  			@foreach($students as $data)
+											<option value="{{$data->stu_id}}">{{$data->usr_name}}</option>
+											@endforeach
+									</select>
                                 </div>
                             </div>
 
+                        	
                         	<div class="col-lg-12">
-                                <div class="form-group mb-3">
-                                    <label for="simpleinput">Kelas</label>
-                                        <select type="text" id="simpleinput" name="grade" class="form-control" required>
-                                            <option value="">Pilih---</option>
-                                            @foreach($classes as $data)
-                                            <option value="{{$data->class_id}}">{{$data->class_name}}</option>
-                                            @endforeach
-                                        </select>
-                                </div>
-                            </div>
+								<div class="form-group mb-3">
+									<label for="simpleinput">Kelas</label>
+										<select type="text" id="simpleinput" name="grade" class="form-control" required>
+											<option value="">Pilih kelas---</option>
+											@foreach($grades as $data)
+											<option value="{{$data->grade_id}}">{{$data->grade_name}}</option>
+											@endforeach
+										</select>
+								</div>
+							</div>
                            
                             <div class="col-lg-12">
                                 <div class="form-group mb-3">

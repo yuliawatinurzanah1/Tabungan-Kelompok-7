@@ -23,6 +23,7 @@
                             <th>Nis</th>
                             <th>Nama</th>
                             <th>Kelas</th>
+                            <th>Jurusan</th>
                             <th>Aksi</th>
                         </tr>
                         </thead>
@@ -33,7 +34,8 @@
                             <td>{{ ++$count }}</td>
                             <td>{{ $student->stu_nis }}</td>
                             <td>{{ $student->usr_name }}</td>
-                            <td>{{ $student->class_name }}</td>
+                            <td>{{ $student->grade_name }}</td>
+                            <td>{{ $student->major_name }}</td>
                        
                             <td>
 
