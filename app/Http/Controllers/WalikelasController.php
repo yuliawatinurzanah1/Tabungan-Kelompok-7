@@ -27,14 +27,16 @@ class WalikelasController extends Controller
 //Management Siswa
 	public function listStudent()
 	{
-		//mengambil data dari tabel siswa
-		$user= DB::table('users')->get();
-		$students = Student::join('users','stu_usr_id','=','usr_id') 
-		->join('classes','stu_class_id','=','class_id')
-		->get();
-		$count=0;
-			//dd($students);
+		//untuk yg login
+		$user = Auth()->user();
 
+		$teachers = Teacher::where('tcr_usr_id', $user->usr_id)->first(); 
+		$students = Student::join('users','students.stu_usr_id','=','users.usr_id')
+					->where('stu_class_id', $teachers->tcr_class_id)
+					->get();
+		
+		$count=0;
+			
 		return view ('walikelas.list-student',['students' => $students,'count'=> $count]);
 	}
 
@@ -55,17 +57,16 @@ class WalikelasController extends Controller
  	public function listTabungan() 
 		
 	{
-		//dd(Auth()->user()->usr_id);
-		$user= DB::table('users')->get();
-		$savings = Saving::join('students','sav_stu_id','=','stu_id')
-		->join('classes','stu_class_id','=','class_id') 
-		->join('users','stu_usr_id','=','usr_id')
-		
-		//->join('majors','classes.class_major_id','=','majors.major_id')
-		
-		->get();
+		//untuk yg login
+		$user = Auth()->user();
+
+		$teachers = Teacher::where('tcr_usr_id', $user->usr_id)->first(); 
+		$students = Student::join('users','students.stu_usr_id','=','users.usr_id')
+					->where('stu_class_id', $teachers->tcr_class_id)
+					->get();
+
 		$count=0;
-		return view ('walikelas.list-tabungan',['savings'=>$savings,'count'=>$count]);	
+		return view ('walikelas.list-tabungan',['students'=>$students,'count'=>$count]);	
 	}
 	public function detailTabungan($id)
 	{
@@ -159,17 +160,17 @@ class WalikelasController extends Controller
 	//Managemen Pengambilan Tabungan    
  	public function listPengambilan()
 	{
-		$user= DB::table('users')->get();
-		$saving_usages = Saving_usage::join('students','usa_stu_id','=','stu_id')
-		->join('classes','stu_class_id','=','class_id') 
-		->join('users','stu_usr_id','=','usr_id')
-		
-		//->join('majors','classes.class_major_id','=','majors.major_id')
-		
-		->get();
+		//untuk yg login
+		$user = Auth()->user();
+
+		$teachers = Teacher::where('tcr_usr_id', $user->usr_id)->first(); 
+		$students = Student::join('users','students.stu_usr_id','=','users.usr_id')
+					->where('stu_class_id', $teachers->tcr_class_id)
+					->get();
+
 		$count=0;
 	
-		return view ('walikelas.list-Pengambilan',['saving_usages'=>$saving_usages,'count'=>$count]);	
+		return view ('walikelas.list-Pengambilan',['students'=>$students,'count'=>$count]);	
 	}
 
 	public function detailPengambilan($id)

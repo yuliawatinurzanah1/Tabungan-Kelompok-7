@@ -22,16 +22,16 @@
 
                         <tbody>
                          <tr>
-                         @foreach($saving_usages as $saving_usage)   
+                         @foreach($students as $student)   
                             <td>{{++$count}}</td>
-                            <td>{{$saving_usage->usr_name}}</td>
+                            <td>{{$student->usr_name}}</td>
 
                             <td>
-                               <a href="/walikelas/list-pengambilan/detail/{{ $saving_usage->stu_id }}" class="btn btn-success btn-sm">detail</a>
+                               <a href="/walikelas/list-pengambilan/detail/{{ $student->stu_id }}" class="btn btn-success btn-sm">detail</a>
 
-                               <a href="/walikelas/edit-pengambilan/{{ $saving_usage->stu_id }}" class="btn btn-warning btn-sm">edit</a>
+                               <a href="/walikelas/edit-pengambilan/{{ $student->stu_id }}" class="btn btn-warning btn-sm">edit</a>
 
-                               <a href="/walikelas/pengambilan/hapus/{{ $saving_usage->stu_id }}" class="btn btn-danger btn-sm">hapus</a>
+                               <a href="/walikelas/pengambilan/hapus/{{ $student->stu_id }}" class="btn btn-danger btn-sm">hapus</a>
         
                             </td>
 
