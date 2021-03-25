@@ -130,27 +130,30 @@ class WalikelasController extends Controller
 		->where('stu_id',$id)
 		->first();
 		
-		
-		$classes = Classes::all();
+		$classes = DB::table('classes')
+		->join('grades','classes.class_grade_id','=','grades.grade_id')
+		->join('majors','classes.class_major_id','=','majors.major_id')
+		->get();
+		//$grades = Grade::all();
+		//$classes = Classes::all();
 		
 		//passingg data tabungan yg di dapat ke view edit-tabungan.blade.php
 		return view('walikelas.edit-tabungan',['saving' => $saving,'classes' => $classes]);
 			
 	}
+
+
 	public function updateTabungan(Request $request,$id)
 	{
 		//dd($request);
-		//update data tabungan
+		//update data tabungan 
 		$saving = DB::table('savings')
 		->join('students','sav_stu_id','=','stu_id')
-		->join('classes','stu_class_id','=','class_id') 
-		->join('users','stu_usr_id','=','usr_id') 
-		->join('majors','class_major_id','=','major_id')
 		->where('stu_id',$id)
 		->update([
 
 			'sav_class_id'	 => $request->grade,
-			'sav_amount '	 => $request->sav_amount,
+			'sav_amount'	 => $request->sav_amount,
 			'sav_date'	  	 => $request->sav_date
 		]);
 			
@@ -227,19 +230,20 @@ class WalikelasController extends Controller
 	{
 		//mengambil data tabungan sesuai id yg dipilih
 		$saving_usage = DB::table('saving_usages')
-		->join('students','saving_usages.usa_stu_id','=','users.stu_id')
-		->join('classes','students.stu_class_id','=','classes.class_id') 
-		->join('users','students.stu_usr_id','=','users.usr_id')
-		->join('majors','classes.class_major_id','=','majors.major_id')
+		->join('students','usa_stu_id','=','stu_id')
+		->join('classes','stu_class_id','=','class_id') 
+		->join('users','stu_usr_id','=','usr_id') 
+		->join('majors','class_major_id','=','major_id')
 		->where('stu_id',$id)
-
+		->first();
+		
+		$classes = DB::table('classes')
+		->join('grades','classes.class_grade_id','=','grades.grade_id')
+		->join('majors','classes.class_major_id','=','majors.major_id')
 		->get();
-		
-		
-		$classes = Classes::all();
-		
-		//passingg data tabungan yg di dapat ke view edit-tabungan.blade.php
-		return view('walikelas.edit-pengambilan',['saving_usages' => $saving_usages,'classes' => $classes]);
+	
+		//passingg data tabungan yg di dapat ke view edit-Pemakaian.blade.php
+		return view('walikelas.edit-pengambilan',['saving_usage' => $saving_usage,'classes' => $classes]);
 			
 	}
 	public function updatePengambilan(Request $request,$id)
@@ -256,7 +260,9 @@ class WalikelasController extends Controller
 
 			'usa_class_id'	 => $request->grade,
 			'usa_amount '	 => $request->usa_amount,
-			'usa_date'	  	 => $request->usa_date]);
+			'usa_date'	  	 => $request->usa_date,
+			'usa_information'=> $request->usa_information
+		]);
 			
 		return redirect('walikelas/list-pengambilan');
 	}

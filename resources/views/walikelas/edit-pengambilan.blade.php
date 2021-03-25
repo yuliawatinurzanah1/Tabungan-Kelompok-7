@@ -1,7 +1,7 @@
 @extends('layouts.admin-master')
 
 @section('judul')
-    Edit Tabungan
+    Edit Pengambilan Tabungan
 @endsection
 
 @section('content')
@@ -11,16 +11,16 @@
 
             	
                 <div class="card-body">
-                    <h4 class="header-title">Edit Tabungan</h4>
+                    <h4 class="header-title">Edit Pengambilan Tabungan </h4>
    
-                    <form action="{{ url('walikelas/update-tabungan/'.$saving->sav_id) }}" method="post">
+                    <form action="{{ url('walikelas/update-pengambilan/'.$saving_usage->usa_id) }}" method="post">
                         @csrf
                         <div class="row">
 
                             <div class="col-lg-12">
                                 <div class="form-group mb-3">
                                     <label for="simpleinput">Nama</label>
-                                    <input value="{{ $saving->usr_name }}" type="text" id="simpleinput" name="student_name" class="form-control" required>
+                                    <input value="{{ $saving_usage->usr_name }}" type="text" id="simpleinput" name="student_name" class="form-control" required>
                                 </div>
                             </div>
 
@@ -40,14 +40,21 @@
                               <div class="col-lg-12">
                                 <div class="form-group mb-3">
                                     <label for="simpleinput">Nominal</label>
-                                    <input value="{{ $saving->sav_amount }}"  type="text" id="simpleinput" name="nominal" class="form-control" required>
+                                    <input value="{{ $saving_usage->usa_amount }}"  type="text" id="simpleinput" name="nominal" class="form-control" required>
                                 </div>
                             </div>
 
                             <div class="col-lg-12">
                                 <div class="form-group mb-3">
-                                    <label for="simpleinput">Tanggal Menabung </label>
-                                    <input value="{{ $saving->sav_date }}"  type="dater" id="simpleinput" name="tanggal_menabung" class="form-control" required>
+                                    <label for="simpleinput">Tanggal Pengambilan</label>
+                                    <input value="{{ $saving_usage->usa_date }}"  type="dater" id="simpleinput" name="tanggal_pengambilan" class="form-control" required>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="form-group mb-3">
+                                    <label for="simpleinput">Keterangan Pengambilan</label>
+                                    <input value="{{ $saving_usage->usa_information }}"  type="dater" id="simpleinput" name="keterangan_pemanggilan" class="form-control" required>
                                 </div>
                             </div>
 
