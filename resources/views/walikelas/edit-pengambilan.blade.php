@@ -1,4 +1,4 @@
-@extends('layouts.admin-master')
+@extends('layouts.walikelas-master')
 
 @section('judul')
     Edit Pengambilan Tabungan

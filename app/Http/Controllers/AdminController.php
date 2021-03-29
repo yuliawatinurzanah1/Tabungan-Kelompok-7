@@ -40,6 +40,8 @@ class AdminController extends Controller
 		->join('majors','major_id','=','class_major_id')
 		->get();
 		$count=0;
+
+		$students = Student::where('stu_')
 			//dd($students);
 
 		return view ('admin.list-student',['students' => $students,'count'=> $count]);
@@ -339,36 +341,7 @@ public function hapusClass($class_id)
         return back();
     }
 
-	public function listTabungan()
-	{
-		$user= DB::table('users')->get();
-		$students = Student::join('users','stu_usr_id','=','usr_id') 
-		->join('classes','stu_class_id','=','class_id')
-		->join('majors','major_id','=','class_major_id')
-		->join('grades','grade_id','=','class_grade_id')
-		//->join('savings','sav_class_id','=','sav_id')
-		
-		->get();
-		$count=0;
-		return view ('admin.list-tabungan',['students'=>$students,'count'=>$count]);	
-	}
-	public function detailTabungan()
-	{
-		$user= DB::table('users')->get();
-		$students = Student::join('users','stu_usr_id','=','usr_id') 
-		->join('classes','stu_class_id','=','class_id')
-		->join('majors','major_id','=','class_major_id')
-		->join('savings','sav_class_id','=','sav_id')
-		
-		
-		->get();
-		$count=0;
-		return view ('admin.detail-tabungan',['students'=>$students,'count'=>$count]);
-	}
-	public function detailTabunganSiswa()
-	{
-		return view ('admin.detail-tabungan-siswa');
-	}
+	
     public function table (){
         return view ('admin.table');
     }

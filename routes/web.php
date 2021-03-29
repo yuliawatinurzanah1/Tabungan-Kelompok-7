@@ -94,9 +94,9 @@ Route::group(['middleware' => ['role:admin']], function () {
 //Tabungan
    
 
-    Route::get('/admin/list-tabungan'  , 'AdminController@listTabungan');
-    Route::get('/admin/list-tabungan/detail' , 'AdminController@detailTabungan');
-    Route::get('/admin/list-tabungan/detail/siswa' , 'AdminController@detailTabunganSiswa');
+  //  Route::get('/admin/list-tabungan'  , 'AdminController@listTabungan');
+   // Route::get('/admin/list-tabungan/detail' , 'AdminController@detailTabungan');
+   // Route::get('/admin/list-tabungan/detail/siswa' , 'AdminController@detailTabunganSiswa');
 
     //Untuk Save
     //ini untuk bagian input data kelas dan siswa
@@ -136,6 +136,7 @@ Route::group(['middleware' => ['role:admin']], function () {
     Route::post('/walikelas/update-tabungan/{id}' , 'walikelasController@updateTabungan');
 
  	Route::get('/walikelas/tabungan/hapus/{stu_id}' , 'WalikelasController@hapusTabungan');
+
 
  	//FITUR PENGAMBILAN TABUNGAN
  	Route::get('/walikelas/list-pengambilan' , 'WalikelasController@listPengambilan');

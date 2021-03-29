@@ -61,11 +61,12 @@ class WalikelasController extends Controller
 		$user = Auth()->user();
 
 		$teachers = Teacher::where('tcr_usr_id', $user->usr_id)->first(); 
-		$students = Student::join('users','students.stu_usr_id','=','users.usr_id')
-					->where('stu_class_id', $teachers->tcr_class_id)
-					->get();
-
+		$students= Saving::join('students','sav_stu_id','stu_id')
+			->join('users','users.usr_id','students.stu_usr_id')
+			->where('stu_class_id', $teachers->tcr_class_id)
+			->get();
 		$count=0;
+
 		return view ('walikelas.list-tabungan',['students'=>$students,'count'=>$count]);	
 	}
 	public function detailTabungan($id)
@@ -157,6 +158,16 @@ class WalikelasController extends Controller
 			'sav_date'	  	 => $request->sav_date
 		]);
 			
+		return redirect('walikelas/list-tabungan');
+	}
+
+	//soft delete
+	public function hapusTabungan($sav_id)
+	{
+		
+		$savings= Saving::where('sav_id',$sav_id);
+		$savings->delete();
+
 		return redirect('walikelas/list-tabungan');
 	}
 

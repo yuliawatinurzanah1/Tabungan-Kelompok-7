@@ -1,4 +1,4 @@
-@extends('layouts.admin-master')
+@extends('layouts.walikelas-master')
 
 @section('judul')
     Edit Tabungan
@@ -40,14 +40,14 @@
                               <div class="col-lg-12">
                                 <div class="form-group mb-3">
                                     <label for="simpleinput">Nominal</label>
-                                    <input value="{{ $saving->sav_amount }}"  type="text" id="simpleinput" name="nominal" class="form-control" required>
+                                    <input value="{{ $saving->sav_amount }}"  type="text" id="simpleinput" name="sav_amount" class="form-control" required>
                                 </div>
                             </div>
 
                             <div class="col-lg-12">
                                 <div class="form-group mb-3">
                                     <label for="simpleinput">Tanggal Menabung </label>
-                                    <input value="{{ $saving->sav_date }}"  type="dater" id="simpleinput" name="tanggal_menabung" class="form-control" required>
+                                    <input value="{{ $saving->sav_date }}"  type="date" id="simpleinput" name="sav_date" class="form-control" required>
                                 </div>
                             </div>
 
