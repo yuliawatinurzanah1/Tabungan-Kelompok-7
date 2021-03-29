@@ -1,7 +1,7 @@
 @extends('layouts.walikelas-master')
 
 @section('judul')
-    Detail Pengambilan Tabungan
+    Detail Pengambilan
 @endsection
 
 @section('content')
@@ -11,38 +11,38 @@
             <div class="card">
                 <div class="card-body">
 
-                    <h3 class="text-primary"> Data Tabungan </h3>
+                    <h3 class="text-primary"> Data Pengambilan Tabungan </h3>
                     <hr>
                     <div class="table-responsive">
                         <table class="table">
-                        @foreach($saving_usages as $saving_usages)
+                       @foreach($saving_usages as $saving_usages)
                             <tbody>
-
-                            	 <tr>
+                                <tr>
                                     <td>Nama</td>
                                     <td>:</td>
                                     <td>{{$saving_usages->usr_name}}</td>
-                                </tr> 
-
+                                </tr>    
+                                    
                                 <tr>
                                     <td>Kelas</td>
                                     <td>:</td>
                                     <td>{{$saving_usages->grade_name}}</td>
-                                </tr>    
+                                </tr>
 
                                 <tr>
                                     <td>Jurusan</td>
                                     <td>:</td>
                                     <td>{{$saving_usages->major_name}}</td>
-                                </tr>  
+                                </tr>
 
-                                <tr>
+                               
+                                 <tr>
                                     <td>Nomor Kelas</td>
                                     <td>:</td>
                                     <td>{{$saving_usages->class_number}}</td>
-                                </tr>   
-                             
-                                <tr>
+                                </tr>
+
+                                 <tr>
                                     <td>Nominal</td>
                                     <td>:</td>
                                     <td>{{$saving_usages->usa_amount}}</td>
@@ -54,12 +54,13 @@
                                     <td>{{$saving_usages->usa_date}}</td>
                                 </tr>
 
-                                 <tr>
+                                <tr>
                                     <td>Keterangan Pengambilan</td>
                                     <td>:</td>
                                     <td>{{$saving_usages->usa_information}}</td>
                                 </tr>
 
+                               
                             </tbody>
                         @endforeach
                         </table>

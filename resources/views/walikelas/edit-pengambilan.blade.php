@@ -40,21 +40,21 @@
                               <div class="col-lg-12">
                                 <div class="form-group mb-3">
                                     <label for="simpleinput">Nominal</label>
-                                    <input value="{{ $saving_usage->usa_amount }}"  type="text" id="simpleinput" name="nominal" class="form-control" required>
+                                    <input value="{{ $saving_usage->usa_amount }}"  type="text" id="simpleinput" name="usa_amount" class="form-control" required>
                                 </div>
                             </div>
 
                             <div class="col-lg-12">
                                 <div class="form-group mb-3">
                                     <label for="simpleinput">Tanggal Pengambilan</label>
-                                    <input value="{{ $saving_usage->usa_date }}"  type="dater" id="simpleinput" name="tanggal_pengambilan" class="form-control" required>
+                                    <input value="{{ $saving_usage->usa_date }}"  type="date" id="simpleinput" name="usa_date" class="form-control" required>
                                 </div>
                             </div>
 
                             <div class="col-lg-12">
                                 <div class="form-group mb-3">
                                     <label for="simpleinput">Keterangan Pengambilan</label>
-                                    <input value="{{ $saving_usage->usa_information }}"  type="dater" id="simpleinput" name="keterangan_pemanggilan" class="form-control" required>
+                                    <input value="{{ $saving_usage->usa_information }}"  type="dater" id="simpleinput" name="usa_information" class="form-control" required>
                                 </div>
                             </div>
 

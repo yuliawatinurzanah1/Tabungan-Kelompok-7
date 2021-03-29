@@ -178,7 +178,8 @@ class WalikelasController extends Controller
 		$user = Auth()->user();
 
 		$teachers = Teacher::where('tcr_usr_id', $user->usr_id)->first(); 
-		$students = Student::join('users','students.stu_usr_id','=','users.usr_id')
+		$students= Saving_usage::join('students','usa_stu_id','stu_id')
+					->join('users','users.usr_id','students.stu_usr_id')
 					->where('stu_class_id', $teachers->tcr_class_id)
 					->get();
 
@@ -239,7 +240,7 @@ class WalikelasController extends Controller
 	
 		public function editPengambilan($id)
 	{
-		//mengambil data tabungan sesuai id yg dipilih
+			
 		$saving_usage = DB::table('saving_usages')
 		->join('students','usa_stu_id','=','stu_id')
 		->join('classes','stu_class_id','=','class_id') 
@@ -252,32 +253,40 @@ class WalikelasController extends Controller
 		->join('grades','classes.class_grade_id','=','grades.grade_id')
 		->join('majors','classes.class_major_id','=','majors.major_id')
 		->get();
-	
-		//passingg data tabungan yg di dapat ke view edit-Pemakaian.blade.php
+		//$grades = Grade::all();
+		//$classes = Classes::all();
+		
+		//passingg data tabungan yg di dapat ke view edit-pemakaian.blade.php
 		return view('walikelas.edit-pengambilan',['saving_usage' => $saving_usage,'classes' => $classes]);
 			
 	}
+
+
 	public function updatePengambilan(Request $request,$id)
 	{
 		//dd($request);
-		//update data tabungan
+		//update data tabungan 
 		$saving_usage = DB::table('saving_usages')
-		->join('students','saving_usages.usa_stu_id','=','users.stu_id')
-		->join('classes','students.stu_class_id','=','classes.class_id') 
-		->join('users','students.stu_usr_id','=','users.usr_id')
-		->join('majors','classes.class_major_id','=','majors.major_id')
+		->join('students','usa_stu_id','=','stu_id')
 		->where('stu_id',$id)
 		->update([
 
 			'usa_class_id'	 => $request->grade,
-			'usa_amount '	 => $request->usa_amount,
-			'usa_date'	  	 => $request->usa_date,
-			'usa_information'=> $request->usa_information
+			'usa_amount'	 => $request->usa_amount,
+			'usa_date'	  	 => $request->usa_date
 		]);
 			
 		return redirect('walikelas/list-pengambilan');
 	}
+	//soft delete
+	public function hapusPengambilan($usa_id)
+	{
+		
+		$saving_usages= Saving_usage::where('usa_id',$usa_id);
+		$saving_usages->delete();
 
+		return redirect('walikelas/list-pengambilan');
+	}
 
 
 

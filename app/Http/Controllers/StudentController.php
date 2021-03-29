@@ -30,7 +30,10 @@ class StudentController extends Controller
 //Managemen Tabungan    
  	public function listTabungan()
 	{
-		$user= DB::table('users')->get();
+//untuk yg login
+		$user = Auth()->user();
+
+
 		$students = Student::join('users','stu_usr_id','=','usr_id') 
 		->join('classes','stu_class_id','=','class_id')
 		//->join('majors','major_id','=','class_major_id')
@@ -40,17 +43,30 @@ class StudentController extends Controller
 		$count=0;
 		return view ('student.list-tabungan',['students'=>$students,'count'=>$count]);	
 	}
-	public function detailTabungan()
+	public function detailTabungan($id)
 	{
 		$user= DB::table('users')->get();
 		$students = Student::join('users','stu_usr_id','=','usr_id') 
 		->join('classes','stu_class_id','=','class_id')
 		->join('majors','major_id','=','class_major_id')
 		->join('savings','sav_class_id','=','sav_id')
-		
+		->where('stu_id',$id)
 		
 		->get();
 		$count=0;
 		return view ('student.detail-tabungan',['students'=>$students,'count'=>$count]);
 	}
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

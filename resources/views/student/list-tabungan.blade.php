@@ -13,18 +13,17 @@
                     <table id="basic-datatable" class="table dt-responsive nowrap">
                         <thead>
                         <tr>
-                            <th>No</th>
-                            <th>Kelas</th>                            
-                            <th>Aksi</th>
+                        	<th>No</th> 
+                            <th>Nama</th>     
+                            <th>Aksi</th>                       
                         </tr>
                         </thead>
 
                         <tbody>
                          <tr>
-                         @foreach($students as $classes)   
+                         @foreach($students as $students)   
                             <td>{{++$count}}</td>
-                            <td>{{$classes->class_name}}</td>
-
+                            <td>{{$students->usr_name}}</td>
                             
                             
                             <td>

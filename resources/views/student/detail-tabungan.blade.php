@@ -17,11 +17,17 @@
                         <table class="table">
                         @foreach($students as $students)
                             <tbody>
-                                <tr>
+								<tr>
+                                    <td>Nama</td>
+                                    <td>:</td>
+                                    <td>{{$students->usr_name}}</td>
+                                </tr>
+
+                                   <tr>
                                     <td>Kelas</td>
                                     <td>:</td>
-                                    <td>{{$students->class_grade_id}}</td>
-                                </tr>    
+                                    <td>{{$students->grade_name}}</td>
+                                </tr>   
                                     
                                 <tr>
                                     <td>Jurusan</td>
@@ -30,9 +36,15 @@
                                 </tr>
 
                                 <tr>
-                                    <td>Tabungan</td>
+                                    <td>Nominal Menabung</td>
                                     <td>:</td>
                                     <td>{{$students->sav_amount}}</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Tanggal Menabung</td>
+                                    <td>:</td>
+                                    <td>{{$students->sav_date}}</td>
                                 </tr>
 
                             </tbody>
