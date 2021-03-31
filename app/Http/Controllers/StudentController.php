@@ -36,10 +36,9 @@ class StudentController extends Controller
 		//untuk yg login
 		$user = Auth()->user();
 
-		
 		$students= Saving::join('students','sav_stu_id','stu_id')
 			->join('users','users.usr_id','students.stu_usr_id')
-			
+			->where('users.usr_id',$user->usr_id)
 			->get();
 		$count=0;
 
@@ -69,7 +68,7 @@ class StudentController extends Controller
 
 		$students= Saving_usage::join('students','usa_stu_id','stu_id')
 					->join('users','users.usr_id','students.stu_usr_id')
-					
+					->where('users.usr_id',$user->usr_id)
 					->get();
 
 		$count=0;
