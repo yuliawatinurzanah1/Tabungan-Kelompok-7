@@ -113,8 +113,14 @@ Route::group(['middleware' => ['role:admin']], function () {
 //student
 	Route::group(['middleware' => ['role:student', 'verified']], function () {
 	Route::get('/student' , 'StudentController@dashboard');
+
+	//FITUR TABUNGAN SISWA
     Route::get('/student/list-tabungan' , 'StudentController@listTabungan');
     Route::get('/student/list-tabungan/detail/{id}' , 'StudentController@detailTabungan');
+
+    //FITUR PENGAMBILAN TABUNGAN
+ 	Route::get('/student/list-pengambilan' , 'StudentController@listPengambilan');
+	Route::get('/student/list-pengambilan/detail/{id}' , 'StudentController@detailPengambilan');
     
 });
 //walikelas

@@ -14,6 +14,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Student;
 use App\Teacher;
+use App\Saving;
+use App\Saving_usage;
 
 class StudentController extends Controller
 {
@@ -28,39 +30,68 @@ class StudentController extends Controller
     }
 
 //Managemen Tabungan    
- 	public function listTabungan()
+ 	public function listTabungan() 
+		
 	{
-//untuk yg login
+		//untuk yg login
 		$user = Auth()->user();
 
-
-		$students = Student::join('users','stu_usr_id','=','usr_id') 
-		->join('classes','stu_class_id','=','class_id')
-		//->join('majors','major_id','=','class_major_id')
-		//->join('savings','sav_class_id','=','sav_id')
 		
-		->get();
+		$students= Saving::join('students','sav_stu_id','stu_id')
+			->join('users','users.usr_id','students.stu_usr_id')
+			
+			->get();
 		$count=0;
+
 		return view ('student.list-tabungan',['students'=>$students,'count'=>$count]);	
 	}
 	public function detailTabungan($id)
 	{
 		$user= DB::table('users')->get();
-		$students = Student::join('users','stu_usr_id','=','usr_id') 
-		->join('classes','stu_class_id','=','class_id')
+		$savings = Saving::join('students','sav_stu_id','=','stu_id')
+		->join('classes','stu_class_id','=','class_id') 
+		->join('users','stu_usr_id','=','usr_id')
+		->join('grades','grade_id','=','class_grade_id')
 		->join('majors','major_id','=','class_major_id')
-		->join('savings','sav_class_id','=','sav_id')
-		->where('stu_id',$id)
 		
+		->where('stu_id',$id)
+
 		->get();
 		$count=0;
-		return view ('student.detail-tabungan',['students'=>$students,'count'=>$count]);
+		return view ('student.detail-tabungan',['savings'=>$savings,'count'=>$count]);
 	}
 
+//Managemen Pengambilan Tabungan    
+ 	public function listPengambilan()
+	{
+		//untuk yg login
+		$user = Auth()->user();
 
+		$students= Saving_usage::join('students','usa_stu_id','stu_id')
+					->join('users','users.usr_id','students.stu_usr_id')
+					
+					->get();
 
+		$count=0;
+	
+		return view ('student.list-Pengambilan',['students'=>$students,'count'=>$count]);	
+	}
 
+	public function detailPengambilan($id)
+	{
+		$user= DB::table('users')->get();
+		$saving_usages = Saving_usage::join('students','usa_stu_id','=','stu_id')
+		->join('classes','stu_class_id','=','class_id') 
+		->join('users','stu_usr_id','=','usr_id')
+		->join('grades','grade_id','=','class_grade_id')
+		->join('majors','major_id','=','class_major_id')
+		
+		->where('stu_id',$id)
 
+		->get();
+		$count=0;
+		return view ('student.detail-pengambilan',['saving_usages'=>$saving_usages,'count'=>$count]);
+	}
 
 
 

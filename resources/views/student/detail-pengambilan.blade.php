@@ -1,7 +1,7 @@
 @extends('layouts.student-master')
 
 @section('judul')
-    Detail Tabungan
+    Detail Pengambilan
 @endsection
 
 @section('content')
@@ -11,49 +11,56 @@
             <div class="card">
                 <div class="card-body">
 
-                    <h3 class="text-primary"> Data Tabungan </h3>
+                    <h3 class="text-primary"> Data Pengambilan Tabungan </h3>
                     <hr>
                     <div class="table-responsive">
                         <table class="table">
-                        @foreach($savings as $savings)
+                       @foreach($saving_usages as $saving_usages)
                             <tbody>
-
-                            	 <tr>
+                                <tr>
                                     <td>Nama</td>
                                     <td>:</td>
-                                    <td>{{$savings->usr_name}}</td>
-                                </tr> 
-
-                                <tr>
-                                    <td>Kelas</td>
-                                    <td>:</td>
-                                    <td>{{$savings->grade_name}}</td>
+                                    <td>{{$saving_usages->usr_name}}</td>
                                 </tr>    
                                     
                                 <tr>
+                                    <td>Kelas</td>
+                                    <td>:</td>
+                                    <td>{{$saving_usages->grade_name}}</td>
+                                </tr>
+
+                                <tr>
                                     <td>Jurusan</td>
                                     <td>:</td>
-                                    <td>{{$savings->major_name}}</td>
-                                </tr>    
-                             	
-                             	  <tr>
+                                    <td>{{$saving_usages->major_name}}</td>
+                                </tr>
+
+                               
+                                 <tr>
                                     <td>Nomor Kelas</td>
                                     <td>:</td>
-                                    <td>{{$savings->class_number}}</td>
-                                </tr> 
+                                    <td>{{$saving_usages->class_number}}</td>
+                                </tr>
 
-                                <tr>
+                                 <tr>
                                     <td>Nominal</td>
                                     <td>:</td>
-                                    <td>{{$savings->sav_amount}}</td>
+                                    <td>{{$saving_usages->usa_amount}}</td>
                                 </tr>
 
                                 <tr>
-                                    <td>Tanggal Menabung</td>
+                                    <td>Tanggal Pengambilan</td>
                                     <td>:</td>
-                                    <td>{{$savings->sav_date}}</td>
+                                    <td>{{$saving_usages->usa_date}}</td>
                                 </tr>
 
+                                <tr>
+                                    <td>Keterangan Pengambilan</td>
+                                    <td>:</td>
+                                    <td>{{$saving_usages->usa_information}}</td>
+                                </tr>
+
+                               
                             </tbody>
                         @endforeach
                         </table>

@@ -1,6 +1,6 @@
 @extends('layouts.student-master')
 @section('judul')
-    List Tabungan
+    List Pengambilan Tabungan
 @endsection
 @section('content')
      <div class="row">
@@ -10,7 +10,6 @@
 
                     <table id="basic-datatable" class="table dt-responsive nowrap">
 
-                    
                         <thead>
                         <tr>
                             <th>No</th>
@@ -26,7 +25,7 @@
                             <td>{{$student->usr_name}}</td>
 
                             <td>
-                               <a href="/student/list-tabungan/detail/{{ $student->stu_id }}" class="btn btn-success btn-sm">detail</a>
+                               <a href="/student/list-pengambilan/detail/{{ $student->stu_id }}" class="btn btn-success btn-sm">detail</a>
                             </td>
 
                         </tr>
