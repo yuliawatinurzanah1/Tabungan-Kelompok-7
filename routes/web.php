@@ -121,6 +121,9 @@ Route::group(['middleware' => ['role:admin']], function () {
     //FITUR PENGAMBILAN TABUNGAN
  	Route::get('/student/list-pengambilan' , 'StudentController@listPengambilan');
 	Route::get('/student/list-pengambilan/detail/{id}' , 'StudentController@detailPengambilan');
+
+	Route::get('/student/create-pengambilan' , 'StudentController@addPengambilan');
+    Route::post('/student/create-pengambilan' , 'StudentController@savePengambilan');
     
 });
 //walikelas

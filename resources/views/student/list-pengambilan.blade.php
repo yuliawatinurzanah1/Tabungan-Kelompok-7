@@ -26,20 +26,25 @@
 
                             <td>
                                <a href="/student/list-pengambilan/detail/{{ $student->stu_id }}" class="btn btn-success btn-sm">detail</a>
+                               <a href="/student/create-pengambilan" class="btn btn-danger btn-sm">Ambil Tabungan</a>
                             </td>
 
                         </tr>
                           @endforeach  
 
                         </tbody>
+
                     </table>
 
                 </div> <!-- end card body-->
             </div> <!-- end card -->
         </div><!-- end col-->
     </div>
-   
+
+
 @endsection
+
+
 
 
 

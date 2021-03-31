@@ -85,6 +85,61 @@
                                         @enderror
                                     </div>
 
+                                     <div class="form-group">
+                                        <label for="gender">Gender</label>
+                                        <input id="usr_gender" type="text" class="form-control @error('usr_gender') is-invalid @enderror" name="usr_gender" value="{{ old('usr_gender') }}" autocomplete="usr_gender" autofocus required>
+
+		                                @error('usr_gender')
+		                                <span class="invalid-feedback" role="alert">
+		                                    <strong>{{ $message }}</strong>
+		                                </span>
+		                                @enderror
+                                    </div>
+
+                                      <div class="form-group">
+                                        <label for="placeofbirth">Place Of Birth</label>
+                                        <input id="usr_place_of_birth" type="text" class="form-control @error('usr_place_of_birth') is-invalid @enderror" name="usr_place_of_birth" value="{{ old('usr_place_of_birth') }}" autocomplete="usr_place_of_birth" autofocus required>
+
+		                                @error('usr_place_of_birth')
+		                                <span class="invalid-feedback" role="alert">
+		                                    <strong>{{ $message }}</strong>
+		                                </span>
+		                                @enderror
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="dateofbirth">Date Of Birth</label>
+                                        <input id="usr_date_of_birth" type="text" class="form-control @error('usr_date_of_birth') is-invalid @enderror" name="usr_date_of_birth" value="{{ old('usr_date_of_birth') }}" autocomplete="usr_date_of_birth" autofocus required>
+
+		                                @error('usr_date_of_birth')
+		                                <span class="invalid-feedback" role="alert">
+		                                    <strong>{{ $message }}</strong>
+		                                </span>
+		                                @enderror
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="religion">Religion</label>
+                                        <input id="usr_religion" type="text" class="form-control @error('usr_religion') is-invalid @enderror" name="usr_religion" value="{{ old('usr_religion') }}" autocomplete="usr_religion" autofocus required>
+
+		                                @error('usr_religion')
+		                                <span class="invalid-feedback" role="alert">
+		                                    <strong>{{ $message }}</strong>
+		                                </span>
+		                                @enderror
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="addres">Addres</label>
+                                        <input id="usr_addres" type="text" class="form-control @error('usr_addres') is-invalid @enderror" name="usr_addres" value="{{ old('usr_addres') }}" autocomplete="usr_addres" autofocus required>
+
+		                                @error('usr_addres')
+		                                <span class="invalid-feedback" role="alert">
+		                                    <strong>{{ $message }}</strong>
+		                                </span>
+		                                @enderror
+                                    </div>
+
                                     <div class="form-group">
                                         <label for="emailaddress">Phone Number</label>
                                           <input id="usr_phone" value="{{ old('usr_phone') }}" type="number" class="form-control @error('usr_phone') is-invalid @enderror" name="usr_phone" autocomplete="off">

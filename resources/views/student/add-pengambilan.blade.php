@@ -1,4 +1,4 @@
-@extends('layouts.walikelas-master')
+@extends('layouts.student-master')
 
 @section('judul')
     Tambah Pengambilan Tabungan
