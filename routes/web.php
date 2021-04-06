@@ -158,6 +158,10 @@ Route::group(['middleware' => ['role:admin']], function () {
     Route::post('/walikelas/update-pengambilan/{id}' , 'walikelasController@updatePengambilan');
 
  	Route::get('/walikelas/pengambilan/hapus/{stu_id}' , 'WalikelasController@hapusPengambilan');
+
+ 	//FITUR LAPORAN
+ 	Route::get('/walikelas/list-laporan' , 'WalikelasController@listlaporan');
+ 	Route::get('/walikelas/list-laporan/detail/{id}' , 'WalikelasController@detailLaporan');
     
 });
 

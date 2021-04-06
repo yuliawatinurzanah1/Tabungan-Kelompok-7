@@ -15,6 +15,7 @@ use App\Student;
 use App\Teacher;
 use App\Saving;
 use App\Saving_usage;
+use App\Report;
 use Auth;
 
 class WalikelasController extends Controller
@@ -286,6 +287,40 @@ class WalikelasController extends Controller
 		$saving_usages->delete();
 
 		return redirect('walikelas/list-pengambilan');
+	}
+
+	public function listLaporan() 
+		
+	{
+		//untuk yg login
+		$user = Auth()->user();
+
+		$teachers = Teacher::where('tcr_usr_id', $user->usr_id)->first(); 
+		$students = Report::join('students','sav_stu_id','stu_id')
+			->join('savings','sav_id','=','rep_sav_id')
+			->join('saving_usages','usa_id','=','rep_usa_id')
+			->join('users','users.usr_id','students.stu_usr_id')
+			->where('stu_class_id', $teachers->tcr_class_id)
+			->get();
+		$count=0;
+
+		return view ('walikelas.list-laporan',['students'=>$students,'count'=>$count]);	
+	}
+
+	public function detailLaporan($id)
+	{
+		$user= DB::table('users')->get();
+		$savings = Saving::join('students','sav_stu_id','=','stu_id')
+		->join('classes','stu_class_id','=','class_id') 
+		->join('users','stu_usr_id','=','usr_id')
+		->join('grades','grade_id','=','class_grade_id')
+		->join('majors','major_id','=','class_major_id')
+		
+		->where('stu_id',$id)
+
+		->get();
+		$count=0;
+		return view ('walikelas.detail-laporan',['savings'=>$savings,'count'=>$count]);
 	}
 
 

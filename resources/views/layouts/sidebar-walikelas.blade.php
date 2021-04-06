@@ -40,6 +40,13 @@
                     </a>
                 </li>
 
+                 <li>
+                    <a href="{{URL::to('/walikelas/list-laporan')}}">
+                        <i class="la la-edit"></i>
+                        <span> Laporan </span>
+                    </a>
+                </li>
+
                 <li>
 					 <a href="{{ route('logout') }}" class="dropdown-item notify-item" 
                			 onclick="event.preventDefault();
