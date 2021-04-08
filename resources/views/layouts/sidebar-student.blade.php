@@ -35,9 +35,18 @@
                 </li>
 
                  <li>
-                    <a href="{{URL::to('/student/list-pengambilan')}}">
+                 	<?php
+
+						use App\Saving_usage;
+
+						$saving_usage = Saving_usage::join('students','saving_usages.usa_stu_id','=','students.stu_id')
+										  ->join('users','students.stu_usr_id','=','users.usr_id')
+										  ->where('students.stu_usr_id',Auth()->user()->usr_id)->first();
+
+					?>
+                    <a href="{{URL::to('student/detail/'.$saving_usage->usa_id)}}">
                         <i class="la la-edit"></i>
-                        <span> Pemakaian Tabungan </span>
+                        <span> Pengambilan Tabungan </span>
                     </a>
                 </li>
 

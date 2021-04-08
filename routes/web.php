@@ -119,7 +119,7 @@ Route::group(['middleware' => ['role:admin']], function () {
     Route::get('/student/detail/{id}' , 'StudentController@detailTabungan');
 
     //FITUR PENGAMBILAN TABUNGAN
- 	Route::get('/student/list-pengambilan' , 'StudentController@listPengambilan');
+ 	//Route::get('/student/list-pengambilan' , 'StudentController@listPengambilan');
 	Route::get('/student/list-pengambilan/detail/{id}' , 'StudentController@detailPengambilan');
 
 	Route::get('/student/create-pengambilan' , 'StudentController@addPengambilan');
