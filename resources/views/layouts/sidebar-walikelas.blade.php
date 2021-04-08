@@ -10,7 +10,7 @@
 
             <ul class="metismenu" id="side-menu">
 
-                <li class="menu-title">Walikelas</li>
+                <li class="menu-title">{{ Auth()->user()->usr_name }}</li>
 
                 <li>
                     <a href="{{URL::to('/admin')}}">

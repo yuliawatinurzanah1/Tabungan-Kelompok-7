@@ -8,7 +8,7 @@
 
             <ul class="metismenu" id="side-menu">
 
-                <li class="menu-title">Student</li>
+                <li class="menu-title">{{ Auth()->user()->usr_name }}</li>
 
                 <li>
                     <a href="{{URL::to('/student')}}">
@@ -19,16 +19,33 @@
 
                 
                 <li>
-                    <a href="{{URL::to('/student/list-tabungan')}}">
+                	<?php
+
+						use App\Saving;
+
+						$saving = Saving::join('students','savings.sav_stu_id','=','students.stu_id')
+										  ->join('users','students.stu_usr_id','=','users.usr_id')
+										  ->where('students.stu_usr_id',Auth()->user()->usr_id)->first();
+
+					?>
+                    <a href="{{ URL::to('student/detail/'.$saving->sav_id) }}">
                         <i class="la la-edit"></i>
                         <span> Tabungan Siswa </span>
                     </a>
                 </li>
 
-                  <li>
+                 <li>
                     <a href="{{URL::to('/student/list-pengambilan')}}">
                         <i class="la la-edit"></i>
                         <span> Pemakaian Tabungan </span>
+                    </a>
+                </li>
+
+
+                 <li>
+                    <a href="{{URL::to('/student/create-pengambilan')}}">
+                        <i class="la la-edit"></i>
+                        <span> Ambil Tabungan </span>
                     </a>
                 </li>
 

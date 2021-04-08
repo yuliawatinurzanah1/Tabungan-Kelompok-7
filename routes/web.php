@@ -115,8 +115,8 @@ Route::group(['middleware' => ['role:admin']], function () {
 	Route::get('/student' , 'StudentController@dashboard');
 
 	//FITUR TABUNGAN SISWA
-    Route::get('/student/list-tabungan' , 'StudentController@listTabungan');
-    Route::get('/student/list-tabungan/detail/{id}' , 'StudentController@detailTabungan');
+   // Route::get('/student/list-tabungan' , 'StudentController@listTabungan');
+    Route::get('/student/detail/{id}' , 'StudentController@detailTabungan');
 
     //FITUR PENGAMBILAN TABUNGAN
  	Route::get('/student/list-pengambilan' , 'StudentController@listPengambilan');

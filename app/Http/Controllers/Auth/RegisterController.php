@@ -30,8 +30,13 @@ class RegisterController extends Controller
     */
     public function registerStudent()
     {
-    	$class= DB::table('classes')->get();
-        return view('auth.register-student');
+    	$students= DB::table('students')->get();
+    	$classes= DB::table('classes')
+    	->join('grades','grade_id','=','class_grade_id')
+		->join('majors','major_id','=','class_major_id')
+		->get();
+    	//dd($students);
+        return view('auth.register-student',['students'=> $students,'classes'=> $classes]);
     }
 
     public function registerWalikelas()

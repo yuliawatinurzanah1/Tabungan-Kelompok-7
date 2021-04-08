@@ -30,20 +30,22 @@ class StudentController extends Controller
     }
 
 //Managemen Tabungan    
- 	public function listTabungan() 
+ 	//public function listTabungan() 
 		
-	{
+	//{
 		//untuk yg login
-		$user = Auth()->user();
+		//$user = Auth()->user();
 
-		$students= Saving::join('students','sav_stu_id','stu_id')
-			->join('users','users.usr_id','students.stu_usr_id')
-			->where('users.usr_id',$user->usr_id)
-			->get();
-		$count=0;
+		//$students= Saving::join('students','sav_stu_id','stu_id')
+			//->join('users','users.usr_id','students.stu_usr_id')
+			//->where('users.usr_id',$user->usr_id)
+			//->get();
+	//	$count=0;
 
-		return view ('student.list-tabungan',['students'=>$students,'count'=>$count]);	
-	}
+		//$students = Student::groupBy('stu_usr_id', )
+
+		//return view ('student.list-tabungan',['students'=>$students,'count'=>$count]);	
+	//}
 	public function detailTabungan($id)
 	{
 		$user= DB::table('users')->get();
@@ -58,38 +60,6 @@ class StudentController extends Controller
 		->get();
 		$count=0;
 		return view ('student.detail-tabungan',['savings'=>$savings,'count'=>$count]);
-	}
-
-//Managemen Pengambilan Tabungan    
- 	public function listPengambilan()
-	{
-		//untuk yg login
-		$user = Auth()->user();
-
-		$students= Saving_usage::join('students','usa_stu_id','stu_id')
-					->join('users','users.usr_id','students.stu_usr_id')
-					->where('users.usr_id',$user->usr_id)
-					->get();
-
-		$count=0;
-	
-		return view ('student.list-Pengambilan',['students'=>$students,'count'=>$count]);	
-	}
-
-	public function detailPengambilan($id)
-	{
-		$user= DB::table('users')->get();
-		$saving_usages = Saving_usage::join('students','usa_stu_id','=','stu_id')
-		->join('classes','stu_class_id','=','class_id') 
-		->join('users','stu_usr_id','=','usr_id')
-		->join('grades','grade_id','=','class_grade_id')
-		->join('majors','major_id','=','class_major_id')
-		
-		->where('stu_id',$id)
-
-		->get();
-		$count=0;
-		return view ('student.detail-pengambilan',['saving_usages'=>$saving_usages,'count'=>$count]);
 	}
 
 	//CREATE PENGAMBILAN TABUNGAN
@@ -126,6 +96,40 @@ class StudentController extends Controller
         //mengirim data siswa ke view index
 		return redirect('student/add-pengambilan');
 	}
+
+//Managemen Pengambilan Tabungan    
+ 	public function listPengambilan()
+	{
+		//untuk yg login
+		$user = Auth()->user();
+
+		$students= Saving_usage::join('students','usa_stu_id','stu_id')
+					->join('users','users.usr_id','students.stu_usr_id')
+					->where('users.usr_id',$user->usr_id)
+					->get();
+
+		$count=0;
+	
+		return view ('student.list-Pengambilan',['students'=>$students,'count'=>$count]);	
+	}
+
+	public function detailPengambilan($id)
+	{
+		$user= DB::table('users')->get();
+		$saving_usages = Saving_usage::join('students','usa_stu_id','=','stu_id')
+		->join('classes','stu_class_id','=','class_id') 
+		->join('users','stu_usr_id','=','usr_id')
+		->join('grades','grade_id','=','class_grade_id')
+		->join('majors','major_id','=','class_major_id')
+		
+		->where('stu_id',$id)
+
+		->get();
+		$count=0;
+		return view ('student.detail-pengambilan',['saving_usages'=>$saving_usages,'count'=>$count]);
+	}
+
+	
 
 
 

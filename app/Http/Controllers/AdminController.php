@@ -41,7 +41,7 @@ class AdminController extends Controller
 		->get();
 		$count=0;
 
-		$students = Student::where('stu_')
+		//$students = Student::where('stu_')
 			//dd($students);
 
 		return view ('admin.list-student',['students' => $students,'count'=> $count]);
