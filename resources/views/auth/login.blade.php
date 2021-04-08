@@ -86,8 +86,7 @@
                         <div class="row mt-3">
                             <div class="col-12 text-center">
                                 <p> <a href="pages-recoverpw.html" class="text-muted ml-1">Forgot your password?</a></p>
-                                <p class="text-muted">Register sebagai siswa <a href="{{URL::to('/register-student')}}" class="text-muted ml-1"><b class="font-weight-semibold">Register</b></a></p>
-                                <p class="text-muted">Register sebagai walikelas <a href="{{URL::to('/register-walikelas')}}" class="text-muted ml-1"><b class="font-weight-semibold">Register</b></a></p>
+                               
                             </div> <!-- end col -->
                         </div>
                         <!-- end row -->

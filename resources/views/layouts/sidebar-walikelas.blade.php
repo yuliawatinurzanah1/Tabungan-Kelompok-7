@@ -22,7 +22,7 @@
                  <li>
                     <a href="{{URL::to('/walikelas/list-student')}}">
                         <i class="la la-edit"></i>
-                        <span> Kelola Siswa </span>
+                        <span> Data Siswa </span>
                     </a>
                 </li>
 

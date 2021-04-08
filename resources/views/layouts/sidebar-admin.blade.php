@@ -26,18 +26,16 @@
                 </li>
 
                  <li>
-                    <a href="{{URL::to('/admin/list-student')}}">
-                        <i class="la la-edit"></i>
-                        <span> Kelola Siswa </span>
-                    </a>
-                </li>
- 				
-
-
-                <li>
                     <a href="{{URL::to('/admin/list-class')}}">
                         <i class="la la-edit"></i>
                         <span> Kelola Kelas </span>
+                    </a>
+                </li>
+
+                 <li>
+                    <a href="{{URL::to('/admin/list-student')}}">
+                        <i class="la la-edit"></i>
+                        <span> Kelola Siswa </span>
                     </a>
                 </li>
                 
