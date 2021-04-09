@@ -62,41 +62,6 @@ class StudentController extends Controller
 		return view ('student.detail-tabungan',['savings'=>$savings,'count'=>$count]);
 	}
 
-	//CREATE PENGAMBILAN TABUNGAN
-	public function addPengambilan()
-	{
-		$user= DB::table('users')->get();
-		$students = Student::join('users','stu_usr_id','=','usr_id')
-		
-
-		->get();
-		$count=0;
-		$grades = Grade::all();
-		//$students = Student::all();
-		//$classes = Classes::all();
-		//$savings = Savings::all();
-		//$saving = DB::table('savings')->get();	 
-		//mengirim data tabungan ke view index
-		return view ('student.add-pengambilan',['students'=>$students,'count'=>$count], compact('grades'));
-	}
-
-	public function savePengambilan(Request $request)
-	{
-		
-			$saving_usage = new Saving_usage;
-				$saving_usage->usa_stu_id       = $request->usr_name;
-				$saving_usage->usa_class_id     = $request->grade;
-				$saving_usage->usa_amount       = $request->usa_amount;
-				$saving_usage->usa_date		    = $request->usa_date;
-				$saving_usage->usa_information  = $request->usa_information;
-				$saving_usage->save();	
-		
-				Session::flash('sukses','Data Berhasil disimpan');
-        return back();
-        //mengirim data siswa ke view index
-		return redirect('student/add-pengambilan');
-	}
-
 //Managemen Pengambilan Tabungan    
  	//public function listPengambilan()
 	//{
@@ -129,7 +94,58 @@ class StudentController extends Controller
 		return view ('student.detail-pengambilan',['saving_usages'=>$saving_usages,'count'=>$count]);
 	}
 
-	
+		//CREATE PENGAMBILAN TABUNGAN
+	public function addPengambilan()
+	{
+		$user= DB::table('users')->get();
+		$students = Student::join('users','stu_usr_id','=','usr_id')
+		
+
+		->get();
+		$count=0;
+		$grades = Grade::all();
+		//$students = Student::all();
+		//$classes = Classes::all();
+		//$savings = Savings::all();
+		//$saving = DB::table('savings')->get();	 
+		//mengirim data tabungan ke view index
+		return view ('student.add-pengambilan',['students'=>$students,'count'=>$count], compact('grades'));
+	}
+
+	public function savePengambilan(Request $request)
+	{
+		$students = Student::whereStuUsrId($stu_usr_id)->first();
+		$saving = $saving->sav_amount;
+		$saving_usage = $request->usa_amount;
+
+			if ($saving <= 0) {
+				\Session::flash('gagal', 'Saldo Tabungan Kosong');
+				return redirect('/list-student')->with('Info', 'Saldo Tabungan Kosong');
+			} elseif ($saving < $saving_usage) {
+				\Session::flash('gagal', 'Jumlah Pengambilan Lebih Dari Saldo');
+				return redirect('/list-student')->with('Info', 'Jumlah Pengambilan Lebih Dari Saldo');
+			} elseif ($saving > $saving_usage or $saving == $saving_usage) {
+
+				$saving_usage = new Saving_usage;
+				$saving_usage->usa_stu_id       = $request->usr_name;
+				$saving_usage->usa_class_id     = $request->grade;
+				$saving_usage->usa_amount       = $request->usa_amount;
+				$saving_usage->usa_date		    = $request->usa_date;
+				$saving_usage->usa_information  = $request->usa_information;
+				$save = $saving_usage->save();	
+
+				if($save) {
+					$students->stu_usr_id = $saving - $saving_usage;
+					$students->update();
+				}
+
+				return redirect('student/add-pengambilan')->with('sukses','Data Berhasil disimpan');
+			}
+
+			
+	}
+
+
 
 
 
