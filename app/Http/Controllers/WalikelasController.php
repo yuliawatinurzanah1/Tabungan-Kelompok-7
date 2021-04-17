@@ -328,8 +328,8 @@ class WalikelasController extends Controller
 		->get();
 
 		$saving_usages = Saving_usage::where('usa_stu_id',$id)
-		->get();
-		 dd($saving_usages);
+		->first();
+		 
 		$count=0;
 		return view ('walikelas.detail-laporan',['savings'=>$savings,'saving_usages'=>$saving_usages,'count'=>$count]);
 	}

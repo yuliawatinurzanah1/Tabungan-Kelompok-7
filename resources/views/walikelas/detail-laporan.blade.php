@@ -54,7 +54,7 @@
                                     <td>{{$savings->sav_date}}</td>
                                 </tr>
 
-                                 @foreach($saving_usages as $saving_usages)
+
                                  <tr>
                                     <td>Tanggal Pengambilan</td>
                                     <td>:</td>
@@ -66,7 +66,7 @@
                                     <td>:</td>
                                     <td>{{$saving_usages->usa_information}}</td>
                                 </tr>
-                                 @endforeach
+                                
                             </tbody>
                         @endforeach
                         </table>
