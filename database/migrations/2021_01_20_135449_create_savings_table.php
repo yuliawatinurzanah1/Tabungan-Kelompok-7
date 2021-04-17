@@ -17,7 +17,7 @@ class CreateSavingsTable extends Migration
            $table->bigIncrements('sav_id');
            $table->unsignedBigInteger('sav_stu_id');
            $table->unsignedBigInteger('sav_class_id');
-           $table->string('sav_amount');
+           $table->unsignedBigInteger('sav_amount');
            $table->string('sav_date');
            $table->timestamps();
         });

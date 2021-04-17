@@ -29,7 +29,7 @@
                                 </tr>
 
                                 <tr>
-                                    <td>NIS</td>
+                                    <td>NIk</td>
                                     <td>:</td>
                                     <td>{{$teacher->tcr_nik}}</td>
                                 </tr>
@@ -65,11 +65,7 @@
                                     <td>{{$teacher->usr_phone}}</td>
                                 </tr>
                                     
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
+                         
                             </tbody>
                         @endforeach
                         </table>

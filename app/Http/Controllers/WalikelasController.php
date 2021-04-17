@@ -61,10 +61,17 @@ class WalikelasController extends Controller
 		//untuk yg login
 		$user = Auth()->user();
 
+		//$user= DB::table('users')
+				//->groupBy('sav_stu_id')
+				//->having('sav_stu_id')
+				//->orderBy('usr_name','asc')
+				//->get();
+
 		$teachers = Teacher::where('tcr_usr_id', $user->usr_id)->first(); 
 		$students= Saving::join('students','sav_stu_id','stu_id')
 			->join('users','users.usr_id','students.stu_usr_id')
 			->where('stu_class_id', $teachers->tcr_class_id)
+			
 			->get();
 		$count=0;
 
@@ -296,7 +303,7 @@ class WalikelasController extends Controller
 		$user = Auth()->user();
 
 		$teachers = Teacher::where('tcr_usr_id', $user->usr_id)->first(); 
-		$students = Report::join('students','sav_stu_id','stu_id')
+		$students = Report::join('students','rep_stu_id','stu_id')
 			->join('savings','sav_id','=','rep_sav_id')
 			->join('saving_usages','usa_id','=','rep_usa_id')
 			->join('users','users.usr_id','students.stu_usr_id')
@@ -319,8 +326,12 @@ class WalikelasController extends Controller
 		->where('stu_id',$id)
 
 		->get();
+
+		$saving_usages = Saving_usage::where('usa_stu_id',$id)
+		->get();
+		 dd($saving_usages);
 		$count=0;
-		return view ('walikelas.detail-laporan',['savings'=>$savings,'count'=>$count]);
+		return view ('walikelas.detail-laporan',['savings'=>$savings,'saving_usages'=>$saving_usages,'count'=>$count]);
 	}
 
 

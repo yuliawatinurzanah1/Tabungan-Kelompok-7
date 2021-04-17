@@ -186,9 +186,11 @@ class AdminController extends Controller
 	public function addTeacher()
 	{
 		$classes = Classes::all();
+		$grades = Grade::all();
+		$majors = Major::all();
 		$teacher = DB::table('teachers')->get();	 
 		//mengirim data guru ke view index
-		return view ('admin.add-teacher', compact('classes','teacher'));
+		return view ('admin.add-teacher', compact('classes','grades','majors','teacher'));
 	}
 
 	public function saveTeacher(Request $request)
@@ -225,9 +227,19 @@ class AdminController extends Controller
 		//mengambil data guru sesuai id yg dipilih
 		$teacher = DB::table('teachers')
 		->join('users','teachers.tcr_usr_id','=','users.usr_id')
+		->join('classes','teachers.tcr_class_id','=','classes.class_id')
+		->join('majors','classes.class_major_id','=','majors.major_id')
+		->join('grades','classes.class_grade_id','=','grades.grade_id')
+
 		->where('tcr_id',$id)
 		->first();
-		$classes = Classes::all();
+		
+
+		$classes = DB::table('classes')
+		->join('grades','classes.class_grade_id','=','grades.grade_id')
+		->join('majors','classes.class_major_id','=','majors.major_id')
+		->get();
+
 		
 		//passingg data guru yg di dapat ke view edit-teacher.blade.php
 		return view('admin.edit-teacher',['teacher' => $teacher,'classes' => $classes]);

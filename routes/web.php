@@ -124,6 +124,8 @@ Route::group(['middleware' => ['role:admin']], function () {
 
 	Route::get('/student/create-pengambilan' , 'StudentController@addPengambilan');
     Route::post('/student/create-pengambilan' , 'StudentController@savePengambilan');
+
+    Route::get('/student/saldo','StudentController@countPerhari');
     
 });
 //walikelas

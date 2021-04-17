@@ -33,18 +33,40 @@
                                 </div>
                             </div>
 
-                       		<div class="col-lg-12">
+                       			<div class="col-lg-12">
                                 <div class="form-group mb-3">
                                     <label for="simpleinput">Kelas</label>
                                 
                                         <select type="text" id="simpleinput" name="grade" class="form-control" required>
                                             <option value="">Pilih---</option>
                                             @foreach($classes as $data)
-                                            <option value="{{$data->class_id}}">{{$data->class_name}}</option>
+                                            <option value="{{$data->class_id}}">{{$data->grade_name}}</option>
                                             @endforeach
                                         </select>
                                 </div>
                             </div>
+
+                        
+
+                            <div class="col-lg-12">
+                                <div class="form-group mb-3">
+                                    <label for="simpleinput">Jurusan</label>
+                                
+                                        <select type="text" id="simpleinput" name="grade" class="form-control" required>
+                                            <option value="">Pilih---</option>
+                                            @foreach($classes as $data)
+                                            <option value="{{$data->major_id}}">{{$data->major_name}}</option>
+                                            @endforeach
+                                        </select>
+                                </div>
+                            </div>
+
+                             <div class="col-lg-12">
+								<div class="form-group mb-3">
+									<label for="simpleinput">Nomor Kelas </label>
+									<input type="number" id="simpleinput" name="stu_class_id" class="form-control" placeholder="Nomor Kelas" required>
+								</div>
+							</div>
 
                              <div class="col-lg-12">
                                 <div class="form-group mb-3">
@@ -67,7 +89,12 @@
                                 </div>
                             </div>
 
-                       		
+                       		 <div class="col-lg-12">
+                                <div class="form-group mb-3">
+                                    <label for="simpleinput">Password </label>
+                                    <input type="text" id="simpleinput" name="usr_passord" class="form-control"  placeholder="Password"  required>
+                                </div>
+                            </div>
 
                            	<div class="col-lg-12">
                                	<div class="form-group mb-3">

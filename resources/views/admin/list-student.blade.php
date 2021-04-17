@@ -24,6 +24,7 @@
                             <th>Nama</th>
                             <th>Kelas</th>
                             <th>Jurusan</th>
+                            <th>Nomor Kelas</th>
                             <th>Aksi</th>
                         </tr>
                         </thead>
@@ -36,6 +37,7 @@
                             <td>{{ $student->usr_name }}</td>
                             <td>{{ $student->grade_name }}</td>
                             <td>{{ $student->major_name }}</td>
+                            <td>{{ $student->class_number }}</td>
                        
                             <td>
 

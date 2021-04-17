@@ -58,6 +58,13 @@
                     </a>
                 </li>
 
+                <li>
+                    <a href="{{URL::to('/student/saldo')}}">
+                        <i class="la la-edit"></i>
+                        <span> Saldo Tabungan </span>
+                    </a>
+                </li>
+
 				<li>
 					 <a href="{{ route('logout') }}" class="dropdown-item notify-item" 
                			 onclick="event.preventDefault();

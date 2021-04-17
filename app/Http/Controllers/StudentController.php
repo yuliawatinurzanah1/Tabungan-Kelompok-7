@@ -29,23 +29,6 @@ class StudentController extends Controller
     	return view('student.dashboard');
     }
 
-//Managemen Tabungan    
- 	//public function listTabungan() 
-		
-	//{
-		//untuk yg login
-		//$user = Auth()->user();
-
-		//$students= Saving::join('students','sav_stu_id','stu_id')
-			//->join('users','users.usr_id','students.stu_usr_id')
-			//->where('users.usr_id',$user->usr_id)
-			//->get();
-	//	$count=0;
-
-		//$students = Student::groupBy('stu_usr_id', )
-
-		//return view ('student.list-tabungan',['students'=>$students,'count'=>$count]);	
-	//}
 	public function detailTabungan($id)
 	{
 		$user= DB::table('users')->get();
@@ -62,21 +45,36 @@ class StudentController extends Controller
 		return view ('student.detail-tabungan',['savings'=>$savings,'count'=>$count]);
 	}
 
-//Managemen Pengambilan Tabungan    
- 	//public function listPengambilan()
-	//{
-		//untuk yg login
-		//$user = Auth()->user();
+	public function countPerhari()
+	{
+		//$saving = DB::table('savings')->get();
+		$student = Student::where('stu_usr_id',Auth()->user()->usr_id)
+					->first();
 
-		//$students= Saving_usage::join('students','usa_stu_id','stu_id')
-					//->join('users','users.usr_id','students.stu_usr_id')
-					//->where('users.usr_id',$user->usr_id)
-					//->get();
 
-		//$count=0;
-	
-		//return view ('student.list-Pengambilan',['students'=>$students,'count'=>$count]);	
-	//}
+
+				//dd($student->stu_id);
+		$saving = Saving::where('sav_stu_id',$student->stu_id)
+		
+		->sum('sav_amount');
+
+				//dd($saving);
+		
+
+		//dd(Auth()->user()->usr_id);
+		//$saving_usage = DB::table('saving_usages')->get();
+		$saving_usage = Saving_usage::where('usa_stu_id',$student->stu_id)
+		->sum('usa_amount');
+
+		//$saving_usage = "Rp " . number_format($saving_usage,2,',','.');
+		$hasil = $saving - $saving_usage;
+		$hasil = "Rp " . number_format($hasil,2,',','.');
+
+			//dd($hasil);
+		return view('student.saldo',compact('saving','saving_usage','hasil'));
+		
+		
+	}
 
 	public function detailPengambilan($id)
 	{
@@ -114,33 +112,18 @@ class StudentController extends Controller
 
 	public function savePengambilan(Request $request)
 	{
-		$students = Student::whereStuUsrId($stu_usr_id)->first();
-		$saving = $saving->sav_amount;
-		$saving_usage = $request->usa_amount;
-
-			if ($saving <= 0) {
-				\Session::flash('gagal', 'Saldo Tabungan Kosong');
-				return redirect('/list-student')->with('Info', 'Saldo Tabungan Kosong');
-			} elseif ($saving < $saving_usage) {
-				\Session::flash('gagal', 'Jumlah Pengambilan Lebih Dari Saldo');
-				return redirect('/list-student')->with('Info', 'Jumlah Pengambilan Lebih Dari Saldo');
-			} elseif ($saving > $saving_usage or $saving == $saving_usage) {
-
+	
 				$saving_usage = new Saving_usage;
 				$saving_usage->usa_stu_id       = $request->usr_name;
 				$saving_usage->usa_class_id     = $request->grade;
 				$saving_usage->usa_amount       = $request->usa_amount;
 				$saving_usage->usa_date		    = $request->usa_date;
 				$saving_usage->usa_information  = $request->usa_information;
-				$save = $saving_usage->save();	
+				$saving_usage->save();	
 
-				if($save) {
-					$students->stu_usr_id = $saving - $saving_usage;
-					$students->update();
-				}
-
-				return redirect('student/add-pengambilan')->with('sukses','Data Berhasil disimpan');
-			}
+				
+				return redirect('student/add-pengambilan');
+			
 
 			
 	}

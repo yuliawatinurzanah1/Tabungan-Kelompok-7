@@ -43,16 +43,11 @@
                             </div>
 
                             <div class="col-lg-12">
-                                <div class="form-group mb-3">
-                                    <label for="simpleinput">Namor Kelas</label>
-                                        <select type="number" id="simpleinput" name="class_number" class="form-control" required>
-                                            <option value="">Pilih---</option>
-                                            @foreach($class as $data)
-                                            <option value="{{$data->class_number}}">{{$data->class_number}}</option>
-                                            @endforeach
-                                        </select>
-                                </div>
-                            </div>
+								<div class="form-group mb-3">
+									<label for="simpleinput">Nomor Kelas </label>
+									<input type="number" id="simpleinput" name="stu_class_id" class="form-control" placeholder="Nomor Kelas" required>
+								</div>
+							</div>
 
                            
 
