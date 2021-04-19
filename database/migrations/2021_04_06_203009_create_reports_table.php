@@ -22,6 +22,7 @@ class CreateReportsTable extends Migration
              $table->unsignedBigInteger('rep_usa_id');
          
              $table->timestamps();
+ 
         });
     }
 

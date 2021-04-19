@@ -20,6 +20,7 @@ class CreateSavingsTable extends Migration
            $table->unsignedBigInteger('sav_amount');
            $table->string('sav_date');
            $table->timestamps();
+
         });
     }
 

@@ -71,7 +71,7 @@ class WalikelasController extends Controller
 		$students= Saving::join('students','sav_stu_id','stu_id')
 			->join('users','users.usr_id','students.stu_usr_id')
 			->where('stu_class_id', $teachers->tcr_class_id)
-			
+			//->groupBy('sav_stu_id')//
 			->get();
 		$count=0;
 

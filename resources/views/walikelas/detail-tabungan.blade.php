@@ -53,9 +53,16 @@
                                     <td>:</td>
                                     <td>{{$savings->sav_date}}</td>
                                 </tr>
+                               
+                               <tr> 
+                                   <td> <a href="/walikelas/edit-tabungan/{{ $savings->sav_id }}" class="btn btn-warning btn-sm">edit</a>
 
+                                   <td> <a href="/walikelas/tabungan/hapus/{{ $savings->sav_id }}" class="btn btn-danger btn-sm">hapus</a>
+                                </tr>    
                             </tbody>
+                            
                         @endforeach
+
                         </table>
                     </div>
                 </div> <!-- end card body-->
