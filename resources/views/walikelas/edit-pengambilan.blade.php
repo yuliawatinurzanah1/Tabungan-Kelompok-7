@@ -16,26 +16,6 @@
                     <form action="{{ url('walikelas/update-pengambilan/'.$saving_usage->usa_id) }}" method="post">
                         @csrf
                         <div class="row">
-
-                            <div class="col-lg-12">
-                                <div class="form-group mb-3">
-                                    <label for="simpleinput">Nama</label>
-                                    <input value="{{ $saving_usage->usr_name }}" type="text" id="simpleinput" name="student_name" class="form-control" required>
-                                </div>
-                            </div>
-
-                       		<div class="col-lg-12">
-                                <div class="form-group mb-3">
-                                    <label for="simpleinput">Kelas</label>
-                                
-                                        <select type="text" id="simpleinput" name="grade" class="form-control" required>
-                                            <option value="">Pilih---</option>
-                                            @foreach($classes as $data)
-                                            <option value="{{$data->class_id}}">{{$data->grade_name}}</option>
-                                            @endforeach
-                                        </select>
-                                </div>
-                            </div>
                            
                               <div class="col-lg-12">
                                 <div class="form-group mb-3">
@@ -46,10 +26,13 @@
 
                             <div class="col-lg-12">
                                 <div class="form-group mb-3">
-                                    <label for="simpleinput">Tanggal Pengambilan</label>
+                                    <label for="simpleinput">Tanggal Pengambilan </label>
                                     <input value="{{ $saving_usage->usa_date }}"  type="date" id="simpleinput" name="usa_date" class="form-control" required>
+                                    
                                 </div>
                             </div>
+
+
 
                             <div class="col-lg-12">
                                 <div class="form-group mb-3">

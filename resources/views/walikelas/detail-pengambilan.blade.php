@@ -59,7 +59,11 @@
                                     <td>:</td>
                                     <td>{{$saving_usages->usa_information}}</td>
                                 </tr>
+                                <tr>
+                                <td><a href="/walikelas/edit-pengambilan/{{ $saving_usages->usa_id }}" class="btn btn-warning btn-sm">edit</a></td>
 
+                                <td><a href="/walikelas/pengambilan/hapus/{{ $saving_usages->usa_id }}" class="btn btn-danger btn-sm">hapus</a></td>
+                                </tr>    
                                
                             </tbody>
                         @endforeach

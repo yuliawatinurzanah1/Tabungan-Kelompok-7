@@ -28,10 +28,6 @@
 
                             <td>
                                <a href="/walikelas/list-pengambilan/detail/{{ $student->stu_id }}" class="btn btn-success btn-sm">detail</a>
-
-                               <a href="/walikelas/edit-pengambilan/{{ $student->stu_id }}" class="btn btn-warning btn-sm">edit</a>
-
-                               <a href="/walikelas/pengambilan/hapus/{{ $student->stu_id }}" class="btn btn-danger btn-sm">hapus</a>
         
                             </td>
 

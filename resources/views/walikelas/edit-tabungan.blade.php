@@ -23,7 +23,7 @@
                                 <div class="form-group mb-3">
                                     <label for="simpleinput">Nominal</label>
                                     <input value="{{ $saving->sav_amount }}"  type="text" id="simpleinput" name="sav_amount" class="form-control" required>
-                                </div>
+                                </div>  
                             </div>
 
                             <div class="col-lg-12">

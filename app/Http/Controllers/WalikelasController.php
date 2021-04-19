@@ -71,7 +71,8 @@ class WalikelasController extends Controller
 		$students= Saving::join('students','sav_stu_id','stu_id')
 			->join('users','users.usr_id','students.stu_usr_id')
 			->where('stu_class_id', $teachers->tcr_class_id)
-			//->groupBy('sav_stu_id')//
+			->groupBy('usr_name')
+			->orderBy('usr_name','asc')
 			->get();
 		$count=0;
 
@@ -136,7 +137,7 @@ class WalikelasController extends Controller
 		->join('classes','stu_class_id','=','class_id') 
 		->join('users','stu_usr_id','=','usr_id') 
 		->join('majors','class_major_id','=','major_id')
-		->where('stu_id',$id)
+		->where('sav_id',$id)
 		->first();
 		
 		$classes = DB::table('classes')
@@ -158,7 +159,7 @@ class WalikelasController extends Controller
 		//update data tabungan 
 		$saving = DB::table('savings')
 		->join('students','sav_stu_id','=','stu_id')
-		->where('stu_id',$id)
+		->where('sav_id',$id)
 		->update([
 
 			'sav_class_id'	 => $request->grade,
@@ -189,6 +190,8 @@ class WalikelasController extends Controller
 		$students= Saving_usage::join('students','usa_stu_id','stu_id')
 					->join('users','users.usr_id','students.stu_usr_id')
 					->where('stu_class_id', $teachers->tcr_class_id)
+					->groupBy('usr_name')
+					->orderBy('usr_name','asc')
 					->get();
 
 		$count=0;
@@ -254,7 +257,7 @@ class WalikelasController extends Controller
 		->join('classes','stu_class_id','=','class_id') 
 		->join('users','stu_usr_id','=','usr_id') 
 		->join('majors','class_major_id','=','major_id')
-		->where('stu_id',$id)
+		->where('usa_id',$id)
 		->first();
 		
 		$classes = DB::table('classes')
@@ -276,7 +279,7 @@ class WalikelasController extends Controller
 		//update data tabungan 
 		$saving_usage = DB::table('saving_usages')
 		->join('students','usa_stu_id','=','stu_id')
-		->where('stu_id',$id)
+		->where('usa_id',$id)
 		->update([
 
 			'usa_class_id'	 => $request->grade,
