@@ -40,32 +40,14 @@
 									<label for="simpleinput">Kelas</label>
 									<select type="text" id="simpleinput" name="grade" class="form-control" placeholder="Kelas" required>
 									      <option value="">Pilih kelas---</option>
-									      @foreach($grades as $data)
-									      <option value="{{$data->grade_id}}">{{$data->grade_name}}</option>
+									      @foreach($classes as $data)
+									      <option value="{{$data->class_id}}">{{$data->grade_name . ' ' . $data->major_name . ' '. $data->class_number }}
 									      @endforeach
 									</select>
 								</div>
 							</div>
 
-							<div class="col-lg-12">
-								<div class="form-group mb-3">
-									<label for="simpleinput">Jurusan</label>
-										<select type="text" id="simpleinput" name="major" class="form-control" placeholder="Jurusan" required>
-											<option value="">Pilih Jurusan---</option>
-											@foreach($majors as $data)
-											<option value="{{$data->major_id}}">{{$data->major_name}}</option>
-											@endforeach
-										</select>
-								</div>
-							</div>
-
-							<div class="col-lg-12">
-								<div class="form-group mb-3">
-									<label for="simpleinput">Nomor Kelas </label>
-									<input type="text" id="simpleinput" name="class_number" class="form-control" placeholder="Nomor Kelas" required>
-								</div>
-							</div>
-
+							
                            
                             <div class="col-lg-12">
                                 <div class="form-group mb-3">

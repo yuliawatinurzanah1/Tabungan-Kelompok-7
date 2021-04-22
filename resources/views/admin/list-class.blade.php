@@ -24,18 +24,18 @@
                         </thead>
 
                         <tbody>
-                        @foreach($classes as $classes)
+                        @foreach($classes as $data)
                         <tr>
-                        	
+                        	@if($data->deleted_at == null)
                             <td>{{++$count}}</td>
-                            <td>{{$classes->grade_name}}</td>
-                            <td>{{$classes->major_name}}</td>
-                            <td>{{$classes->class_number}}</td>
+                            <td>{{$data->grade_name. '' .$data->major_name}}</td>
+                            <td>{{$data->class_number}}</td>
                             <td>
-                               
-                                <a href="/admin/edit-class/{{ $classes->class_id }}" class="btn btn-warning btn-sm">Edit</a>
-                                <a href="/admin/class/hapus/{{ $classes->class_id }}" class="btn btn-danger btn-sm">Delete</a>
+                            
+                                <a href="/admin/edit-class/{{ $data->class_id }}" class="btn btn-warning btn-sm">Edit</a>
+                                <a href="/admin/class/hapus/{{ $data->class_id }}" class="btn btn-danger btn-sm">Delete</a>
                             </td>
+                            @endif
                         
                         </tr>       
                         @endforeach

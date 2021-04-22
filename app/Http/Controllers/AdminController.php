@@ -64,11 +64,12 @@ class AdminController extends Controller
 
 	public function addStudent()
 	{
-		$classes = Classes::all();
-		$majors = Major::all();
-		$grades = Grade::all();
+		$classes = DB::table('classes')
+		->join('grades','class.class_grade_id','=','grades_grade_id')
+		->join('majors','class.class_major_id','=','majors_major_id');
+		$student =DB::table('students')->get();
 		//mengirim data siswa ke view index
-		return view ('admin.add-student', compact('classes','majors','grades'));
+		return view ('admin.add-student', compact('classes','student'));
 	}
 
 	public function saveStudent(Request $request)
@@ -127,23 +128,25 @@ class AdminController extends Controller
 	}
 	public function updateStudent(Request $request,$id)
 	{
-		//dd($request);
+		//dd($id);
 		//update data siswa
 		$student = DB::table('students')
 		->join('users','students.stu_usr_id','=','users.usr_id')
-		->where('stu_id',$id)
+		->join('classes','stu_class_id','=','class_id')
+		->where('students.stu_usr_id','=',$id)
 		->update([
 			'stu_nis'		  => $request->nis,
 			'usr_name'		  => $request->student_name,
 			'stu_class_id'	  => $request->grade,
 			'stu_school_year' => $request->tahun_ajaran,
 			'usr_email'		  => $request->email,
-			'usr_phone'       => $request->nomor_telepon
+			'usr_phone'       => $request->nomor_telepon,
+			'class_number'	  => $request->class_number
 		]); 
-
+		
 
 		Session::flash('sukses','Data Berhasil disimpan');
-        return back();
+        
 
 		return redirect('admin/list-student');
 	}
@@ -181,7 +184,7 @@ class AdminController extends Controller
 		->get();
 		return view ('admin.detail-teacher',['teachers'=>$teachers]);
 	}
-
+	
 	//CRUD Guru
 	public function addTeacher()
 	{
@@ -273,6 +276,7 @@ class AdminController extends Controller
 	
 
 //Managemen Kelas
+	
 	public function listClass()
 	{
 		
@@ -312,7 +316,10 @@ class AdminController extends Controller
 
     public function editClass($id)
     {
-    	$classes = DB::table('classes')->where('class_id',$id)->first();
+    	$classes = DB::table('classes')
+		->join('majors','classes.class_major_id','=','majors.major_id')
+		->join('grades','classes.class_grade_id','=','grades.grade_id')
+		->where('class_id',$id)->first();
     	// dd($classes)
     	// ;
     	$grade=DB::table('grades')->get();
@@ -337,13 +344,12 @@ class AdminController extends Controller
     	return redirect('admin/list-class');
     }
 
-public function hapusClass($class_id)
+public function hapusClass($id)
 	{
 		//menghapus data kelas berdasarkan id
 
-		$classes= Classes::where('class_id',$class_id);
-		$classes->delete();
-
+		$classes = Classes::where('class_id',$id)->delete();
+		//dd($classes);
 		return redirect('admin/list-class');
 	}
 

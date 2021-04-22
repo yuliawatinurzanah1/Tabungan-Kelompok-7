@@ -25,7 +25,7 @@
 
 						$saving = Saving::join('students','savings.sav_stu_id','=','students.stu_id')
 										  ->join('users','students.stu_usr_id','=','users.usr_id')
-										  ->where('students.stu_usr_id',Auth()->user()->usr_id)->first();
+										  ->where('students.stu_usr_id',Auth::user()->usr_id);
 
 					?>
                     <a href="{{ URL::to('student/detail/'.$saving->sav_id) }}">

@@ -89,7 +89,7 @@ Route::group(['middleware' => ['role:admin']], function () {
     Route::get('/admin/edit-class/{id}' , 'AdminController@editClass');
     Route::post('/admin/update-class/{id}' , 'AdminController@updateClass');
 
-    Route::get('admin/class/hapus/{class_id}','AdminController@hapusClass');
+    Route::get('admin/class/hapus/{id}','AdminController@hapusClass');
 
 //Tabungan
    

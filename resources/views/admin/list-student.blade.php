@@ -23,7 +23,6 @@
                             <th>Nis</th>
                             <th>Nama</th>
                             <th>Kelas</th>
-                            <th>Jurusan</th>
                             <th>Nomor Kelas</th>
                             <th>Aksi</th>
                         </tr>
@@ -35,8 +34,7 @@
                             <td>{{ ++$count }}</td>
                             <td>{{ $student->stu_nis }}</td>
                             <td>{{ $student->usr_name }}</td>
-                            <td>{{ $student->grade_name }}</td>
-                            <td>{{ $student->major_name }}</td>
+                            <td>{{ $student->grade_name. '' .$student->major_name }}</td>
                             <td>{{ $student->class_number }}</td>
                        
                             <td>
