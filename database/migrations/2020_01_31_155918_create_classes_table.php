@@ -21,7 +21,9 @@ class CreateClassesTable extends Migration
 
             $table->foreign('class_grade_id')->references('grade_id')->on('grades');
             $table->foreign('class_major_id')->references('major_id')->on('majors');
-            $table->timestamps();
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
+            $table->timestamp('deleted_at')->nullable();
             
 
         });

@@ -88,7 +88,7 @@ class WalikelasController extends Controller
 		->join('majors','major_id','=','class_major_id')
 		
 		->where('stu_id',$id)
-
+		->orderBy('sav_date','DESC')
 		->get();
 		$count=0;
 		return view ('walikelas.detail-tabungan',['savings'=>$savings,'count'=>$count]);
@@ -207,7 +207,7 @@ class WalikelasController extends Controller
 		->join('users','stu_usr_id','=','usr_id')
 		->join('grades','grade_id','=','class_grade_id')
 		->join('majors','major_id','=','class_major_id')
-		
+		->orderBy('usa_date','DESC')
 		->where('stu_id',$id)
 
 		->get();
@@ -311,6 +311,8 @@ class WalikelasController extends Controller
 			->join('saving_usages','usa_id','=','rep_usa_id')
 			->join('users','users.usr_id','students.stu_usr_id')
 			->where('stu_class_id', $teachers->tcr_class_id)
+			->groupBy('usr_name')
+			->orderBy('usr_name','asc')
 			->get();
 		$count=0;
 

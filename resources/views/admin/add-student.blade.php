@@ -73,7 +73,7 @@
                              <div class="col-lg-12">
                                 <div class="form-group mb-3">
                                     <label for="simpleinput">Password </label>
-                                    <input type="text" id="simpleinput" name="usr_passord" class="form-control"  placeholder="Password"  required>
+                                    <input type="password" id="simpleinput" name="usr_passord" class="form-control"  placeholder="Password"  required>
                                 </div>
                             </div>
                        		

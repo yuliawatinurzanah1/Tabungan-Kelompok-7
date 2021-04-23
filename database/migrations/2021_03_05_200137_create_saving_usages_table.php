@@ -18,9 +18,11 @@ class CreateSavingUsagesTable extends Migration
              $table->unsignedBigInteger('usa_stu_id');
              $table->unsignedBigInteger('usa_class_id');
              $table->unsignedBigInteger('usa_amount');
-             $table->string('usa_date');
+             $table->date('usa_date');
              $table->string('usa_information');
-             $table->timestamps();
+             $table->timestamp('created_at')->nullable();
+             $table->timestamp('updated_at')->nullable();
+             $table->timestamp('deleted_at')->nullable();
         });
     }
 

@@ -38,7 +38,6 @@ class AdminController extends Controller
 		->join('classes','stu_class_id','=','class_id')
 		->join('grades','grade_id','=','class_grade_id')
 		->join('majors','major_id','=','class_major_id')
-		->orderBy('usr_name','asc')
 		->get();
 		$count=0;
 
@@ -65,10 +64,9 @@ class AdminController extends Controller
 
 	public function addStudent()
 	{
-		$classes = DB::table('classes') 
-		->join('grades','classes.class_grade_id','=','grades.grade_id')
-		->join('majors','classes.class_major_id','=','majors.major_id')
-		->get();
+		$classes = DB::table('classes')
+		->join('grades','class.class_grade_id','=','grades_grade_id')
+		->join('majors','class.class_major_id','=','majors_major_id');
 		$student =DB::table('students')->get();
 		//mengirim data siswa ke view index
 		return view ('admin.add-student', compact('classes','student'));

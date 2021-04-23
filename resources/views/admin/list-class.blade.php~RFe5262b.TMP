@@ -16,6 +16,8 @@
                         	
                             <th>No</th>
                             <th>KELAS</th>
+                            <th>JURUSAN</th>
+                            <th>NOMOR KELAS</th>
                             <th>ACTION</th>
                             
                         </tr>
@@ -26,8 +28,8 @@
                         <tr>
                         	@if($data->deleted_at == null)
                             <td>{{++$count}}</td>
-                            <td>{{$data->grade_name. ' ' .$data->major_name.' '.$data->class_number}}</td>
-                           
+                            <td>{{$data->grade_name. '' .$data->major_name}}</td>
+                            <td>{{$data->class_number}}</td>
                             <td>
                             
                                 <a href="/admin/edit-class/{{ $data->class_id }}" class="btn btn-warning btn-sm">Edit</a>

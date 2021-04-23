@@ -34,8 +34,8 @@
                             <td>{{ ++$count }}</td>
                             <td>{{ $student->stu_nis }}</td>
                             <td>{{ $student->usr_name }}</td>
-                            <td>{{ $student->grade_name. '' .$student->major_name }}</td>
-                            <td>{{ $student->class_number }}</td>
+                            <td>{{ $student->grade_name. ' ' .$student->major_name.' '.$student->class_number }}</td>
+                            
                        
                             <td>
 

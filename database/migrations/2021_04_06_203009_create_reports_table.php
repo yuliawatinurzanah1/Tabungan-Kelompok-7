@@ -21,7 +21,9 @@ class CreateReportsTable extends Migration
              $table->unsignedBigInteger('rep_sav_id');
              $table->unsignedBigInteger('rep_usa_id');
          
-             $table->timestamps();
+             $table->timestamp('created_at')->nullable();
+             $table->timestamp('updated_at')->nullable();
+             $table->timestamp('deleted_at')->nullable();
  
         });
     }

@@ -23,8 +23,9 @@ class CreateTeachersTable extends Migration
 
             $table->foreign('tcr_usr_id')->references('usr_id')->on('users');
             $table->foreign('tcr_class_id')->references('class_id')->on('classes');
-            $table->timestamps();
-            $table->softdeletes();
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
+            $table->timestamp('deleted_at')->nullable();
 
         });
     }

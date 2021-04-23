@@ -18,8 +18,10 @@ class CreateSavingsTable extends Migration
            $table->unsignedBigInteger('sav_stu_id');
            $table->unsignedBigInteger('sav_class_id');
            $table->unsignedBigInteger('sav_amount');
-           $table->string('sav_date');
-           $table->timestamps();
+           $table->date('sav_date');
+           $table->timestamp('created_at')->nullable();
+           $table->timestamp('updated_at')->nullable();
+           $table->timestamp('deleted_at')->nullable();
 
         });
     }
