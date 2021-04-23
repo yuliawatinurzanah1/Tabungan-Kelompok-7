@@ -108,7 +108,7 @@ class ReportSeeder extends Seeder
           DB::table('reports')->insert([
         	'rep_id'        => '11',
         	'rep_tcr_id' 	=> '2',
-        	'rep_stu_id'    => '36',
+        	'rep_stu_id'    => '6',
         	'rep_class_id'  => '3', 
         	'rep_sav_id'    => '11', 
         	'rep_usa_id'    => '11' 
@@ -117,7 +117,7 @@ class ReportSeeder extends Seeder
           DB::table('reports')->insert([
         	'rep_id'        => '12',
         	'rep_tcr_id' 	=> '2',
-        	'rep_stu_id'    => '37',
+        	'rep_stu_id'    => '7',
         	'rep_class_id'  => '3', 
         	'rep_sav_id'    => '12', 
         	'rep_usa_id'    => '12' 
@@ -126,7 +126,7 @@ class ReportSeeder extends Seeder
            DB::table('reports')->insert([
         	'rep_id'        => '13',
         	'rep_tcr_id' 	=> '2',
-        	'rep_stu_id'    => '38',
+        	'rep_stu_id'    => '8',
         	'rep_class_id'  => '3', 
         	'rep_sav_id'    => '13', 
         	'rep_usa_id'    => '13' 
@@ -135,7 +135,7 @@ class ReportSeeder extends Seeder
             DB::table('reports')->insert([
         	'rep_id'        => '14',
         	'rep_tcr_id' 	=> '2',
-        	'rep_stu_id'    => '39',
+        	'rep_stu_id'    => '9',
         	'rep_class_id'  => '3', 
         	'rep_sav_id'    => '14', 
         	'rep_usa_id'    => '14' 
@@ -144,7 +144,7 @@ class ReportSeeder extends Seeder
              DB::table('reports')->insert([
         	'rep_id'        => '15',
         	'rep_tcr_id' 	=> '2',
-        	'rep_stu_id'    => '40',
+        	'rep_stu_id'    => '10',
         	'rep_class_id'  => '3', 
         	'rep_sav_id'    => '15', 
         	'rep_usa_id'    => '15' 
@@ -152,7 +152,7 @@ class ReportSeeder extends Seeder
              DB::table('reports')->insert([
         	'rep_id'        => '16',
         	'rep_tcr_id' 	=> '2',
-        	'rep_stu_id'    => '36',
+        	'rep_stu_id'    => '6',
         	'rep_class_id'  => '3', 
         	'rep_sav_id'    => '16', 
         	'rep_usa_id'    => '16' 
@@ -161,7 +161,7 @@ class ReportSeeder extends Seeder
           DB::table('reports')->insert([
         	'rep_id'        => '17',
         	'rep_tcr_id' 	=> '2',
-        	'rep_stu_id'    => '37',
+        	'rep_stu_id'    => '7',
         	'rep_class_id'  => '3', 
         	'rep_sav_id'    => '17', 
         	'rep_usa_id'    => '17' 
@@ -170,7 +170,7 @@ class ReportSeeder extends Seeder
            DB::table('reports')->insert([
         	'rep_id'        => '18',
         	'rep_tcr_id' 	=> '2',
-        	'rep_stu_id'    => '38',
+        	'rep_stu_id'    => '8',
         	'rep_class_id'  => '3', 
         	'rep_sav_id'    => '18', 
         	'rep_usa_id'    => '18' 
@@ -179,7 +179,7 @@ class ReportSeeder extends Seeder
             DB::table('reports')->insert([
         	'rep_id'        => '19',
         	'rep_tcr_id' 	=> '2',
-        	'rep_stu_id'    => '39',
+        	'rep_stu_id'    => '9',
         	'rep_class_id'  => '3', 
         	'rep_sav_id'    => '19', 
         	'rep_usa_id'    => '19' 
@@ -188,7 +188,7 @@ class ReportSeeder extends Seeder
              DB::table('reports')->insert([
         	'rep_id'        => '20',
         	'rep_tcr_id' 	=> '2',
-        	'rep_stu_id'    => '40',
+        	'rep_stu_id'    => '10',
         	'rep_class_id'  => '3', 
         	'rep_sav_id'    => '20', 
         	'rep_usa_id'    => '20' 
@@ -201,7 +201,7 @@ class ReportSeeder extends Seeder
  		 DB::table('reports')->insert([
         	'rep_id'        => '21',
         	'rep_tcr_id' 	=> '3',
-        	'rep_stu_id'    => '67',
+        	'rep_stu_id'    => '11',
         	'rep_class_id'  => '1', 
         	'rep_sav_id'    => '21', 
         	'rep_usa_id'    => '21' 
@@ -210,7 +210,7 @@ class ReportSeeder extends Seeder
           DB::table('reports')->insert([
         	'rep_id'        => '22',
         	'rep_tcr_id' 	=> '3',
-        	'rep_stu_id'    => '68',
+        	'rep_stu_id'    => '12',
         	'rep_class_id'  => '1', 
         	'rep_sav_id'    => '22', 
         	'rep_usa_id'    => '22' 
@@ -219,7 +219,7 @@ class ReportSeeder extends Seeder
            DB::table('reports')->insert([
         	'rep_id'        => '23',
         	'rep_tcr_id' 	=> '3',
-        	'rep_stu_id'    => '69',
+        	'rep_stu_id'    => '13',
         	'rep_class_id'  => '1', 
         	'rep_sav_id'    => '23', 
         	'rep_usa_id'    => '23' 
@@ -228,7 +228,7 @@ class ReportSeeder extends Seeder
             DB::table('reports')->insert([
         	'rep_id'        => '24',
         	'rep_tcr_id' 	=> '3',
-        	'rep_stu_id'    => '70',
+        	'rep_stu_id'    => '14',
         	'rep_class_id'  => '1', 
         	'rep_sav_id'    => '24', 
         	'rep_usa_id'    => '24' 
@@ -237,7 +237,7 @@ class ReportSeeder extends Seeder
              DB::table('reports')->insert([
         	'rep_id'        => '25',
         	'rep_tcr_id' 	=> '3',
-        	'rep_stu_id'    => '71',
+        	'rep_stu_id'    => '15',
         	'rep_class_id'  => '1', 
         	'rep_sav_id'    => '25', 
         	'rep_usa_id'    => '25' 
@@ -245,7 +245,7 @@ class ReportSeeder extends Seeder
               DB::table('reports')->insert([
         	'rep_id'        => '26',
         	'rep_tcr_id' 	=> '3',
-        	'rep_stu_id'    => '67',
+        	'rep_stu_id'    => '11',
         	'rep_class_id'  => '1', 
         	'rep_sav_id'    => '26', 
         	'rep_usa_id'    => '26' 
@@ -254,7 +254,7 @@ class ReportSeeder extends Seeder
           DB::table('reports')->insert([
         	'rep_id'        => '27',
         	'rep_tcr_id' 	=> '3',
-        	'rep_stu_id'    => '68',
+        	'rep_stu_id'    => '12',
         	'rep_class_id'  => '1', 
         	'rep_sav_id'    => '27', 
         	'rep_usa_id'    => '27' 
@@ -263,7 +263,7 @@ class ReportSeeder extends Seeder
            DB::table('reports')->insert([
         	'rep_id'        => '28',
         	'rep_tcr_id' 	=> '3',
-        	'rep_stu_id'    => '69',
+        	'rep_stu_id'    => '13',
         	'rep_class_id'  => '1', 
         	'rep_sav_id'    => '28', 
         	'rep_usa_id'    => '28' 
@@ -271,7 +271,7 @@ class ReportSeeder extends Seeder
                DB::table('reports')->insert([
         	'rep_id'        => '29',
         	'rep_tcr_id' 	=> '3',
-        	'rep_stu_id'    => '70',
+        	'rep_stu_id'    => '14',
         	'rep_class_id'  => '1', 
         	'rep_sav_id'    => '29', 
         	'rep_usa_id'    => '29' 
@@ -279,7 +279,7 @@ class ReportSeeder extends Seeder
             DB::table('reports')->insert([
         	'rep_id'        => '30',
         	'rep_tcr_id' 	=> '3',
-        	'rep_stu_id'    => '70',
+        	'rep_stu_id'    => '15',
         	'rep_class_id'  => '1', 
         	'rep_sav_id'    => '30', 
         	'rep_usa_id'    => '30' 
@@ -294,7 +294,7 @@ class ReportSeeder extends Seeder
             DB::table('reports')->insert([
         	'rep_id'        => '31',
         	'rep_tcr_id' 	=> '4',
-        	'rep_stu_id'    => '94',
+        	'rep_stu_id'    => '16',
         	'rep_class_id'  => '4', 
         	'rep_sav_id'    => '31', 
         	'rep_usa_id'    => '31' 
@@ -303,7 +303,7 @@ class ReportSeeder extends Seeder
           DB::table('reports')->insert([
         	'rep_id'        => '32',
         	'rep_tcr_id' 	=> '4',
-        	'rep_stu_id'    => '95',
+        	'rep_stu_id'    => '17',
         	'rep_class_id'  => '4', 
         	'rep_sav_id'    => '32', 
         	'rep_usa_id'    => '32' 
@@ -312,7 +312,7 @@ class ReportSeeder extends Seeder
            DB::table('reports')->insert([
         	'rep_id'        => '33',
         	'rep_tcr_id' 	=> '4',
-        	'rep_stu_id'    => '96',
+        	'rep_stu_id'    => '18',
         	'rep_class_id'  => '4', 
         	'rep_sav_id'    => '33', 
         	'rep_usa_id'    => '33' 
@@ -321,7 +321,7 @@ class ReportSeeder extends Seeder
             DB::table('reports')->insert([
         	'rep_id'        => '34',
         	'rep_tcr_id' 	=> '4',
-        	'rep_stu_id'    => '97',
+        	'rep_stu_id'    => '19',
         	'rep_class_id'  => '4', 
         	'rep_sav_id'    => '34', 
         	'rep_usa_id'    => '34' 
@@ -330,7 +330,7 @@ class ReportSeeder extends Seeder
              DB::table('reports')->insert([
         	'rep_id'        => '35',
         	'rep_tcr_id' 	=> '4',
-        	'rep_stu_id'    => '98',
+        	'rep_stu_id'    => '20',
         	'rep_class_id'  => '4', 
         	'rep_sav_id'    => '35', 
         	'rep_usa_id'    => '35' 
@@ -338,7 +338,7 @@ class ReportSeeder extends Seeder
               DB::table('reports')->insert([
         	'rep_id'        => '36',
         	'rep_tcr_id' 	=> '4',
-        	'rep_stu_id'    => '94',
+        	'rep_stu_id'    => '16',
         	'rep_class_id'  => '4', 
         	'rep_sav_id'    => '36', 
         	'rep_usa_id'    => '36' 
@@ -347,7 +347,7 @@ class ReportSeeder extends Seeder
           DB::table('reports')->insert([
         	'rep_id'        => '37',
         	'rep_tcr_id' 	=> '4',
-        	'rep_stu_id'    => '95',
+        	'rep_stu_id'    => '17',
         	'rep_class_id'  => '4', 
         	'rep_sav_id'    => '37', 
         	'rep_usa_id'    => '37' 
@@ -356,7 +356,7 @@ class ReportSeeder extends Seeder
            DB::table('reports')->insert([
         	'rep_id'        => '38',
         	'rep_tcr_id' 	=> '4',
-        	'rep_stu_id'    => '96',
+        	'rep_stu_id'    => '18',
         	'rep_class_id'  => '4', 
         	'rep_sav_id'    => '38', 
         	'rep_usa_id'    => '38' 
@@ -364,7 +364,7 @@ class ReportSeeder extends Seeder
                DB::table('reports')->insert([
         	'rep_id'        => '39',
         	'rep_tcr_id' 	=> '4',
-        	'rep_stu_id'    => '97',
+        	'rep_stu_id'    => '19',
         	'rep_class_id'  => '4', 
         	'rep_sav_id'    => '39', 
         	'rep_usa_id'    => '39' 
@@ -372,7 +372,7 @@ class ReportSeeder extends Seeder
             DB::table('reports')->insert([
         	'rep_id'        => '40',
         	'rep_tcr_id' 	=> '4',
-        	'rep_stu_id'    => '98',
+        	'rep_stu_id'    => '20',
         	'rep_class_id'  => '4', 
         	'rep_sav_id'    => '40', 
         	'rep_usa_id'    => '40' 
@@ -385,7 +385,7 @@ class ReportSeeder extends Seeder
             DB::table('reports')->insert([
         	'rep_id'        => '41',
         	'rep_tcr_id' 	=> '5',
-        	'rep_stu_id'    => '121',
+        	'rep_stu_id'    => '21',
         	'rep_class_id'  => '5', 
         	'rep_sav_id'    => '41', 
         	'rep_usa_id'    => '41' 
@@ -394,7 +394,7 @@ class ReportSeeder extends Seeder
           DB::table('reports')->insert([
         	'rep_id'        => '42',
         	'rep_tcr_id' 	=> '5',
-        	'rep_stu_id'    => '122',
+        	'rep_stu_id'    => '22',
         	'rep_class_id'  => '5', 
         	'rep_sav_id'    => '42', 
         	'rep_usa_id'    => '42' 
@@ -403,7 +403,7 @@ class ReportSeeder extends Seeder
            DB::table('reports')->insert([
         	'rep_id'        => '43',
         	'rep_tcr_id' 	=> '5',
-        	'rep_stu_id'    => '123',
+        	'rep_stu_id'    => '23',
         	'rep_class_id'  => '5', 
         	'rep_sav_id'    => '43', 
         	'rep_usa_id'    => '43' 
@@ -412,7 +412,7 @@ class ReportSeeder extends Seeder
             DB::table('reports')->insert([
         	'rep_id'        => '44',
         	'rep_tcr_id' 	=> '5',
-        	'rep_stu_id'    => '123',
+        	'rep_stu_id'    => '23',
         	'rep_class_id'  => '5', 
         	'rep_sav_id'    => '44', 
         	'rep_usa_id'    => '44' 
@@ -421,7 +421,7 @@ class ReportSeeder extends Seeder
              DB::table('reports')->insert([
         	'rep_id'        => '45',
         	'rep_tcr_id' 	=> '5',
-        	'rep_stu_id'    => '125',
+        	'rep_stu_id'    => '25',
         	'rep_class_id'  => '5', 
         	'rep_sav_id'    => '45', 
         	'rep_usa_id'    => '45' 
@@ -429,7 +429,7 @@ class ReportSeeder extends Seeder
               DB::table('reports')->insert([
         	'rep_id'        => '46',
         	'rep_tcr_id' 	=> '5',
-        	'rep_stu_id'    => '121',
+        	'rep_stu_id'    => '21',
         	'rep_class_id'  => '5', 
         	'rep_sav_id'    => '46', 
         	'rep_usa_id'    => '46' 
@@ -438,7 +438,7 @@ class ReportSeeder extends Seeder
           DB::table('reports')->insert([
         	'rep_id'        => '47',
         	'rep_tcr_id' 	=> '5',
-        	'rep_stu_id'    => '122',
+        	'rep_stu_id'    => '22',
         	'rep_class_id'  => '5', 
         	'rep_sav_id'    => '47', 
         	'rep_usa_id'    => '47' 
@@ -447,7 +447,7 @@ class ReportSeeder extends Seeder
            DB::table('reports')->insert([
         	'rep_id'        => '48',
         	'rep_tcr_id' 	=> '5',
-        	'rep_stu_id'    => '123',
+        	'rep_stu_id'    => '23',
         	'rep_class_id'  => '5', 
         	'rep_sav_id'    => '48', 
         	'rep_usa_id'    => '48' 
@@ -455,7 +455,7 @@ class ReportSeeder extends Seeder
                DB::table('reports')->insert([
         	'rep_id'        => '49',
         	'rep_tcr_id' 	=> '5',
-        	'rep_stu_id'    => '124',
+        	'rep_stu_id'    => '24',
         	'rep_class_id'  => '5', 
         	'rep_sav_id'    => '49', 
         	'rep_usa_id'    => '49' 
@@ -463,7 +463,7 @@ class ReportSeeder extends Seeder
             DB::table('reports')->insert([
         	'rep_id'        => '50',
         	'rep_tcr_id' 	=> '5',
-        	'rep_stu_id'    => '125',
+        	'rep_stu_id'    => '25',
         	'rep_class_id'  => '5', 
         	'rep_sav_id'    => '50', 
         	'rep_usa_id'    => '50' 
@@ -477,7 +477,7 @@ class ReportSeeder extends Seeder
             DB::table('reports')->insert([
         	'rep_id'        => '51',
         	'rep_tcr_id' 	=> '6',
-        	'rep_stu_id'    => '146',
+        	'rep_stu_id'    => '26',
         	'rep_class_id'  => '6', 
         	'rep_sav_id'    => '51', 
         	'rep_usa_id'    => '51' 
@@ -486,7 +486,7 @@ class ReportSeeder extends Seeder
           DB::table('reports')->insert([
         	'rep_id'        => '52',
         	'rep_tcr_id' 	=> '6',
-        	'rep_stu_id'    => '147',
+        	'rep_stu_id'    => '27',
         	'rep_class_id'  => '6', 
         	'rep_sav_id'    => '52', 
         	'rep_usa_id'    => '52' 
@@ -495,7 +495,7 @@ class ReportSeeder extends Seeder
            DB::table('reports')->insert([
         	'rep_id'        => '53',
         	'rep_tcr_id' 	=> '6',
-        	'rep_stu_id'    => '148',
+        	'rep_stu_id'    => '28',
         	'rep_class_id'  => '6', 
         	'rep_sav_id'    => '53', 
         	'rep_usa_id'    => '53' 
@@ -504,7 +504,7 @@ class ReportSeeder extends Seeder
             DB::table('reports')->insert([
         	'rep_id'        => '54',
         	'rep_tcr_id' 	=> '6',
-        	'rep_stu_id'    => '149',
+        	'rep_stu_id'    => '29',
         	'rep_class_id'  => '6', 
         	'rep_sav_id'    => '54', 
         	'rep_usa_id'    => '54' 
@@ -513,7 +513,7 @@ class ReportSeeder extends Seeder
              DB::table('reports')->insert([
         	'rep_id'        => '55',
         	'rep_tcr_id' 	=> '6',
-        	'rep_stu_id'    => '150',
+        	'rep_stu_id'    => '30',
         	'rep_class_id'  => '6', 
         	'rep_sav_id'    => '55', 
         	'rep_usa_id'    => '55' 
@@ -521,7 +521,7 @@ class ReportSeeder extends Seeder
               DB::table('reports')->insert([
         	'rep_id'        => '56',
         	'rep_tcr_id' 	=> '6',
-        	'rep_stu_id'    => '146',
+        	'rep_stu_id'    => '26',
         	'rep_class_id'  => '6', 
         	'rep_sav_id'    => '56', 
         	'rep_usa_id'    => '56' 
@@ -530,7 +530,7 @@ class ReportSeeder extends Seeder
           DB::table('reports')->insert([
         	'rep_id'        => '57',
         	'rep_tcr_id' 	=> '6',
-        	'rep_stu_id'    => '147',
+        	'rep_stu_id'    => '27',
         	'rep_class_id'  => '6', 
         	'rep_sav_id'    => '57', 
         	'rep_usa_id'    => '57' 
@@ -539,7 +539,7 @@ class ReportSeeder extends Seeder
            DB::table('reports')->insert([
         	'rep_id'        => '58',
         	'rep_tcr_id' 	=> '6',
-        	'rep_stu_id'    => '148',
+        	'rep_stu_id'    => '28',
         	'rep_class_id'  => '6', 
         	'rep_sav_id'    => '58', 
         	'rep_usa_id'    => '58' 
@@ -547,7 +547,7 @@ class ReportSeeder extends Seeder
                DB::table('reports')->insert([
         	'rep_id'        => '59',
         	'rep_tcr_id' 	=> '6',
-        	'rep_stu_id'    => '149',
+        	'rep_stu_id'    => '29',
         	'rep_class_id'  => '6', 
         	'rep_sav_id'    => '59', 
         	'rep_usa_id'    => '59' 
@@ -555,7 +555,7 @@ class ReportSeeder extends Seeder
             DB::table('reports')->insert([
         	'rep_id'        => '60',
         	'rep_tcr_id' 	=> '6',
-        	'rep_stu_id'    => '150',
+        	'rep_stu_id'    => '30',
         	'rep_class_id'  => '6', 
         	'rep_sav_id'    => '60', 
         	'rep_usa_id'    => '60' 
@@ -569,7 +569,7 @@ class ReportSeeder extends Seeder
 		 DB::table('reports')->insert([
         	'rep_id'        => '61',
         	'rep_tcr_id' 	=> '9',
-        	'rep_stu_id'    => '170',
+        	'rep_stu_id'    => '31',
         	'rep_class_id'  => '9', 
         	'rep_sav_id'    => '61', 
         	'rep_usa_id'    => '61' 
@@ -578,7 +578,7 @@ class ReportSeeder extends Seeder
           DB::table('reports')->insert([
         	'rep_id'        => '62',
         	'rep_tcr_id' 	=> '9',
-        	'rep_stu_id'    => '171',
+        	'rep_stu_id'    => '32',
         	'rep_class_id'  => '9', 
         	'rep_sav_id'    => '62', 
         	'rep_usa_id'    => '62' 
@@ -587,7 +587,7 @@ class ReportSeeder extends Seeder
            DB::table('reports')->insert([
         	'rep_id'        => '63',
         	'rep_tcr_id' 	=> '9',
-        	'rep_stu_id'    => '172',
+        	'rep_stu_id'    => '33',
         	'rep_class_id'  => '9', 
         	'rep_sav_id'    => '63', 
         	'rep_usa_id'    => '63' 
@@ -596,7 +596,7 @@ class ReportSeeder extends Seeder
             DB::table('reports')->insert([
         	'rep_id'        => '64',
         	'rep_tcr_id' 	=> '9',
-        	'rep_stu_id'    => '173',
+        	'rep_stu_id'    => '34',
         	'rep_class_id'  => '9', 
         	'rep_sav_id'    => '64', 
         	'rep_usa_id'    => '64' 
@@ -605,7 +605,7 @@ class ReportSeeder extends Seeder
              DB::table('reports')->insert([
         	'rep_id'        => '65',
         	'rep_tcr_id' 	=> '9',
-        	'rep_stu_id'    => '174',
+        	'rep_stu_id'    => '35',
         	'rep_class_id'  => '9', 
         	'rep_sav_id'    => '65', 
         	'rep_usa_id'    => '65' 
@@ -613,7 +613,7 @@ class ReportSeeder extends Seeder
               DB::table('reports')->insert([
         	'rep_id'        => '66',
         	'rep_tcr_id' 	=> '9',
-        	'rep_stu_id'    => '170',
+        	'rep_stu_id'    => '131',
         	'rep_class_id'  => '9', 
         	'rep_sav_id'    => '66', 
         	'rep_usa_id'    => '66' 
@@ -622,7 +622,7 @@ class ReportSeeder extends Seeder
           DB::table('reports')->insert([
         	'rep_id'        => '67',
         	'rep_tcr_id' 	=> '9',
-        	'rep_stu_id'    => '171',
+        	'rep_stu_id'    => '32',
         	'rep_class_id'  => '9', 
         	'rep_sav_id'    => '67', 
         	'rep_usa_id'    => '67' 
@@ -631,7 +631,7 @@ class ReportSeeder extends Seeder
            DB::table('reports')->insert([
         	'rep_id'        => '68',
         	'rep_tcr_id' 	=> '9',
-        	'rep_stu_id'    => '172',
+        	'rep_stu_id'    => '33',
         	'rep_class_id'  => '9', 
         	'rep_sav_id'    => '68', 
         	'rep_usa_id'    => '68' 
@@ -639,7 +639,7 @@ class ReportSeeder extends Seeder
                DB::table('reports')->insert([
         	'rep_id'        => '69',
         	'rep_tcr_id' 	=> '9',
-        	'rep_stu_id'    => '173',
+        	'rep_stu_id'    => '34',
         	'rep_class_id'  => '9', 
         	'rep_sav_id'    => '69', 
         	'rep_usa_id'    => '69' 
@@ -647,7 +647,7 @@ class ReportSeeder extends Seeder
             DB::table('reports')->insert([
         	'rep_id'        => '70',
         	'rep_tcr_id' 	=> '9',
-        	'rep_stu_id'    => '174',
+        	'rep_stu_id'    => '35',
         	'rep_class_id'  => '9', 
         	'rep_sav_id'    => '70', 
         	'rep_usa_id'    => '70' 
@@ -660,7 +660,7 @@ class ReportSeeder extends Seeder
              DB::table('reports')->insert([
         	'rep_id'        => '71',
         	'rep_tcr_id' 	=> '7',
-        	'rep_stu_id'    => '206',
+        	'rep_stu_id'    => '36',
         	'rep_class_id'  => '7', 
         	'rep_sav_id'    => '71', 
         	'rep_usa_id'    => '71' 
@@ -669,7 +669,7 @@ class ReportSeeder extends Seeder
           DB::table('reports')->insert([
         	'rep_id'        => '72',
         	'rep_tcr_id' 	=> '7',
-        	'rep_stu_id'    => '207',
+        	'rep_stu_id'    => '37',
         	'rep_class_id'  => '7', 
         	'rep_sav_id'    => '72', 
         	'rep_usa_id'    => '72' 
@@ -678,7 +678,7 @@ class ReportSeeder extends Seeder
            DB::table('reports')->insert([
         	'rep_id'        => '73',
         	'rep_tcr_id' 	=> '7',
-        	'rep_stu_id'    => '208',
+        	'rep_stu_id'    => '38',
         	'rep_class_id'  => '7', 
         	'rep_sav_id'    => '73', 
         	'rep_usa_id'    => '73' 
@@ -687,7 +687,7 @@ class ReportSeeder extends Seeder
             DB::table('reports')->insert([
         	'rep_id'        => '74',
         	'rep_tcr_id' 	=> '7',
-        	'rep_stu_id'    => '209',
+        	'rep_stu_id'    => '39',
         	'rep_class_id'  => '7', 
         	'rep_sav_id'    => '74', 
         	'rep_usa_id'    => '74' 
@@ -696,7 +696,7 @@ class ReportSeeder extends Seeder
              DB::table('reports')->insert([
         	'rep_id'        => '75',
         	'rep_tcr_id' 	=> '7',
-        	'rep_stu_id'    => '210',
+        	'rep_stu_id'    => '40',
         	'rep_class_id'  => '7', 
         	'rep_sav_id'    => '75', 
         	'rep_usa_id'    => '75' 
@@ -704,7 +704,7 @@ class ReportSeeder extends Seeder
               DB::table('reports')->insert([
         	'rep_id'        => '76',
         	'rep_tcr_id' 	=> '7',
-        	'rep_stu_id'    => '206',
+        	'rep_stu_id'    => '36',
         	'rep_class_id'  => '7', 
         	'rep_sav_id'    => '76', 
         	'rep_usa_id'    => '76' 
@@ -713,7 +713,7 @@ class ReportSeeder extends Seeder
           DB::table('reports')->insert([
         	'rep_id'        => '77',
         	'rep_tcr_id' 	=> '7',
-        	'rep_stu_id'    => '207',
+        	'rep_stu_id'    => '37',
         	'rep_class_id'  => '7', 
         	'rep_sav_id'    => '77', 
         	'rep_usa_id'    => '77' 
@@ -722,7 +722,7 @@ class ReportSeeder extends Seeder
            DB::table('reports')->insert([
         	'rep_id'        => '78',
         	'rep_tcr_id' 	=> '7',
-        	'rep_stu_id'    => '208',
+        	'rep_stu_id'    => '38',
         	'rep_class_id'  => '7', 
         	'rep_sav_id'    => '78', 
         	'rep_usa_id'    => '78' 
@@ -730,7 +730,7 @@ class ReportSeeder extends Seeder
                DB::table('reports')->insert([
         	'rep_id'        => '79',
         	'rep_tcr_id' 	=> '7',
-        	'rep_stu_id'    => '209',
+        	'rep_stu_id'    => '39',
         	'rep_class_id'  => '7', 
         	'rep_sav_id'    => '79', 
         	'rep_usa_id'    => '79' 
@@ -738,7 +738,7 @@ class ReportSeeder extends Seeder
             DB::table('reports')->insert([
         	'rep_id'        => '80',
         	'rep_tcr_id' 	=> '7',
-        	'rep_stu_id'    => '210',
+        	'rep_stu_id'    => '40',
         	'rep_class_id'  => '7', 
         	'rep_sav_id'    => '80', 
         	'rep_usa_id'    => '80' 
@@ -750,7 +750,7 @@ class ReportSeeder extends Seeder
                 DB::table('reports')->insert([
         	'rep_id'        => '81',
         	'rep_tcr_id' 	=> '8',
-        	'rep_stu_id'    => '235',
+        	'rep_stu_id'    => '41',
         	'rep_class_id'  => '8', 
         	'rep_sav_id'    => '81', 
         	'rep_usa_id'    => '81' 
@@ -759,7 +759,7 @@ class ReportSeeder extends Seeder
           DB::table('reports')->insert([
         	'rep_id'        => '82',
         	'rep_tcr_id' 	=> '8',
-        	'rep_stu_id'    => '236',
+        	'rep_stu_id'    => '42',
         	'rep_class_id'  => '8', 
         	'rep_sav_id'    => '82', 
         	'rep_usa_id'    => '82' 
@@ -768,7 +768,7 @@ class ReportSeeder extends Seeder
            DB::table('reports')->insert([
         	'rep_id'        => '83',
         	'rep_tcr_id' 	=> '8',
-        	'rep_stu_id'    => '237',
+        	'rep_stu_id'    => '43',
         	'rep_class_id'  => '8', 
         	'rep_sav_id'    => '83', 
         	'rep_usa_id'    => '83' 
@@ -777,7 +777,7 @@ class ReportSeeder extends Seeder
             DB::table('reports')->insert([
         	'rep_id'        => '84',
         	'rep_tcr_id' 	=> '8',
-        	'rep_stu_id'    => '238',
+        	'rep_stu_id'    => '44',
         	'rep_class_id'  => '8', 
         	'rep_sav_id'    => '84', 
         	'rep_usa_id'    => '84' 
@@ -786,7 +786,7 @@ class ReportSeeder extends Seeder
              DB::table('reports')->insert([
         	'rep_id'        => '85',
         	'rep_tcr_id' 	=> '8',
-        	'rep_stu_id'    => '239',
+        	'rep_stu_id'    => '45',
         	'rep_class_id'  => '8', 
         	'rep_sav_id'    => '85', 
         	'rep_usa_id'    => '85' 
@@ -794,7 +794,7 @@ class ReportSeeder extends Seeder
               DB::table('reports')->insert([
         	'rep_id'        => '86',
         	'rep_tcr_id' 	=> '8',
-        	'rep_stu_id'    => '235',
+        	'rep_stu_id'    => '41',
         	'rep_class_id'  => '8', 
         	'rep_sav_id'    => '86', 
         	'rep_usa_id'    => '86' 
@@ -803,7 +803,7 @@ class ReportSeeder extends Seeder
           DB::table('reports')->insert([
         	'rep_id'        => '87',
         	'rep_tcr_id' 	=> '8',
-        	'rep_stu_id'    => '236',
+        	'rep_stu_id'    => '42',
         	'rep_class_id'  => '8', 
         	'rep_sav_id'    => '87', 
         	'rep_usa_id'    => '87' 
@@ -812,7 +812,7 @@ class ReportSeeder extends Seeder
            DB::table('reports')->insert([
         	'rep_id'        => '88',
         	'rep_tcr_id' 	=> '8',
-        	'rep_stu_id'    => '237',
+        	'rep_stu_id'    => '43',
         	'rep_class_id'  => '8', 
         	'rep_sav_id'    => '88', 
         	'rep_usa_id'    => '88' 
@@ -820,18 +820,18 @@ class ReportSeeder extends Seeder
                DB::table('reports')->insert([
         	'rep_id'        => '89',
         	'rep_tcr_id' 	=> '8',
-        	'rep_stu_id'    => '238',
+        	'rep_stu_id'    => '44',
         	'rep_class_id'  => '8', 
         	'rep_sav_id'    => '89', 
         	'rep_usa_id'    => '89' 
           ]);
             DB::table('reports')->insert([
-        	'rep_id'        => '80',
+        	'rep_id'        => '90',
         	'rep_tcr_id' 	=> '8',
-        	'rep_stu_id'    => '239',
+        	'rep_stu_id'    => '45',
         	'rep_class_id'  => '8', 
-        	'rep_sav_id'    => '80', 
-        	'rep_usa_id'    => '80' 
+        	'rep_sav_id'    => '90', 
+        	'rep_usa_id'    => '90' 
           ]);
 
 

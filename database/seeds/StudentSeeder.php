@@ -15,7 +15,7 @@ class StudentSeeder extends Seeder
          	'stu_id'          => '1',
          	'stu_usr_id'      => '11',
          	'stu_class_id'    => '2',
-         	'stu_nis'         => '2021.10.002',
+         	'stu_nis'         => '202110002',
          	'stu_school_year' => '2020-2021'
          ]);
 
@@ -23,7 +23,7 @@ class StudentSeeder extends Seeder
          	'stu_id'          => '2',
          	'stu_usr_id'      => '12',
          	'stu_class_id'    => '2',
-         	'stu_nis'         => '2021.10.003',
+         	'stu_nis'         => '202110003',
          	'stu_school_year' => '2020-2021'
          ]);
 
@@ -31,7 +31,7 @@ class StudentSeeder extends Seeder
          	'stu_id'          => '3',
          	'stu_usr_id'      => '13',
          	'stu_class_id'    => '2',
-         	'stu_nis'         => '2021.10.004',
+         	'stu_nis'         => '202110004',
          	'stu_school_year' => '2020-2021'
          ]);
 
@@ -39,7 +39,7 @@ class StudentSeeder extends Seeder
          	'stu_id'          => '4',
          	'stu_usr_id'      => '14',
          	'stu_class_id'    => '2',
-         	'stu_nis'         => '2021.10.005',
+         	'stu_nis'         => '202110005',
          	'stu_school_year' => '2020-2021'
          ]);
 
@@ -47,177 +47,185 @@ class StudentSeeder extends Seeder
          	'stu_id'          => '5',
          	'stu_usr_id'      => '15',
          	'stu_class_id'    => '2',
-         	'stu_nis'         => '2021.10.006',
+         	'stu_nis'         => '202110006',
          	'stu_school_year' => '2020-2021'
          ]);
+
+
+
 
 
 
         DB::table('students')->insert([
-         	'stu_id'          => '36',
-         	'stu_usr_id'      => '46',
+         	'stu_id'          => '6',
+         	'stu_usr_id'      => '16',
          	'stu_class_id'    => '3',
-         	'stu_nis'         => '2021.10.048',
+         	'stu_nis'         => '202110048',
          	'stu_school_year' => '2020-2021'
          ]);
 
         DB::table('students')->insert([
-         	'stu_id'          => '37',
-         	'stu_usr_id'      => '47',
+         	'stu_id'          => '7',
+         	'stu_usr_id'      => '17',
          	'stu_class_id'    => '3',
-         	'stu_nis'         => '2021.10.049',
+         	'stu_nis'         => '202110049',
          	'stu_school_year' => '2020-2021'
          ]);
 
           DB::table('students')->insert([
-         	'stu_id'          => '38',
-         	'stu_usr_id'      => '48',
+         	'stu_id'          => '8',
+         	'stu_usr_id'      => '18',
          	'stu_class_id'    => '3',
-         	'stu_nis'         => '2021.10.051',
+         	'stu_nis'         => '202110051',
          	'stu_school_year' => '2020-2021'
          ]);
 
           DB::table('students')->insert([
-         	'stu_id'          => '39',
-         	'stu_usr_id'      => '49',
+         	'stu_id'          => '9',
+         	'stu_usr_id'      => '19',
          	'stu_class_id'    => '3',
-         	'stu_nis'         => '2021.10.052',
+         	'stu_nis'         => '202110052',
          	'stu_school_year' => '2020-2021'
          ]);
 
           DB::table('students')->insert([
-         	'stu_id'          => '40',
-         	'stu_usr_id'      => '50',
+         	'stu_id'          => '10',
+         	'stu_usr_id'      => '20',
          	'stu_class_id'    => '3',
-         	'stu_nis'         => '2021.10.056',
+         	'stu_nis'         => '202110056',
          	'stu_school_year' => '2020-2021'
          ]);
+
+
+
 
 
 
            DB::table('students')->insert([
-         	'stu_id'          => '67',
-         	'stu_usr_id'      => '77',
+         	'stu_id'          => '11',
+         	'stu_usr_id'      => '21',
          	'stu_class_id'    => '1',
-         	'stu_nis'         => '2021.10.001',
+         	'stu_nis'         => '202110001',
          	'stu_school_year' => '2020-2021'
          ]);
 
             DB::table('students')->insert([
-         	'stu_id'          => '68',
-         	'stu_usr_id'      => '78',
+         	'stu_id'          => '12',
+         	'stu_usr_id'      => '22',
          	'stu_class_id'    => '1',
-         	'stu_nis'         => '2021.10.014',
+         	'stu_nis'         => '202110014',
          	'stu_school_year' => '2020-2021'
          ]);
 
              DB::table('students')->insert([
-         	'stu_id'          => '69',
-         	'stu_usr_id'      => '79',
+         	'stu_id'          => '13',
+         	'stu_usr_id'      => '23',
          	'stu_class_id'    => '1',
-         	'stu_nis'         => '2021.10.015',
+         	'stu_nis'         => '202110015',
          	'stu_school_year' => '2020-2021'
          ]);
 
               DB::table('students')->insert([
-         	'stu_id'          => '70',
-         	'stu_usr_id'      => '80',
+         	'stu_id'          => '14',
+         	'stu_usr_id'      => '24',
          	'stu_class_id'    => '1',
-         	'stu_nis'         => '2021.10.021',
+         	'stu_nis'         => '202110021',
          	'stu_school_year' => '2020-2021'
          ]);
 
                DB::table('students')->insert([
-         	'stu_id'          => '71',
-         	'stu_usr_id'      => '81',
+         	'stu_id'          => '15',
+         	'stu_usr_id'      => '25',
          	'stu_class_id'    => '1',
-         	'stu_nis'         => '2021.10.094',
+         	'stu_nis'         => '202110094',
          	'stu_school_year' => '2020-2021'
          ]);
 
 
 
 
+
          DB::table('students')->insert([
-         	'stu_id'          => '94',
-         	'stu_usr_id'      => '104',
+         	'stu_id'          => '16',
+         	'stu_usr_id'      => '26',
          	'stu_class_id'    => '4',
-         	'stu_nis'         => '1920.10.002',
+         	'stu_nis'         => '192010002',
          	'stu_school_year' => '2019-2020'
          ]);
 
          DB::table('students')->insert([
-         	'stu_id'          => '95',
-         	'stu_usr_id'      => '105',
+         	'stu_id'          => '17',
+         	'stu_usr_id'      => '27',
          	'stu_class_id'    => '4',
-         	'stu_nis'         => '1920.10.007',
+         	'stu_nis'         => '192010007',
          	'stu_school_year' => '2019-2020'
          ]);
 
          DB::table('students')->insert([
-         	'stu_id'          => '96',
-         	'stu_usr_id'      => '106',
+         	'stu_id'          => '18',
+         	'stu_usr_id'      => '28',
          	'stu_class_id'    => '4',
-         	'stu_nis'         => '1920.10.009',
+         	'stu_nis'         => '192010009',
          	'stu_school_year' => '2019-2020'
          ]);
 
          DB::table('students')->insert([
-         	'stu_id'          => '97',
-         	'stu_usr_id'      => '107',
+         	'stu_id'          => '19',
+         	'stu_usr_id'      => '29',
          	'stu_class_id'    => '4',
-         	'stu_nis'         => '1920.10.011',
+         	'stu_nis'         => '192010011',
          	'stu_school_year' => '2019-2020'
          ]);
 
          DB::table('students')->insert([
-         	'stu_id'          => '98',
-         	'stu_usr_id'      => '108',
+         	'stu_id'          => '20',
+         	'stu_usr_id'      => '30',
          	'stu_class_id'    => '4',
-         	'stu_nis'         => '1920.10.014',
+         	'stu_nis'         => '192010014',
          	'stu_school_year' => '2019-2020'
          ]);
+
 
 
 
 
           DB::table('students')->insert([
-         	'stu_id'          => '121',
-         	'stu_usr_id'      => '131',
+         	'stu_id'          => '21',
+         	'stu_usr_id'      => '31',
          	'stu_class_id'    => '5',
-         	'stu_nis'         => '1920.10.001',
+         	'stu_nis'         => '192010001',
          	'stu_school_year' => '2019-2020'
          ]);
 
            DB::table('students')->insert([
-         	'stu_id'          => '122',
-         	'stu_usr_id'      => '132',
+         	'stu_id'          => '22',
+         	'stu_usr_id'      => '32',
          	'stu_class_id'    => '5',
-         	'stu_nis'         => '1920.10.003',
+         	'stu_nis'         => '192010003',
          	'stu_school_year' => '2019-2020'
          ]);
 
             DB::table('students')->insert([
-         	'stu_id'          => '123',
-         	'stu_usr_id'      => '133',
+         	'stu_id'          => '23',
+         	'stu_usr_id'      => '33',
          	'stu_class_id'    => '5',
-         	'stu_nis'         => '1920.10.005',
+         	'stu_nis'         => '192010005',
          	'stu_school_year' => '2019-2020'
          ]);
 
              DB::table('students')->insert([
-         	'stu_id'          => '124',
-         	'stu_usr_id'      => '134',
+         	'stu_id'          => '24',
+         	'stu_usr_id'      => '34',
          	'stu_class_id'    => '5',
-         	'stu_nis'         => '1920.10.006',
+         	'stu_nis'         => '192010006',
          	'stu_school_year' => '2019-2020'
          ]);
 
               DB::table('students')->insert([
-         	'stu_id'          => '125',
-         	'stu_usr_id'      => '135',
+         	'stu_id'          => '25',
+         	'stu_usr_id'      => '35',
          	'stu_class_id'    => '5',
-         	'stu_nis'         => '1920.10.008',
+         	'stu_nis'         => '192010008',
          	'stu_school_year' => '2019-2020'
          ]);
 
@@ -225,175 +233,180 @@ class StudentSeeder extends Seeder
 
 
               DB::table('students')->insert([
-         	'stu_id'          => '146',
-         	'stu_usr_id'      => '156',
+         	'stu_id'          => '26',
+         	'stu_usr_id'      => '36',
          	'stu_class_id'    => '6',
-         	'stu_nis'         => '1920.10.004',
+         	'stu_nis'         => '192010004',
          	'stu_school_year' => '2019-2020'
          ]);
 
 
               DB::table('students')->insert([
-         	'stu_id'          => '147',
-         	'stu_usr_id'      => '157',
+         	'stu_id'          => '27',
+         	'stu_usr_id'      => '37',
          	'stu_class_id'    => '6',
-         	'stu_nis'         => '1920.10.040',
+         	'stu_nis'         => '192010040',
          	'stu_school_year' => '2019-2020'
          ]);
 
 
               DB::table('students')->insert([
-         	'stu_id'          => '148',
-         	'stu_usr_id'      => '158',
+         	'stu_id'          => '28',
+         	'stu_usr_id'      => '38',
          	'stu_class_id'    => '6',
-         	'stu_nis'         => '1920.10.042',
+         	'stu_nis'         => '192010042',
          	'stu_school_year' => '2019-2020'
          ]);
 
 
               DB::table('students')->insert([
-         	'stu_id'          => '149',
-         	'stu_usr_id'      => '159',
+         	'stu_id'          => '29',
+         	'stu_usr_id'      => '39',
          	'stu_class_id'    => '6',
-         	'stu_nis'         => '1920.10.043',
+         	'stu_nis'         => '192010043',
          	'stu_school_year' => '2019-2020'
          ]);
 
 
               DB::table('students')->insert([
-         	'stu_id'          => '150',
-         	'stu_usr_id'      => '160',
+         	'stu_id'          => '30',
+         	'stu_usr_id'      => '40',
          	'stu_class_id'    => '6',
-         	'stu_nis'         => '1920.10.044',
+         	'stu_nis'         => '192010044',
          	'stu_school_year' => '2019-2020'
          ]);
+
+
+
 
 
 
 
                  DB::table('students')->insert([
-         	'stu_id'          => '170',
-         	'stu_usr_id'      => '180',
+         	'stu_id'          => '31',
+         	'stu_usr_id'      => '41',
          	'stu_class_id'    => '9',
-         	'stu_nis'         => '1819.10.003',
+         	'stu_nis'         => '181910003',
          	'stu_school_year' => '2018-2019'
          ]);
 
               DB::table('students')->insert([
-         	'stu_id'          => '171',
-         	'stu_usr_id'      => '181',
+         	'stu_id'          => '32',
+         	'stu_usr_id'      => '42',
          	'stu_class_id'    => '9',
-         	'stu_nis'         => '1819.10.010',
+         	'stu_nis'         => '181910010',
          	'stu_school_year' => '2018-2019'
          ]);
 
                DB::table('students')->insert([
-         	'stu_id'          => '172',
-         	'stu_usr_id'      => '182',
+         	'stu_id'          => '33',
+         	'stu_usr_id'      => '43',
          	'stu_class_id'    => '9',
-         	'stu_nis'         => '1819.10.019',
+         	'stu_nis'         => '181910019',
          	'stu_school_year' => '2018-2019'
          ]);
 
                DB::table('students')->insert([
-         	'stu_id'          => '173',
-         	'stu_usr_id'      => '183',
+         	'stu_id'          => '34',
+         	'stu_usr_id'      => '44',
          	'stu_class_id'    => '9',
-         	'stu_nis'         => '1819.10.021',
+         	'stu_nis'         => '181910021',
          	'stu_school_year' => '2018-2019'
          ]);
 
                   DB::table('students')->insert([
-         	'stu_id'          => '174',
-         	'stu_usr_id'      => '184',
+         	'stu_id'          => '35',
+         	'stu_usr_id'      => '45',
          	'stu_class_id'    => '9',
-         	'stu_nis'         => '1819.10.026',
+         	'stu_nis'         => '181910026',
          	'stu_school_year' => '2018-2019'
          ]);
 
 
 
 
+
                   DB::table('students')->insert([
-         	'stu_id'          => '206',
-         	'stu_usr_id'      => '216',
+         	'stu_id'          => '36',
+         	'stu_usr_id'      => '46',
          	'stu_class_id'    => '7',
-         	'stu_nis'         => '1819.10.002',
+         	'stu_nis'         => '181910002',
          	'stu_school_year' => '2018-2019'
          ]);
 
                   DB::table('students')->insert([
-         	'stu_id'          => '207',
-         	'stu_usr_id'      => '217',
+         	'stu_id'          => '37',
+         	'stu_usr_id'      => '47',
          	'stu_class_id'    => '7',
-         	'stu_nis'         => '1819.10.001',
+         	'stu_nis'         => '181910001',
          	'stu_school_year' => '2018-2019'
          ]);
 
                   DB::table('students')->insert([
-         	'stu_id'          => '208',
-         	'stu_usr_id'      => '218',
+         	'stu_id'          => '38',
+         	'stu_usr_id'      => '48',
          	'stu_class_id'    => '7',
-         	'stu_nis'         => '1819.10.005',
+         	'stu_nis'         => '181910005',
          	'stu_school_year' => '2018-2019'
          ]);
 
                   DB::table('students')->insert([
-         	'stu_id'          => '209',
-         	'stu_usr_id'      => '219',
+         	'stu_id'          => '39',
+         	'stu_usr_id'      => '49',
          	'stu_class_id'    => '7',
-         	'stu_nis'         => '1819.10.006',
+         	'stu_nis'         => '181910006',
          	'stu_school_year' => '2018-2019'
          ]);
 
                   DB::table('students')->insert([
-         	'stu_id'          => '210',
-         	'stu_usr_id'      => '220',
+         	'stu_id'          => '40',
+         	'stu_usr_id'      => '50',
          	'stu_class_id'    => '7',
-         	'stu_nis'         => '1819.10.008',
+         	'stu_nis'         => '181910008',
          	'stu_school_year' => '2018-2019'
          ]);
 
 
 
 
+
                   DB::table('students')->insert([
-         	'stu_id'          => '235',
-         	'stu_usr_id'      => '245',
+         	'stu_id'          => '41',
+         	'stu_usr_id'      => '51',
          	'stu_class_id'    => '8',
-         	'stu_nis'         => '1819.10.012',
+         	'stu_nis'         => '181910012',
          	'stu_school_year' => '2018-2019'
          ]);
 
                   DB::table('students')->insert([
-         	'stu_id'          => '236',
-         	'stu_usr_id'      => '246',
+         	'stu_id'          => '42',
+         	'stu_usr_id'      => '52',
          	'stu_class_id'    => '8',
-         	'stu_nis'         => '1819.10.013',
+         	'stu_nis'         => '181910013',
          	'stu_school_year' => '2018-2019'
          ]);
 
                   DB::table('students')->insert([
-         	'stu_id'          => '237',
-         	'stu_usr_id'      => '247',
+         	'stu_id'          => '43',
+         	'stu_usr_id'      => '53',
          	'stu_class_id'    => '8',
-         	'stu_nis'         => '1819.10.014',
+         	'stu_nis'         => '181910014',
          	'stu_school_year' => '2018-2019'
          ]);
 
                   DB::table('students')->insert([
-         	'stu_id'          => '238',
-         	'stu_usr_id'      => '248',
+         	'stu_id'          => '44',
+         	'stu_usr_id'      => '54',
          	'stu_class_id'    => '8',
-         	'stu_nis'         => '1819.10.015',
+         	'stu_nis'         => '181910015',
          	'stu_school_year' => '2018-2019'
          ]);
 
                   DB::table('students')->insert([
-         	'stu_id'          => '239',
-         	'stu_usr_id'      => '249',
+         	'stu_id'          => '45',
+         	'stu_usr_id'      => '45',
          	'stu_class_id'    => '8',
-         	'stu_nis'         => '1819.10.016',
+         	'stu_nis'         => '181910016',
          	'stu_school_year' => '2018-2019'
          ]);
 

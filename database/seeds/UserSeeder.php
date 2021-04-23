@@ -20,6 +20,11 @@ class UserSeeder extends Seeder
             'usr_email' => 'admin@gmail.com',
             'usr_phone' => '08213456789',
             'usr_password' => Hash::make('admin123123'),
+            'usr_gender' => 'laki-laki',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '10-10-1995',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -35,6 +40,11 @@ class UserSeeder extends Seeder
              'usr_email' => 'dewiastriindriani@gmail.com',
              'usr_phone' => '08213156781',
              'usr_password' => Hash::make('12345678'),
+             'usr_gender' => 'Perempuan',
+             'usr_place_of_birth' => 'Bandung',
+             'usr_date_of_birth' => '11-11-1995',
+             'usr_religion' => 'Islam',
+             'usr_addres' => 'Jln. Katapang Andir',
              'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
              'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
              'usr_is_active' => true,
@@ -48,6 +58,11 @@ class UserSeeder extends Seeder
              'usr_email' => 'rosmelia@gmail.com',
              'usr_phone' => '08210456782',
              'usr_password' => Hash::make('12345678'),
+             'usr_gender' => 'Perempuan',
+             'usr_place_of_birth' => 'Bandung',
+             'usr_date_of_birth' => '12-11-1995',
+             'usr_religion' => 'Islam',
+             'usr_addres' => 'Jln. Katapang Andir',
              'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
              'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
              'usr_is_active' => true,
@@ -60,6 +75,11 @@ class UserSeeder extends Seeder
              'usr_email' => 'sitisaadah@gmail.com',
              'usr_phone' => '08213056783',
              'usr_password' => Hash::make('12345678'),
+             'usr_gender' => 'Perempuan',
+             'usr_place_of_birth' => 'Bandung',
+             'usr_date_of_birth' => '13-01-1995',
+             'usr_religion' => 'Islam',
+             'usr_addres' => 'Jln. Katapang Andir',
              'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
              'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
              'usr_is_active' => true,
@@ -72,6 +92,11 @@ class UserSeeder extends Seeder
              'usr_email' => 'agfienuranihanifah@gmail.com',
              'usr_phone' => '08213406784',
              'usr_password' => Hash::make('12345678'),
+             'usr_gender' => 'Perempuan',
+             'usr_place_of_birth' => 'Bandung',
+             'usr_date_of_birth' => '12-02-1995',
+             'usr_religion' => 'Islam',
+             'usr_addres' => 'Jln. Katapang Andir',
              'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
              'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
              'usr_is_active' => true,
@@ -84,6 +109,11 @@ class UserSeeder extends Seeder
              'usr_email' => 'annisakomalasari@gmail.com',
              'usr_phone' => '08273456785',
              'usr_password' => Hash::make('12345678'),
+             'usr_gender' => 'Perempuan',
+             'usr_place_of_birth' => 'Bandung',
+             'usr_date_of_birth' => '15-11-1995',
+             'usr_religion' => 'Islam',
+             'usr_addres' => 'Jln. Katapang Andir',
              'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
              'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
              'usr_is_active' => true,
@@ -96,6 +126,11 @@ class UserSeeder extends Seeder
              'usr_email' => 'roslaila@gmail.com',
              'usr_phone' => '08613456786',
              'usr_password' => Hash::make('12345678'),
+             'usr_gender' => 'Perempuan',
+             'usr_place_of_birth' => 'Bandung',
+             'usr_date_of_birth' => '16-10-1995',
+             'usr_religion' => 'Islam',
+             'usr_addres' => 'Jln. Katapang Andir',
              'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
              'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
              'usr_is_active' => true,
@@ -108,6 +143,11 @@ class UserSeeder extends Seeder
              'usr_email' => 'miagarmianti@gmail.com',
              'usr_phone' => '08213456087',
              'usr_password' => Hash::make('12345678'),
+             'usr_gender' => 'Perempuan',
+             'usr_place_of_birth' => 'Bandung',
+             'usr_date_of_birth' => '17-10-1995',
+             'usr_religion' => 'Islam',
+             'usr_addres' => 'Jln. Katapang Andir',
              'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
              'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
              'usr_is_active' => true,
@@ -120,6 +160,11 @@ class UserSeeder extends Seeder
              'usr_email' => 'essaamaliakhairina@gmail.com',
              'usr_phone' => '08231456787',
              'usr_password' => Hash::make('12345678'),
+             'usr_gender' => 'Perempuan',
+             'usr_place_of_birth' => 'Bandung',
+             'usr_date_of_birth' => '18-10-1995',
+             'usr_religion' => 'Islam',
+             'usr_addres' => 'Jln. Katapang Andir',
              'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
              'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
              'usr_is_active' => true,
@@ -132,6 +177,11 @@ class UserSeeder extends Seeder
              'usr_email' => 'sitirobiahadawiyah@gmail.com',
              'usr_phone' => '08213546787',
              'usr_password' => Hash::make('12345678'),
+             'usr_gender' => 'Perempuan',
+             'usr_place_of_birth' => 'Bandung',
+             'usr_date_of_birth' => '19-10-1995',
+             'usr_religion' => 'Islam',
+             'usr_addres' => 'Jln. Katapang Andir',
              'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
              'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
              'usr_is_active' => true,
@@ -143,11 +193,20 @@ class UserSeeder extends Seeder
 
 
 
+
+
+
+
         $siswa = User::create([
             'usr_name' => 'Adit Farhan',
             'usr_email' => 'adit@gmail.com',
             'usr_phone' => '08213456878',
             'usr_password' => Hash::make('12345678'),
+            'usr_gender' => 'Laki-laki',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '01-01-2005',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -160,6 +219,11 @@ class UserSeeder extends Seeder
             'usr_email' => 'maulana@gmail.com',
             'usr_phone' => '08212456777',
             'usr_password' => Hash::make('12345678'),
+            'usr_gender' => 'Laki-laki',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '02-01-2005',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -172,6 +236,11 @@ class UserSeeder extends Seeder
             'usr_email' => 'mubin@gmail.com',
             'usr_phone' => '08213457727',
             'usr_password' => Hash::make('12345678'),
+            'usr_gender' => 'Laki-laki',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '03-01-2005',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -185,6 +254,11 @@ class UserSeeder extends Seeder
             'usr_email' => 'ajeng@gmail.com',
             'usr_phone' => '08214356977',
             'usr_password' => Hash::make('12345678'),
+            'usr_gender' => 'Perempuan',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '04-01-2005',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -197,6 +271,11 @@ class UserSeeder extends Seeder
             'usr_email' => 'akas@gmail.com',
             'usr_phone' => '08213465707',
             'usr_password' => Hash::make('12345678'),
+            'usr_gender' => 'Laki-laki',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '05-01-2005',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -204,11 +283,24 @@ class UserSeeder extends Seeder
 
       		  $siswa->assignRole('student');
 
+
+
+
+
+
+
+
+
             $siswa = User::create([
             'usr_name' => 'M. Hendry Firmansyah	',
             'usr_email' => 'hendry@gmail.com',
             'usr_phone' => '08213556771',
             'usr_password' => Hash::make('12345678'),
+            'usr_gender' => 'Laki-laki',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '01-01-2005',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -221,6 +313,11 @@ class UserSeeder extends Seeder
             'usr_email' => 'mesya@gmail.com',
             'usr_phone' => '08013456771',
             'usr_password' => Hash::make('12345678'),
+            'usr_gender' => 'Perempuan',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '02-01-2005',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -233,6 +330,11 @@ class UserSeeder extends Seeder
             'usr_email' => 'dzacky@gmail.com',
             'usr_phone' => '08213456071',
             'usr_password' => Hash::make('12345678'),
+            'usr_gender' => 'Laki-laki',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '03-01-2005',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -245,6 +347,11 @@ class UserSeeder extends Seeder
             'usr_email' => 'muammar@gmail.com',
             'usr_phone' => '08213450171',
             'usr_password' => Hash::make('12345678'),
+            'usr_gender' => 'Laki-laki',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '04-01-2005',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -258,6 +365,11 @@ class UserSeeder extends Seeder
             'usr_email' => 'muhamadRestu@gmail.com',
             'usr_phone' => '08203456771',
             'usr_password' => Hash::make('12345678'),
+            'usr_gender' => 'Laki-laki',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '05-01-2005',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -265,11 +377,22 @@ class UserSeeder extends Seeder
 
       		  $siswa->assignRole('student');
 
+
+
+
+
+
+
   $siswa = User::create([
             'usr_name' => '	Achdian Fahrul Rizki',
             'usr_email' => 'achdian@gmail.com',
             'usr_phone' => '08113456771',
             'usr_password' => Hash::make('12345678'),
+            'usr_gender' => 'Laki-laki',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '01-01-2005',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -281,6 +404,11 @@ class UserSeeder extends Seeder
             'usr_email' => 'azkaramdani@gmail.com',
             'usr_phone' => '08213486771',
             'usr_password' => Hash::make('12345678'),
+            'usr_gender' => 'Laki-laki',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '02-01-2005',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -293,6 +421,11 @@ class UserSeeder extends Seeder
             'usr_email' => 'bagaswijayalubis@gmail.com',
             'usr_phone' => '08213056771',
             'usr_password' => Hash::make('12345678'),
+            'usr_gender' => 'Laki-laki',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '03-01-2005',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -304,6 +437,11 @@ class UserSeeder extends Seeder
             'usr_email' => 'cindialfiany@gmail.com',
             'usr_phone' => '08213450771',
             'usr_password' => Hash::make('12345678'),
+            'usr_gender' => 'Perempuan',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '04-01-2005',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -317,6 +455,11 @@ class UserSeeder extends Seeder
             'usr_email' => 'dhandyrizkynugraha@gmail.com',
             'usr_phone' => '08213956771',
             'usr_password' => Hash::make('12345678'),
+            'usr_gender' => 'Laki-laki',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '05-01-2005',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -324,11 +467,26 @@ class UserSeeder extends Seeder
 
       		  $siswa->assignRole('student');
 
+
+
+
+
+
+
+
+
+
+
   $siswa = User::create([
             'usr_name' => 'Ajri Muhammad Sidiq	',
             'usr_email' => 'ajri@gmail.com',
             'usr_phone' => '08213256771',
             'usr_password' => Hash::make('12345678'),
+             'usr_gender' => 'Laki-laki',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '01-01-2004',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -341,6 +499,11 @@ class UserSeeder extends Seeder
             'usr_email' => 'arya@gmail.com',
             'usr_phone' => '08433456771',
             'usr_password' => Hash::make('12345678'),
+             'usr_gender' => 'Laki-laki',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '02-01-2004',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -354,6 +517,11 @@ class UserSeeder extends Seeder
             'usr_email' => 'bagus@gmail.com',
             'usr_phone' => '08593456771',
             'usr_password' => Hash::make('12345678'),
+             'usr_gender' => 'Laki-laki',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '03-01-2004',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -367,6 +535,11 @@ class UserSeeder extends Seeder
             'usr_email' => 'dadang@gmail.com',
             'usr_phone' => '08313456771',
             'usr_password' => Hash::make('12345678'),
+            'usr_gender' => 'Laki-laki',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '04-01-2004',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -379,6 +552,11 @@ class UserSeeder extends Seeder
             'usr_email' => 'deanov@gmail.com',
             'usr_phone' => '08313456771',
             'usr_password' => Hash::make('12345678'),
+            'usr_gender' => 'Perempuan',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '05-01-2004',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -386,11 +564,25 @@ class UserSeeder extends Seeder
 
       		  $siswa->assignRole('student');
 
+
+
+
+
+
+
+
+
+
  $siswa = User::create([
             'usr_name' => 'Ahmad Fauzan Musthofa	',
             'usr_email' => 'ahmadfauzanmusthofa@gmail.com',
             'usr_phone' => '08213756771',
             'usr_password' => Hash::make('12345678'),
+            'usr_gender' => 'Laki-laki',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '01-01-2004',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -403,6 +595,11 @@ class UserSeeder extends Seeder
             'usr_email' => 'akbarmulyadi@gmail.com',
             'usr_phone' => '08213466771',
             'usr_password' => Hash::make('12345678'),
+            'usr_gender' => 'Laki-laki',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '02-01-2004',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -417,6 +614,11 @@ class UserSeeder extends Seeder
             'usr_email' => 'anabiladarapradista@gmail.com',
             'usr_phone' => '08213456771',
             'usr_password' => Hash::make('12345678'),
+            'usr_gender' => 'Perempuan',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '03-01-2004',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -429,6 +631,11 @@ class UserSeeder extends Seeder
             'usr_email' => 'ariardiansyah@gmail.com',
             'usr_phone' => '08093456771',
             'usr_password' => Hash::make('12345678'),
+            'usr_gender' => 'Laki-laki',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '04-01-2004',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -442,6 +649,11 @@ class UserSeeder extends Seeder
             'usr_email' => 'azizahnurilhaq@gmail.com',
             'usr_phone' => '08463456771',
             'usr_password' => Hash::make('12345678'),
+            'usr_gender' => 'Perempuan',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '05-01-2004',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -450,11 +662,23 @@ class UserSeeder extends Seeder
       		  $siswa->assignRole('student');
 
 
+
+
+
+
+
+
+
  $siswa = User::create([
             'usr_name' => 'Albar Hanafi	',
             'usr_email' => 'albarhanafi@gmail.com',
             'usr_phone' => '08913456771',
             'usr_password' => Hash::make('12345678'),
+            'usr_gender' => 'Laki-laki',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '01-01-2004',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -467,6 +691,11 @@ class UserSeeder extends Seeder
             'usr_email' => 'mohamadbarqisinanudin@gmail.com',
             'usr_phone' => '08513456771',
             'usr_password' => Hash::make('12345678'),
+            'usr_gender' => 'Laki-laki',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '02-01-2004',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -480,6 +709,11 @@ class UserSeeder extends Seeder
             'usr_email' => 'mohammadrizaldy@gmail.com',
             'usr_phone' => '08313456771',
             'usr_password' => Hash::make('12345678'),
+            'usr_gender' => 'Laki-laki',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '03-01-2004',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -493,6 +727,11 @@ class UserSeeder extends Seeder
             'usr_email' => 'muhamadadinsainifar@gmail.com',
             'usr_phone' => '08013456771',
             'usr_password' => Hash::make('12345678'),
+  			'usr_gender' => 'Laki-laki',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '04-01-2004',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -506,6 +745,11 @@ class UserSeeder extends Seeder
             'usr_email' => 'muhammadfauzanhadi@gmail.com',
             'usr_phone' => '08513456771',
             'usr_password' => Hash::make('12345678'),
+ 			'usr_gender' => 'Laki-laki',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '05-01-2004',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -514,11 +758,23 @@ class UserSeeder extends Seeder
       		  $siswa->assignRole('student');
 
 
+
+
+
+
+
+
+
  $siswa = User::create([
             'usr_name' => 'Aidha Nurhaliza	',
             'usr_email' => 'aidhanurhaliza@gmail.com',
             'usr_phone' => '08113456771',
             'usr_password' => Hash::make('12345678'),
+			'usr_gender' => 'Perempuan',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '01-01-2003',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -531,6 +787,11 @@ class UserSeeder extends Seeder
             'usr_email' => 'asrikarlina@gmail.com',
             'usr_phone' => '08213457771',
             'usr_password' => Hash::make('12345678'),
+			'usr_gender' => 'Perempuan',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '02-01-2003',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -543,6 +804,11 @@ class UserSeeder extends Seeder
             'usr_email' => 'cantrihendriani@gmail.com',
             'usr_phone' => '08213456001',
             'usr_password' => Hash::make('12345678'),
+			'usr_gender' => 'Perempuan',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '03-01-2003',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -555,6 +821,11 @@ class UserSeeder extends Seeder
             'usr_email' => 'cjenialviyonnita@gmail.com',
             'usr_phone' => '09013456771',
             'usr_password' => Hash::make('12345678'),
+			'usr_gender' => 'Perempuan',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '03-01-2003',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -568,6 +839,11 @@ class UserSeeder extends Seeder
             'usr_email' => 'dellasilvani@gmail.com',
             'usr_phone' => '09213456771',
             'usr_password' => Hash::make('12345678'),
+            'usr_gender' => 'Perempuan',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '03-01-2003',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -575,11 +851,23 @@ class UserSeeder extends Seeder
 
       		  $siswa->assignRole('student');
 
+
+
+
+
+
+
+
  $siswa = User::create([
             'usr_name' => 'Ahmad Saepudin	',
             'usr_email' => 'ahmadsaepudin@gmail.com',
             'usr_phone' => '08211456771',
             'usr_password' => Hash::make('12345678'),
+            'usr_gender' => 'Laki-laki',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '01-01-2003',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -592,6 +880,11 @@ class UserSeeder extends Seeder
             'usr_email' => 'ahmadsuherman@gmail.com',
             'usr_phone' => '08213126771',
             'usr_password' => Hash::make('12345678'),
+            'usr_gender' => 'Laki-laki',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '02-01-2003',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -605,6 +898,11 @@ class UserSeeder extends Seeder
             'usr_email' => 'alikatazkiyah@gmail.com',
             'usr_phone' => '08213456011',
             'usr_password' => Hash::make('12345678'),
+            'usr_gender' => 'Perempuan',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '03-01-2003',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -618,6 +916,11 @@ class UserSeeder extends Seeder
             'usr_email' => 'ameliaputri@gmail.com',
             'usr_phone' => '08213491771',
             'usr_password' => Hash::make('12345678'),
+            'usr_gender' => 'Perempuan',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '04-01-2003',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -631,6 +934,11 @@ class UserSeeder extends Seeder
             'usr_email' => 'arifrifaldi@gmail.com',
             'usr_phone' => '08213456171',
             'usr_password' => Hash::make('12345678'),
+            'usr_gender' => 'Laki-laki',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '05-01-2003',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -639,11 +947,23 @@ class UserSeeder extends Seeder
       		  $siswa->assignRole('student');
 
 
+
+
+
+
+
+
+
  $siswa = User::create([
             'usr_name' => 'Asyiah Nurjanah	',
             'usr_email' => 'asyiah@gmail.com',
             'usr_phone' => '00913456771',
             'usr_password' => Hash::make('12345678'),
+            'usr_gender' => 'Perempuan',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '01-01-2003',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -656,6 +976,11 @@ class UserSeeder extends Seeder
             'usr_email' => 'auliarahma@gmail.com',
             'usr_phone' => '08213450071',
             'usr_password' => Hash::make('12345678'),
+            'usr_gender' => 'Perempuan',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '02-01-2003',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -669,6 +994,11 @@ class UserSeeder extends Seeder
             'usr_email' => 'azizahalkhusnayain@gmail.com',
             'usr_phone' => '08213456009',
             'usr_password' => Hash::make('12345678'),
+            'usr_gender' => 'Perempuan',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '03-01-2003',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -682,6 +1012,11 @@ class UserSeeder extends Seeder
             'usr_email' => 'bayusetiawan@gmail.com',
             'usr_phone' => '08213456000',
             'usr_password' => Hash::make('12345678'),
+            'usr_gender' => 'Laki-laki',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '04-01-2003',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,
@@ -694,6 +1029,11 @@ class UserSeeder extends Seeder
             'usr_email' => 'bimantarapamungkas@gmail.com',
             'usr_phone' => '08213498123',
             'usr_password' => Hash::make('12345678'),
+            'usr_gender' => 'Laki-laki',
+            'usr_place_of_birth' => 'Bandung',
+            'usr_date_of_birth' => '05-01-2003',
+            'usr_religion' => 'Islam',
+            'usr_addres' => 'Jln. Katapang Andir',
             'usr_email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'usr_verification_token' => str_replace('/', '', Hash::make(Str::random(12))),
             'usr_is_active' => true,

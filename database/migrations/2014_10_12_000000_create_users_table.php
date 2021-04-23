@@ -22,6 +22,11 @@ class CreateUsersTable extends Migration
             $table->string('usr_verification_token')->nullable();
             $table->timestamp('usr_email_verified_at')->nullable();
             $table->string('usr_password');
+            $table->string('usr_gender');
+            $table->string('usr_place_of_birth');
+            $table->string('usr_date_of_birth');
+            $table->string('usr_religion');
+            $table->string('usr_addres');
             
             $table->rememberToken();
             $table->biginteger('usr_created_by')->unsigned()->nullable();

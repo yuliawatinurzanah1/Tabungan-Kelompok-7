@@ -27,34 +27,48 @@ class ClassSeeder extends Seeder
 
           DB::table('classes')->insert([
               'class_id'          => '3',
-              'class_grade_id' 	  => '2',
-              'class_major_id'    => '1',
+              'class_grade_id' 	  => '1',
+              'class_major_id'    => '2',
               'class_number'	  => '1' 
               ]);
 
           DB::table('classes')->insert([
             'class_id'          => '4',
             'class_grade_id' 	=> '2',
-            'class_major_id'    => '2',
+            'class_major_id'    => '1',
             'class_number' 		=> '1' 
             ]);
 
           DB::table('classes')->insert([
               'class_id'          => '5',
-              'class_grade_id' 	  => '3',
-              'class_major_id'    => '1',
+              'class_grade_id' 	  => '2',
+              'class_major_id'    => '2',
               'class_number'      => '1' 
               ]);
 
           DB::table('classes')->insert([
             'class_id'          => '6',
-            'class_grade_id' 	=> '3',
-            'class_major_id'    => '1',
+            'class_grade_id' 	=> '2',
+            'class_major_id'    => '2',
             'class_number'      => '2' 
             ]);
 
            DB::table('classes')->insert([
             'class_id'          => '7',
+            'class_grade_id' 	=> '3',
+            'class_major_id'    => '1',
+            'class_number'      => '1' 
+            ]);
+
+             DB::table('classes')->insert([
+            'class_id'          => '8',
+            'class_grade_id' 	=> '3',
+            'class_major_id'    => '1',
+            'class_number'      => '2' 
+            ]);
+
+               DB::table('classes')->insert([
+            'class_id'          => '9',
             'class_grade_id' 	=> '3',
             'class_major_id'    => '2',
             'class_number'      => '1' 
