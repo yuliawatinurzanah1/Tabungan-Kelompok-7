@@ -17,7 +17,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '1',
             'usa_class_id'   => '2',
             'usa_amount'     => '5000',
-            'usa_date'       => '05-05-2020',
+            'usa_date'       => '2020-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -26,7 +26,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '2',
             'usa_class_id'   => '2',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2020',
+            'usa_date'       => '2020-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -35,7 +35,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '3',
             'usa_class_id'   => '2',
             'usa_amount'     => '15000',
-            'usa_date'       => '05-05-2020',
+            'usa_date'       => '2020-05-05',
             'usa_information' => 'Pembelian Buku Tulis'       	
          ]);
 
@@ -44,7 +44,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '4',
             'usa_class_id'   => '2',
             'usa_amount'     => '5000',
-            'usa_date'       => '05-05-2020',
+            'usa_date'       => '2020-05-05',
             'usa_information' => 'Pembelian Alat Tulis'        	
          ]);
 
@@ -53,7 +53,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '5',
             'usa_class_id'   => '2',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2020',
+            'usa_date'       => '2020-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -62,7 +62,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '1',
             'usa_class_id'   => '2',
             'usa_amount'     => '5000',
-            'usa_date'       => '05-05-2021',
+            'usa_date'       => '2020-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -71,7 +71,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '2',
             'usa_class_id'   => '2',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2021',
+            'usa_date'       => '2020-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -80,7 +80,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '3',
             'usa_class_id'   => '2',
             'usa_amount'     => '15000',
-            'usa_date'       => '05-05-2021',
+            'usa_date'       => '2020-05-05',
             'usa_information' => 'Pembelian Buku Tulis'       	
          ]);
 
@@ -89,7 +89,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '4',
             'usa_class_id'   => '2',
             'usa_amount'     => '5000',
-            'usa_date'       => '05-05-2021',
+            'usa_date'       => '2020-05-05',
             'usa_information' => 'Pembelian Alat Tulis'        	
          ]);
 
@@ -98,7 +98,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '5',
             'usa_class_id'   => '2',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2021',
+            'usa_date'       => '2020-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -111,7 +111,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '6',
             'usa_class_id'   => '3',
             'usa_amount'     => '5000',
-            'usa_date'       => '05-05-2020',
+            'usa_date'       => '2020-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -120,7 +120,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '7',
             'usa_class_id'   => '3',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2020',
+            'usa_date'       => '2020-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -129,7 +129,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '8',
             'usa_class_id'   => '3',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2020',
+            'usa_date'       => '2020-05-05',
             'usa_information' => 'Pembelian Buku Tulis'       	
          ]);
 
@@ -138,7 +138,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '9',
             'usa_class_id'   => '3',
             'usa_amount'     => '5000',
-            'usa_date'       => '05-05-2020',
+            'usa_date'       => '2020-05-05',
             'usa_information' => 'Pembelian Alat Tulis'        	
          ]);
 
@@ -147,7 +147,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '10',
             'usa_class_id'   => '3',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2020',
+            'usa_date'       => '2020-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -156,7 +156,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '6',
             'usa_class_id'   => '3',
             'usa_amount'     => '5000',
-            'usa_date'       => '05-05-2021',
+            'usa_date'       => '2020-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -165,7 +165,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '7',
             'usa_class_id'   => '3',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2021',
+            'usa_date'       => '2020-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -174,7 +174,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '8',
             'usa_class_id'   => '3',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2021',
+            'usa_date'       => '2020-05-05',
             'usa_information' => 'Pembelian Buku Tulis'       	
          ]);
 
@@ -183,7 +183,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '9',
             'usa_class_id'   => '3',
             'usa_amount'     => '5000',
-            'usa_date'       => '05-05-2021',
+            'usa_date'       => '2020-05-05',
             'usa_information' => 'Pembelian Alat Tulis'        	
          ]);
 
@@ -192,7 +192,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '10',
             'usa_class_id'   => '3',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2021',
+            'usa_date'       => '2020-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -206,7 +206,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '11',
             'usa_class_id'   => '1',
             'usa_amount'     => '5000',
-            'usa_date'       => '05-05-2020',
+            'usa_date'       => '2020-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -215,7 +215,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '12',
             'usa_class_id'   => '1',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2020',
+            'usa_date'       => '2020-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -224,7 +224,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '13',
             'usa_class_id'   => '1',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2020',
+            'usa_date'       => '2020-05-05',
             'usa_information' => 'Pembelian Buku Tulis'       	
          ]);
 
@@ -233,7 +233,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '14',
             'usa_class_id'   => '1',
             'usa_amount'     => '5000',
-            'usa_date'       => '05-05-2020',
+            'usa_date'       => '2020-05-05',
             'usa_information' => 'Pembelian Alat Tulis'        	
          ]);
 
@@ -242,7 +242,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '15',
             'usa_class_id'   => '1',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2020',
+            'usa_date'       => '2020-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -251,7 +251,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '11',
             'usa_class_id'   => '1',
             'usa_amount'     => '5000',
-            'usa_date'       => '05-05-2020',
+            'usa_date'       => '2020-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -260,7 +260,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '12',
             'usa_class_id'   => '1',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2020',
+            'usa_date'       => '2020-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -269,7 +269,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '13',
             'usa_class_id'   => '1',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2020',
+            'usa_date'       => '2020-05-05',
             'usa_information' => 'Pembelian Buku Tulis'       	
          ]);
 
@@ -278,7 +278,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '14',
             'usa_class_id'   => '1',
             'usa_amount'     => '5000',
-            'usa_date'       => '05-05-2020',
+            'usa_date'       => '2020-05-05',
             'usa_information' => 'Pembelian Alat Tulis'        	
          ]);
 
@@ -287,7 +287,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '15',
             'usa_class_id'   => '1',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2020',
+            'usa_date'       => '2020-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -300,7 +300,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '16',
             'usa_class_id'   => '4',
             'usa_amount'     => '5000',
-            'usa_date'       => '05-05-2019',
+            'usa_date'       => '2019-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -309,7 +309,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '17',
             'usa_class_id'   => '4',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2019',
+            'usa_date'       => '2019-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -318,7 +318,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '18',
             'usa_class_id'   => '4',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2019',
+            'usa_date'       => '2019-05-05',
             'usa_information' => 'Pembelian Buku Tulis'       	
          ]);
 
@@ -327,7 +327,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '19',
             'usa_class_id'   => '4',
             'usa_amount'     => '5000',
-            'usa_date'       => '05-05-2019',
+            'usa_date'       => '2019-05-05',
             'usa_information' => 'Pembelian Alat Tulis'        	
          ]);
 
@@ -336,7 +336,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '20',
             'usa_class_id'   => '4',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2019',
+            'usa_date'       => '2019-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
              DB::table('saving_usages')->insert([
@@ -344,7 +344,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '16',
             'usa_class_id'   => '4',
             'usa_amount'     => '5000',
-            'usa_date'       => '05-05-2020',
+            'usa_date'       => '2020-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -353,7 +353,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '17',
             'usa_class_id'   => '4',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2020',
+            'usa_date'       => '2020-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -362,7 +362,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '18',
             'usa_class_id'   => '4',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2020',
+            'usa_date'       => '2020-05-05',
             'usa_information' => 'Pembelian Buku Tulis'       	
          ]);
 
@@ -371,7 +371,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '19',
             'usa_class_id'   => '4',
             'usa_amount'     => '5000',
-            'usa_date'       => '05-05-2020',
+            'usa_date'       => '2020-05-05',
             'usa_information' => 'Pembelian Alat Tulis'        	
          ]);
 
@@ -380,7 +380,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '20',
             'usa_class_id'   => '4',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2020',
+            'usa_date'       => '2020-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -394,7 +394,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '21',
             'usa_class_id'   => '5',
             'usa_amount'     => '5000',
-            'usa_date'       => '05-05-2019',
+            'usa_date'       => '2019-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -403,7 +403,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '22',
             'usa_class_id'   => '5',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2019',
+            'usa_date'       => '2019-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -412,7 +412,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '23',
             'usa_class_id'   => '5',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2019',
+            'usa_date'       => '2019-05-05',
             'usa_information' => 'Pembelian Buku Tulis'       	
          ]);
 
@@ -421,7 +421,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '24',
             'usa_class_id'   => '5',
             'usa_amount'     => '5000',
-            'usa_date'       => '05-05-2019',
+            'usa_date'       => '2019-05-05',
             'usa_information' => 'Pembelian Alat Tulis'        	
          ]);
 
@@ -430,7 +430,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '25',
             'usa_class_id'   => '5',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2019',
+            'usa_date'       => '2019-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -439,7 +439,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '21',
             'usa_class_id'   => '5',
             'usa_amount'     => '5000',
-            'usa_date'       => '05-05-2020',
+            'usa_date'       => '2020-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -448,7 +448,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '22',
             'usa_class_id'   => '5',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2020',
+            'usa_date'       => '2020-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -457,7 +457,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '23',
             'usa_class_id'   => '5',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2020',
+            'usa_date'       => '2020-05-05',
             'usa_information' => 'Pembelian Buku Tulis'       	
          ]);
 
@@ -466,7 +466,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '24',
             'usa_class_id'   => '5',
             'usa_amount'     => '5000',
-            'usa_date'       => '05-05-2020',
+            'usa_date'       => '2020-05-05',
             'usa_information' => 'Pembelian Alat Tulis'        	
          ]);
 
@@ -475,7 +475,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '25',
             'usa_class_id'   => '5',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2020',
+            'usa_date'       => '2020-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -489,7 +489,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '26',
             'usa_class_id'   => '6',
             'usa_amount'     => '5000',
-            'usa_date'       => '05-05-2019',
+            'usa_date'       => '2019-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -498,7 +498,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '27',
             'usa_class_id'   => '6',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2019',
+            'usa_date'       => '2019-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -507,7 +507,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '28',
             'usa_class_id'   => '6',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2019',
+            'usa_date'       => '2019-05-05',
             'usa_information' => 'Pembelian Buku Tulis'       	
          ]);
 
@@ -516,7 +516,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '29',
             'usa_class_id'   => '6',
             'usa_amount'     => '5000',
-            'usa_date'       => '05-05-2019',
+            'usa_date'       => '2019-05-05',
             'usa_information' => 'Pembelian Alat Tulis'        	
          ]);
 
@@ -525,7 +525,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '30',
             'usa_class_id'   => '6',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2019',
+            'usa_date'       => '2019-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -534,7 +534,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '26',
             'usa_class_id'   => '6',
             'usa_amount'     => '5000',
-            'usa_date'       => '05-05-2019',
+            'usa_date'       => '2019-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -543,7 +543,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '27',
             'usa_class_id'   => '6',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2019',
+            'usa_date'       => '2019-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -552,7 +552,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '28',
             'usa_class_id'   => '6',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2019',
+            'usa_date'       => '2019-05-05',
             'usa_information' => 'Pembelian Buku Tulis'       	
          ]);
 
@@ -561,7 +561,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '29',
             'usa_class_id'   => '6',
             'usa_amount'     => '5000',
-            'usa_date'       => '05-05-2019',
+            'usa_date'       => '2019-05-05',
             'usa_information' => 'Pembelian Alat Tulis'        	
          ]);
 
@@ -570,7 +570,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '30',
             'usa_class_id'   => '6',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2019',
+            'usa_date'       => '2019-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -585,7 +585,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '31',
             'usa_class_id'   => '9',
             'usa_amount'     => '5000',
-            'usa_date'       => '05-05-2018',
+            'usa_date'       => '2018-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -594,7 +594,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '32',
             'usa_class_id'   => '9',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2018',
+            'usa_date'       => '2018-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -603,7 +603,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '33',
             'usa_class_id'   => '9',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2018',
+            'usa_date'       => '2018-05-05',
             'usa_information' => 'Pembelian Buku Tulis'       	
          ]);
 
@@ -612,7 +612,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '34',
             'usa_class_id'   => '9',
             'usa_amount'     => '5000',
-            'usa_date'       => '05-05-2018',
+            'usa_date'       => '2018-05-05',
             'usa_information' => 'Pembelian Alat Tulis'        	
          ]);
 
@@ -621,7 +621,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '35',
             'usa_class_id'   => '9',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2019',
+            'usa_date'       => '2019-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
             DB::table('saving_usages')->insert([
@@ -629,7 +629,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '31',
             'usa_class_id'   => '9',
             'usa_amount'     => '5000',
-            'usa_date'       => '05-05-2019',
+            'usa_date'       => '2019-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -638,7 +638,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '32',
             'usa_class_id'   => '9',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2019',
+            'usa_date'       => '2019-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -647,7 +647,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '33',
             'usa_class_id'   => '9',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2019',
+            'usa_date'       => '2019-05-05',
             'usa_information' => 'Pembelian Buku Tulis'       	
          ]);
 
@@ -656,7 +656,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '34',
             'usa_class_id'   => '9',
             'usa_amount'     => '5000',
-            'usa_date'       => '05-05-2019',
+            'usa_date'       => '2019-05-05',
             'usa_information' => 'Pembelian Alat Tulis'        	
          ]);
 
@@ -665,7 +665,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '35',
             'usa_class_id'   => '9',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2019',
+            'usa_date'       => '2019-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -679,7 +679,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '36',
             'usa_class_id'   => '7',
             'usa_amount'     => '5000',
-            'usa_date'       => '05-05-2018',
+            'usa_date'       => '2018-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -688,7 +688,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '37',
             'usa_class_id'   => '7',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2018',
+            'usa_date'       => '2018-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -697,7 +697,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '38',
             'usa_class_id'   => '7',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2018',
+            'usa_date'       => '2018-05-05',
             'usa_information' => 'Pembelian Buku Tulis'       	
          ]);
 
@@ -706,7 +706,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '39',
             'usa_class_id'   => '7',
             'usa_amount'     => '5000',
-            'usa_date'       => '05-05-2018',
+            'usa_date'       => '2018-05-05',
             'usa_information' => 'Pembelian Alat Tulis'        	
          ]);
 
@@ -715,7 +715,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '40',
             'usa_class_id'   => '7',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2018',
+            'usa_date'       => '2018-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
              DB::table('saving_usages')->insert([
@@ -723,7 +723,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '36',
             'usa_class_id'   => '7',
             'usa_amount'     => '5000',
-            'usa_date'       => '05-05-2019',
+            'usa_date'       => '2019-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -732,7 +732,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '37',
             'usa_class_id'   => '7',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2019',
+            'usa_date'       => '2019-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -741,7 +741,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '38',
             'usa_class_id'   => '7',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2019',
+            'usa_date'       => '2019-05-05',
             'usa_information' => 'Pembelian Buku Tulis'       	
          ]);
 
@@ -750,7 +750,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '39',
             'usa_class_id'   => '7',
             'usa_amount'     => '5000',
-            'usa_date'       => '05-05-2019',
+            'usa_date'       => '2019-05-05',
             'usa_information' => 'Pembelian Alat Tulis'        	
          ]);
 
@@ -759,7 +759,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '40',
             'usa_class_id'   => '7',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2019',
+            'usa_date'       => '2019-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -774,7 +774,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '41',
             'usa_class_id'   => '8',
             'usa_amount'     => '5000',
-            'usa_date'       => '05-05-2018',
+            'usa_date'       => '2018-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -783,7 +783,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '42',
             'usa_class_id'   => '8',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2018',
+            'usa_date'       => '2018-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -792,7 +792,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '43',
             'usa_class_id'   => '8',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2018',
+            'usa_date'       => '2018-05-05',
             'usa_information' => 'Pembelian Buku Tulis'       	
          ]);
 
@@ -801,7 +801,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '44',
             'usa_class_id'   => '8',
             'usa_amount'     => '5000',
-            'usa_date'       => '05-05-2018',
+            'usa_date'       => '2018-05-05',
             'usa_information' => 'Pembelian Alat Tulis'        	
          ]);
 
@@ -810,7 +810,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '45',
             'usa_class_id'   => '8',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2019',
+            'usa_date'       => '2019-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -819,7 +819,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '41',
             'usa_class_id'   => '8',
             'usa_amount'     => '5000',
-            'usa_date'       => '05-05-2019',
+            'usa_date'       => '2019-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -828,7 +828,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '42',
             'usa_class_id'   => '8',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2019',
+            'usa_date'       => '2019-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 
@@ -837,7 +837,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '43',
             'usa_class_id'   => '8',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2019',
+            'usa_date'       => '2019-05-05',
             'usa_information' => 'Pembelian Buku Tulis'       	
          ]);
 
@@ -846,7 +846,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '44',
             'usa_class_id'   => '8',
             'usa_amount'     => '5000',
-            'usa_date'       => '05-05-2019',
+            'usa_date'       => '2019-05-05',
             'usa_information' => 'Pembelian Alat Tulis'        	
          ]);
 
@@ -855,7 +855,7 @@ class SavingUsageSeeder extends Seeder
             'usa_stu_id'     => '45',
             'usa_class_id'   => '8',
             'usa_amount'     => '10000',
-            'usa_date'       => '05-05-2019',
+            'usa_date'       => '2019-05-05',
             'usa_information' => 'Pembelian Buku Tulis'        	
          ]);
 

@@ -27,23 +27,11 @@
                                 <tr>
                                     <td>Kelas</td>
                                     <td>:</td>
-                                    <td>{{$savings->grade_name}}</td>
-                                </tr>    
-                                    
-                                <tr>
-                                    <td>Jurusan</td>
-                                    <td>:</td>
-                                    <td>{{$savings->major_name}}</td>
-                                </tr>    
-                             	
-                             	  <tr>
-                                    <td>Nomor Kelas</td>
-                                    <td>:</td>
-                                    <td>{{$savings->class_number}}</td>
-                                </tr> 
+                                    <td>{{$savings->grade_name.' '.$savings->major_name.' '.$savings->class_number}}</td>
+                                </tr>     
 
                                 <tr>
-                                    <td>Nominal</td>
+                                    <td>Nominal Tabungan</td>
                                     <td>:</td>
                                     <td>{{$savings->sav_amount}}</td>
                                 </tr>
@@ -55,6 +43,11 @@
                                 </tr>
 
 
+                                <tr>
+                                    <td>Nominal Pengambilan</td>
+                                    <td>:</td>
+                                    <td>{{$saving_usages->usa_amount}}</td>
+                                </tr>    
                                  <tr>
                                     <td>Tanggal Pengambilan</td>
                                     <td>:</td>

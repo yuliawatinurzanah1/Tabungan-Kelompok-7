@@ -26,20 +26,7 @@
                                 <tr>
                                     <td>Kelas</td>
                                     <td>:</td>
-                                    <td>{{$saving_usages->grade_name}}</td>
-                                </tr>
-
-                                <tr>
-                                    <td>Jurusan</td>
-                                    <td>:</td>
-                                    <td>{{$saving_usages->major_name}}</td>
-                                </tr>
-
-                               
-                                 <tr>
-                                    <td>Nomor Kelas</td>
-                                    <td>:</td>
-                                    <td>{{$saving_usages->class_number}}</td>
+                                    <td>{{$saving_usages->grade_name.' '.$saving_usages->major_name.' '.$saving_usages->class_number}}</td>
                                 </tr>
 
                                  <tr>

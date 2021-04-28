@@ -28,7 +28,7 @@
 										  ->where('students.stu_usr_id',Auth::user()->usr_id);
 
 					?>
-                    <a href="{{ URL::to('student/detail/'.$saving->sav_id) }}">
+                    
                         <i class="la la-edit"></i>
                         <span> Tabungan Siswa </span>
                     </a>
@@ -44,7 +44,7 @@
 										  ->where('students.stu_usr_id',Auth()->user()->usr_id)->first();
 
 					?>
-                    <a href="{{URL::to('student/detail/'.$saving_usage->usa_id)}}">
+                    
                         <i class="la la-edit"></i>
                         <span> Pengambilan Tabungan </span>
                     </a>

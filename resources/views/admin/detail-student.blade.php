@@ -38,19 +38,7 @@
                                  <tr>
                                     <td>Kelas</td>
                                     <td>:</td>
-                                    <td>{{$student->grade_name}}</td>
-                                </tr>
-
-                                 <tr>
-                                    <td>Jurusan</td>
-                                    <td>:</td>
-                                    <td>{{$student->major_name}}</td>
-                                </tr>
-
-                                 <tr>
-                                    <td>Nomor kelas</td>
-                                    <td>:</td>
-                                    <td>{{$student->class_number}}</td>
+                                    <td>{{$student->grade_name.' '.$student->major_name.' '.$student->class_number}}</td>
                                 </tr>
 
                                 <tr>
@@ -63,6 +51,31 @@
                                     <td>Nomor Telepon</td>
                                     <td>:</td>
                                     <td>{{$student->usr_phone}}</td>
+                                </tr>
+
+
+                                <tr>
+                                    <td>Jenis Kelamin</td>
+                                    <td>:</td>
+                                    <td>{{$student->usr_gender}}</td>
+                                </tr>
+
+                                <tr>
+                                    <td>TTL</td>
+                                    <td>:</td>
+                                    <td>{{$student->usr_place_of_birth. ', '.$student->usr_date_of_birth}}</td>    
+                                </tr>    
+                                
+                                <tr>
+                                    <td>Agama</td>
+                                    <td>:</td>
+                                    <td>{{$student->usr_religion}}</td>
+                                </tr>
+                                    
+                                <tr>
+                                    <td>Alamat</td>
+                                    <td>:</td>
+                                    <td>{{$student->usr_addres}}</td>
                                 </tr>
 
                             </tbody>

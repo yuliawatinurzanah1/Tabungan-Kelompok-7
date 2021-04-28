@@ -22,11 +22,11 @@
                         	  <div class="col-lg-12">
                                 <div class="form-group mb-3">
                                     <label for="simpleinput">Nama</label>
-                                    
-									
-									<input type="text" id="simpleinput" name="student_name" value="{{Auth()->user()->usr_name}}" class="form-control" readonly>		
-											
-										
+                                    <select type="text" id="simpleinput" name="usr_name" class="form-control" required>
+                                            @foreach($students as $data)
+                                            <option value="{{$data->stu_id}}">{{$data->usr_name}}</option>
+                                            @endforeach
+                                    </select>
                                 </div>
                             </div>
 

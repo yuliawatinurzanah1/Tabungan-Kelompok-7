@@ -31,7 +31,7 @@
                             <td>{{ ++$count}}</td>
                             <td>{{ $teacher->tcr_nik }}</td>
                             <td>{{ $teacher->usr_name }}</td>
-                            <td>{{ $teacher->grade_name. ' '.$teacher->major_name }}</td>
+                            <td>{{ $teacher->grade_name. ' '.$teacher->major_name.' '.$teacher->class_number }}</td>
                        
                             <td>
                             	<a href="/admin/list-teacher/detail/{{ $teacher->tcr_id }}" class="btn btn-success btn-sm">detail</a>

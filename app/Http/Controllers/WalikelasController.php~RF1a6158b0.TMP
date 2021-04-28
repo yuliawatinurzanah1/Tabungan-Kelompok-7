@@ -97,13 +97,14 @@ class WalikelasController extends Controller
 		//CRUD TABUNGAN
 	public function addTabungan()
 	{
-		$user = Auth()->user();		
-		$teachers = Teacher::where('tcr_usr_id', $user->usr_id)->first();
-		$students = Student::join('users','users.usr_id','students.stu_usr_id')
+		
+		$users = Teacher::where('tcr_usr_id', $user->usr_id)->first();
+		$students = Saving::join('students','sav_stu_id','stu_id')
+			->join('users','users.usr_id','students.stu_usr_id')
 			->where('stu_class_id', $teachers->tcr_class_id)
 			->groupBy('usr_name')
 			->orderBy('usr_name','asc')
-			
+			->get();
 
 		->get();
 		$count=0;
@@ -233,7 +234,6 @@ class WalikelasController extends Controller
 		//$saving = DB::table('savings')->get();	 
 		//mengirim data tabungan ke view index
 		return view ('walikelas.add-pengambilan',['students'=>$students,'count'=>$count], compact('grades'));
-			
 	}
 
 	public function savePengambilan(Request $request)
@@ -247,6 +247,8 @@ class WalikelasController extends Controller
 				$saving_usage->usa_information  = $request->usa_information;
 				$saving_usage->save();	
 		
+				Session::flash('sukses','Data Berhasil disimpan');
+        return back();
         //mengirim data siswa ke view index
 		return redirect('walikelas/add-pengambilan');
 	}

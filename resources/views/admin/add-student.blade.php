@@ -52,7 +52,7 @@
                             <div class="col-lg-12">
                                 <div class="form-group mb-3">
                                     <label for="simpleinput">Tahun Ajaran</label>
-                                    <input type="text" id="simpleinput" name="tahun_ajaran" class="form-control" placeholder="Tahun Ajaran" required>
+                                    <input type="number" id="simpleinput" name="tahun_ajaran" class="form-control" placeholder="Tahun Ajaran" required>
                                 </div>
                             </div>
 
@@ -70,10 +70,56 @@
                                 </div>
                             </div>
 
+                            <div class="col-lg-12">
+                                <div class="form-group mb-3">
+                                    <label for="simpleinput">Jenis Kelamin</label>
+                                        <select type="text" id="simpleinput" name="gender" class="form-control" placeholder="Jenis Kelamin" required>
+                                         <option value="">Pilih Jenis Kelamin</option>   
+                                         <option value="Laki-laki">Laki Laki</option>
+                                         <option value="Perempuan">Perempuan</option>
+                                        </select>
+                                </div>   
+                            </div>
+                                
+                            <div class="col-lg-12">
+                                <div class="form-group mb-3">
+                                    <label for="simpleinput">Kota Lahir</label>
+                                    <input type="teks" id="simpleinput" name="place_of_birth" class="form-control"  placeholder="Kota Lahir"  required>
+                                </div>
+                             </div>
+
+                            <div class="col-lg-12">
+                                <div class="form-group mb-3">
+                                    <label for="simpleinput">Tanggal Lahir</label>
+                                    <input type="date" id="simpleinput" name="date_of_birth" class="form-control"  placeholder="Tanggal Lahir"  required>
+                                </div>
+                             </div>
+
+                            <div class="col-lg-12">
+                                <div class="form-group mb-3">
+                                    <label for="simpleinput">Agama</label>
+                                    <select type="teks" id="simpleinput" name="religion" class="form-control"  placeholder="Agama"  required>
+                                    <option value="">Pilih Agama</option>
+                                    <option value="Islam">Islam</option>
+                                    <option value="Kristen">Kristen</option>
+                                    <option value="Hindu">Hindu</option>
+                                    <option value="Budha">Budha</option>
+                                    </select>    
+                                </div>
+                             </div>
+
+
+                            <div class="col-lg-12">
+                                <div class="form-group mb-3">
+                                    <label for="simpleinput">Alamat</label>
+                                    <input type="teks" id="simpleinput" name="addres" class="form-control"  placeholder="Alamat"  required>
+                                </div>
+                             </div>
+    
                              <div class="col-lg-12">
                                 <div class="form-group mb-3">
                                     <label for="simpleinput">Password </label>
-                                    <input type="password" id="simpleinput" name="usr_passord" class="form-control"  placeholder="Password"  required>
+                                    <input type="password" id="simpleinput" name="usr_password" class="form-control"  placeholder="Password"  required>
                                 </div>
                             </div>
                        		

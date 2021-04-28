@@ -23,7 +23,6 @@
                             <th>Nis</th>
                             <th>Nama</th>
                             <th>Kelas</th>
-                            <th>Nomor Kelas</th>
                             <th>Aksi</th>
                         </tr>
                         </thead>

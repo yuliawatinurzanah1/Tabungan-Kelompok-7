@@ -68,7 +68,40 @@
                                 </div>
                             </div>
 
-                       		
+                       		<div class="col-lg-12">
+                                <div class="form-group mb-3">
+                                    <label for="simpleinput">Kota Lahir</label>
+                                    <input type="teks" value="{{$student->usr_place_of_birth}}" id="simpleinput" name="place_of_birth" class="form-control"  placeholder="Kota Lahir"  required>
+                                </div>
+                             </div>
+
+                            <div class="col-lg-12">
+                                <div class="form-group mb-3">
+                                    <label for="simpleinput">Tanggal Lahir</label>
+                                    <input type="date" value="{{$student->usr_date_of_birth}}" id="simpleinput" name="date_of_birth" class="form-control"  placeholder="Tanggal Lahir"  required>
+                                </div>
+                             </div>
+
+                            <div class="col-lg-12">
+                                <div class="form-group mb-3">
+                                    <label for="simpleinput">Agama</label>
+                                    <select type="teks" id="simpleinput" name="religion" class="form-control"  placeholder="Agama"  required>
+                                    <option value="{{$student->stu_usr_id}}">{{$student->usr_religion}}</option>
+                                    <option value="Islam">Islam</option>
+                                    <option value="Kristen">Kristen</option>
+                                    <option value="Hindu">Hindu</option>
+                                    <option value="Budha">Budha</option>
+                                    </select>    
+                                </div>
+                             </div>
+
+
+                            <div class="col-lg-12">
+                                <div class="form-group mb-3">
+                                    <label for="simpleinput">Alamat</label>
+                                    <input type="teks" value="{{$student->usr_addres}}" name="addres" class="form-control"  placeholder="Alamat"  required>
+                                </div>
+                             </div>
 
                            	<div class="col-lg-12">
                                	<div class="form-group mb-3">

@@ -38,8 +38,8 @@ class AdminController extends Controller
 		->join('classes','stu_class_id','=','class_id')
 		->join('grades','grade_id','=','class_grade_id')
 		->join('majors','major_id','=','class_major_id')
-		->orderBy('grade_name','asc')
 		->orderBy('usr_name','asc')
+		->orderBy('grade_name','asc')
 		->get();
 		$count=0;
 

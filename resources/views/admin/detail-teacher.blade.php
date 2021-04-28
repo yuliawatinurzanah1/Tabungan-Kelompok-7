@@ -37,19 +37,7 @@
                                 <tr>
                                     <td>Kelas</td>
                                     <td>:</td>
-                                    <td>{{$teacher->grade_name}}</td>
-                                </tr>
-
-                                <tr>
-                                    <td>Jurusan</td>
-                                    <td>:</td>
-                                    <td>{{$teacher->major_name}}</td>
-                                </tr>
-
-                                 <tr>
-                                    <td>Nomor Kelas</td>
-                                    <td>:</td>
-                                    <td>{{$teacher->class_number}}</td>
+                                    <td>{{$teacher->grade_name.' '.$teacher->major_name.' '.$teacher->class_number}}</td>
                                 </tr>
 
                                 <tr>    
@@ -64,8 +52,30 @@
                                     <td>:</td>
                                     <td>{{$teacher->usr_phone}}</td>
                                 </tr>
+
+                                <tr>
+                                    <td>Jenis Kelamin</td>
+                                    <td>:</td>
+                                    <td>{{$teacher->usr_gender}}</td>
+                                </tr>
+
+                                <tr>
+                                    <td>TTL</td>
+                                    <td>:</td>
+                                    <td>{{$teacher->usr_place_of_birth. ', '.$teacher->usr_date_of_birth}}</td>    
+                                </tr>    
+                                
+                                <tr>
+                                    <td>Agama</td>
+                                    <td>:</td>
+                                    <td>{{$teacher->usr_religion}}</td>
+                                </tr>
                                     
-                         
+                                <tr>
+                                    <td>Alamat</td>
+                                    <td>:</td>
+                                    <td>{{$teacher->usr_addres}}</td>
+                                </tr>
                             </tbody>
                         @endforeach
                         </table>

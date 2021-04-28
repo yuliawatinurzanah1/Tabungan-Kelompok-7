@@ -24,7 +24,7 @@ class CreateUsersTable extends Migration
             $table->string('usr_password');
             $table->string('usr_gender');
             $table->string('usr_place_of_birth');
-            $table->string('usr_date_of_birth');
+            $table->date('usr_date_of_birth');
             $table->string('usr_religion');
             $table->string('usr_addres');
             
@@ -33,7 +33,11 @@ class CreateUsersTable extends Migration
             $table->biginteger('usr_updated_by')->unsigned()->nullable();
             $table->biginteger('usr_deleted_by')->unsigned()->nullable();
             $table->boolean('usr_is_active'); //kolom ini digunakan untuk users jika value 1 maka aktif jika 0 maka tidak aktif jadi sebagai pengganti soft delete
-            $table->timestamps();
+            
+             $table->timestamp('created_at')->nullable();
+             $table->timestamp('updated_at')->nullable();
+             $table->timestamp('deleted_at')->nullable();
+ 
             $table->string('usr_sys_note')->nullable();
 
             $table->foreign('usr_created_by')->references('usr_id')->on('users')->onDelete('cascade');

@@ -38,7 +38,6 @@ class AdminController extends Controller
 		->join('classes','stu_class_id','=','class_id')
 		->join('grades','grade_id','=','class_grade_id')
 		->join('majors','major_id','=','class_major_id')
-		->orderBy('grade_name','asc')
 		->orderBy('usr_name','asc')
 		->get();
 		$count=0;
@@ -51,7 +50,7 @@ class AdminController extends Controller
 
 	public function detailStudent($id)
 	{
-		$student = Student::join('users', 'stu_usr_id', '=', 'usr_id') 
+		$student = Student::join('users', 'students.stu_usr_id', '=', 'usr_id') 
 		->join('classes','stu_class_id','=','class_id')
 		->join('grades','grade_id','=','class_grade_id')
 		->join('majors','major_id','=','class_major_id')
@@ -81,11 +80,6 @@ class AdminController extends Controller
 		$user->usr_name              = $request->student_name;
 		$user->usr_email             = $request->email;
 		$user->usr_phone             = $request->nomor_telepon;
-		$user->usr_gender	   = $request->gender;
-		$user->usr_place_of_birth = $request->place_of_birth;
-		$user->usr_date_of_birth = $request->date_of_birth;
-		$user->usr_religion		=$request->religion;
-		$user->usr_addres		=$request->addres;
 		$user->usr_password          = Hash::make('12345678');
 		$user->assignRole('student');
 		$user->usr_is_active         = 1;
@@ -97,6 +91,9 @@ class AdminController extends Controller
 				$student->stu_nis          = $request->nis;
 				$student->stu_school_year  = $request->tahun_ajaran;
 				$student->save();
+
+				Session::flash('sukses','Data Berhasil disimpan');
+        return back();
 
 			}
 		
@@ -150,7 +147,7 @@ class AdminController extends Controller
 		]); 
 		
 
-		
+		Session::flash('sukses','Data Berhasil disimpan');
         
 
 		return redirect('admin/list-student');
@@ -197,7 +194,7 @@ class AdminController extends Controller
 		->join('majors','major_id','=','class_major_id') 
 		->get();
 		$teacher = Teacher::join('users','teachers.tcr_usr_id','=','users.usr_id')
-		->get();	 
+		->first();	 
 		//mengirim data guru ke view index
 		return view ('admin.add-teacher', compact('classes','teacher'));
 	}
@@ -208,11 +205,6 @@ class AdminController extends Controller
 		$user->usr_name              = $request->teacher_name;
 		$user->usr_email             = $request->email;
 		$user->usr_phone             = $request->nomor_telepon;
-		$user->usr_gender	   = $request->gender;
-		$user->usr_place_of_birth = $request->place_of_birth;
-		$user->usr_date_of_birth = $request->date_of_birth;
-		$user->usr_religion		=$request->religion;
-		$user->usr_addres		=$request->addres;
 		$user->usr_password          = Hash::make('12345678');
 		$user->assignRole('walikelas');
 		$user->usr_is_active         = 1;
@@ -223,8 +215,16 @@ class AdminController extends Controller
 				$teacher->tcr_usr_id       = $user->usr_id;
 				$teacher->tcr_nik          = $request ->nik;
 				$teacher->tcr_class_id     = $request->grade;
-				$teacher->tcr_marital_status   = $request->marital_status; 
+				$teacher->tcr_marital_status   = $request->marital_status;
+				$teacher->usr_gender	   = $request->gender;
+				$teacher->usr_place_of_birth = $request->place_of_birth;
+				$teacher->usr_date_of_birth = $request->date_of_birth;
+				$teacher->usr_religion		=$request->religion;
+				$teacher->usr_addres		=$request->addres; 
 				$teacher->save();
+
+				Session::flash('sukses','Data Berhasil disimpan');
+        return back();
 
 			}
 		
@@ -315,6 +315,8 @@ class AdminController extends Controller
 			$class->class_number 	  = $request->class_number;
 			//dd($class);
 			$class->save();
+            Session::flash('sukses','Data Berhasil disimpan');
+        return back();
     
     	return redirect('admin/list-class');
     }
@@ -363,6 +365,12 @@ public function hapusClass($id)
 		//dd($classes);
 		return redirect('admin/list-class');
 	}
+
+
+	public function SaveAddStudent(Request $request){
+            Session::flash('sukses','Data Berhasil disimpan');
+        return back();
+    }
 
 	
     public function table (){

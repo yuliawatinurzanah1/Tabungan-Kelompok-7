@@ -38,7 +38,7 @@
                                     <label for="simpleinput">Kelas</label>
                                 
                                         <select type="text" id="simpleinput" name="grade" class="form-control" required>
-                                            <option value="">{{$teacher->grade_name. '' .$teacher->major_name. ' ' .$teacher->class_number}}</option>
+                                            <option value="{{$teacher->class_id}}">{{$teacher->grade_name. '' .$teacher->major_name. ' ' .$teacher->class_number}}</option>
                                             @foreach($classes as $data)
                                             <option value="{{$data->class_id}}">{{$data->grade_name. ' ' .$data->major_name. ' ' .$data->class_number}}</option>
                                             @endforeach
@@ -46,12 +46,17 @@
                                 </div>
                             </div>
 
-                             <div class="col-lg-12">
-                                <div class="form-group mb-3">
-                                    <label for="simpleinput">Status Pernikahan </label>
-                                    <input value="{{ $teacher->tcr_marital_status }}" type="text" id="simpleinput" name="marital_status" class="form-control" required>
-                                </div>
-                            </div>
+                             <div class="col-lg-12">   
+                             <div class="form-group mb-3">
+                                    <label for="simpleinput">Status Perkawinan</label>
+                                <select type="text" id="simpleinput" name="marital_status" class="form-control" placeholder="Status Pernikahan" required>
+                                        <option value="{{$teacher->tcr_marital_status}}">{{$teacher->tcr_marital_status}}</option>
+                                           <option value="Sudah Menikah">Sudah Menikah</option>
+                                           <option value="Belum Menikah">Belum Menikah</option>
+                                           
+                                </select>
+                             </div>
+                             </div>
 
                             <div class="col-lg-12">
                                 <div class="form-group mb-3">
@@ -67,12 +72,47 @@
                                 </div>
                             </div>
 
-                       		 <div class="col-lg-12">
+                            <div class="col-lg-12">
+                                <div class="form-group mb-3">
+                                    <label for="simpleinput">Kota Lahir</label>
+                                    <input type="teks" value="{{$teacher->usr_place_of_birth}}" id="simpleinput" name="place_of_birth" class="form-control"  placeholder="Kota Lahir"  required>
+                                </div>
+                             </div>
+
+                            <div class="col-lg-12">
+                                <div class="form-group mb-3">
+                                    <label for="simpleinput">Tanggal Lahir</label>
+                                    <input type="date" value="{{$teacher->usr_date_of_birth}}" id="simpleinput" name="date_of_birth" class="form-control"  placeholder="Tanggal Lahir"  required>
+                                </div>
+                             </div>
+
+                            <div class="col-lg-12">
+                                <div class="form-group mb-3">
+                                    <label for="simpleinput">Agama</label>
+                                    <select type="teks" id="simpleinput" name="religion" class="form-control"  placeholder="Agama"  required>
+                                    <option value="{{$teacher->tcr_usr_id}}">{{$teacher->usr_religion}}</option>
+                                    <option value="Islam">Islam</option>
+                                    <option value="Kristen">Kristen</option>
+                                    <option value="Hindu">Hindu</option>
+                                    <option value="Budha">Budha</option>
+                                    </select>    
+                                </div>
+                             </div>
+
+
+                            <div class="col-lg-12">
+                                <div class="form-group mb-3">
+                                    <label for="simpleinput">Alamat</label>
+                                    <input type="teks" value="{{$teacher->usr_addres}}" name="addres" class="form-control"  placeholder="Alamat"  required>
+                                </div>
+                             </div>
+
+                             <div class="col-lg-12">
                                 <div class="form-group mb-3">
                                     <label for="simpleinput">Password </label>
-                                    <input type="text" id="simpleinput" name="usr_passord" class="form-control"  placeholder="Password"  required>
+                                    <input type="password" id="simpleinput" name="usr_passord" class="form-control"  placeholder="Password"  required>
                                 </div>
-                            </div>
+                             </div>
 
                            	<div class="col-lg-12">
                                	<div class="form-group mb-3">

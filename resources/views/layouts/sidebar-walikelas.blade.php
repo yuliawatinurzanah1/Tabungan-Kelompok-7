@@ -12,12 +12,6 @@
 
                 <li class="menu-title">{{ Auth()->user()->usr_name }}</li>
 
-                <li>
-                    <a href="{{URL::to('/admin')}}">
-                        <i class="la la-home"></i>
-                        <span> Dashboard </span>
-                    </a>
-                </li>
 
                  <li>
                     <a href="{{URL::to('/walikelas/list-student')}}">

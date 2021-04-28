@@ -23,7 +23,7 @@
                                     <label for="simpleinput">Kelas</label>
                                     <select type="number" id="simpleinput" name="grade" class="form-control" required>
                                         <option value="{{$classes->grade_id}}">{{$classes->grade_name}}</option>
-                                            @foreach($class as $data)
+                                            @foreach($grade as $data)
                                             <option value="{{$data->grade_id}}">{{$data->grade_name}}</option>
                                             @endforeach    
                                     </select>                                   
