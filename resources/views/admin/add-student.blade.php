@@ -19,6 +19,12 @@
                         @csrf
                         <div class="row">
 
+                        @if($message = Session::get('message')) 
+                    <div class="alert alert-warning">
+                        <p> {{ $message }} </p>
+                    </div>
+                        @endif
+
                         	 <div class="col-lg-12">
                                 <div class="form-group mb-3">
                                     <label for="simpleinput">Nis </label>
@@ -80,7 +86,7 @@
                                         </select>
                                 </div>   
                             </div>
-                                
+
                             <div class="col-lg-12">
                                 <div class="form-group mb-3">
                                     <label for="simpleinput">Kota Lahir</label>

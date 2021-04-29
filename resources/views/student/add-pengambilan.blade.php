@@ -24,7 +24,7 @@
                                     <label for="simpleinput">Nama</label>
                                     
 									
-									<input type="text" id="simpleinput" name="student_name" value="{{Auth()->user()->usr_name}}" class="form-control" readonly>		
+									<input type="text" id="simpleinput" name="usa_stu_id" value="{{Auth()->user()->usr_name}}" class="form-control" readonly>		
 											
 										
                                 </div>
@@ -34,11 +34,14 @@
                         	<div class="col-lg-12">
 								<div class="form-group mb-3">
 									<label for="simpleinput">Kelas</label>
-										<select type="text" id="simpleinput" name="grade" class="form-control" required>
-											<option value="">Pilih kelas---</option>
-											@foreach($grades as $data)
-											<option value="{{$data->grade_id}}">{{$data->grade_name}}</option>
-											@endforeach
+										<select type="text" id="simpleinput" name="usa_class_id" class="form-control" required>
+										<option value="">Pilih kelas---</option>
+                                            @foreach($grades as $data)
+                                            <?php if ($data->grade_name == 'X'): ?>
+                                                <option value="{{$data->grade_id}}">{{$data->grade_name}}</option>
+                                            <?php endif ?>
+                                            @endforeach
+                        
 										</select>
 								</div>
 							</div>

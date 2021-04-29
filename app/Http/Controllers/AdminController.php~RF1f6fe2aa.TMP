@@ -79,7 +79,6 @@ class AdminController extends Controller
 	public function saveStudent(Request $request)
 	{
 		$cek_telp = User::whereUsrPhone($request->nomor_telepon)
-		->whereEmaik($request->email)
 		->count();
 
 		$cek_nis = Student::whereStuNis($request->nis)
@@ -148,14 +147,6 @@ class AdminController extends Controller
 	}
 	public function updateStudent(Request $request,$id)
 	{
-		$cek_telp = User::whereUsrPhone($request->nomor_telepon)
-		->count();
-
-		$cek_nis = Student::whereStuNis($request->nis)
-		->count();
-
-		if( $cek_telp == 0 && $cek_nis == 0 )
-		{
 		//dd($id);
 		//update data siswa
 		$student = DB::table('students')
@@ -171,14 +162,13 @@ class AdminController extends Controller
 			'usr_phone'       => $request->nomor_telepon,
 			'class_number'	  => $request->class_number
 		]); 
-			return redirect('/admin/list-student');
+		
 
-		} else {
-			return back()->with('message', 'Nik, No Telp, Atau Kelas Sudah Terpakai');	
-		}
+		
+        
 
-}
-
+		return redirect('admin/list-student');
+	}
 	public function hapusStudent($stu_id)
 	{
 		//menghapus data siswa berdasarkan id
@@ -299,20 +289,10 @@ class AdminController extends Controller
 		return view('admin.edit-teacher',['teacher' => $teacher,'classes' => $classes,'teachers'=>$teachers]);
 			
 	}
-	public function updateTeacher(Request $request, $id)
+	public function updateTeacher(Request $request,$id)
 	{
-		
-		$cek_telp = User::whereUsrPhone($request->nomor_telepon)
-		->count();
-
-		$cek_nik_class = Teacher::whereTcrNik($request->nik)
-		->whereTcrClassId($request->grade)
-		->count();
-
-		if( $cek_telp == 0 && $cek_nik_class == 0 )
-		{
 		//dd($request);
-		//update data gurup
+		//update data guru
 		$teacher = DB::table('teachers')
 		->join('users','teachers.tcr_usr_id','=','users.usr_id')
 		->where('tcr_id',$id)
@@ -324,13 +304,8 @@ class AdminController extends Controller
 			'tcr_marital_status' => $request->marital_status,
 			'usr_email'		  	 => $request->email,
 			'usr_phone'       	 => $request->nomor_telepon]); 
-			if ($teacher) {
-				return redirect('/admin/list-teacher');
-			}		
-		} else {
-			return back()->with('message', 'Nik, No Telp, Atau Kelas Sudah Terpakai');	
-		}
-	}	
+		return redirect('admin/list-teacher');
+	}
 	public function hapusTeacher($tcr_id)
 	{
 		//menghapus data guru berdasarkan id
@@ -351,10 +326,6 @@ class AdminController extends Controller
 		$classes= DB::table('classes')
 		->join('majors','major_id','=','class_major_id')
 		->join('grades','grade_id','=','class_grade_id')
-		->orderBy('classes.class_grade_id','ASC')
-		->orderBy('majors.major_name','ASC')
-		->orderBy('grades.grade_name','ASC')	
-		->orderBy('classes.class_number','ASC')
 		->get();
 		$count=0;
 		return view ('admin.list-class',['classes'=>$classes,'count'=>$count]);
@@ -363,23 +334,20 @@ class AdminController extends Controller
 
 	public function addClass()
 	{
-		$classes = Classes::all();
 		$majors = Major::all();
 		$grades = Grade::all();
-		return view ('admin.add-class', compact('classes','majors','grades'));
+		return view ('admin.add-class', compact('majors','grades'));
 	}
 	
 
-	public function SaveAddClass(Request $request)
-	{
-		
-		$cek = Classes::whereClassGradeId($request->grade)
-		->whereClassMajorId($request->major)
-		->whereClassNumber($request->class_number)
+	public function SaveAddClass(Request $request){
+	{	
+		$cek_class = Classes::whereClassId($request->grade)
 		->count();
 
-		if ($cek == 0) {
-				
+		if( $cek_class == 0 )
+		{	
+		
 			$class = new Classes();
 			$class->class_grade_id    = $request->grade;
 			$class->class_major_id 	  = $request->major;
@@ -388,11 +356,11 @@ class AdminController extends Controller
 			$class->save();
     
     	return redirect('admin/list-class');
-		} else {
-			return back()->with('message', 'Kelas, Jurusan Atau Nomor Kelas Sudah Tersedia');		
-		}
-    }
+    } else {
+    	return redirect('/admin/create-class')->with('message', 'Tambah Data Siswa Gagal');			
+			}
   
+  }
 
     public function editClass($id)
     {
@@ -414,16 +382,7 @@ class AdminController extends Controller
 
     public function updateClass(Request $request,$class_id)
     {
-
-
-		$cek = Classes::whereClassGradeId($request->grade)
-		->whereClassMajorId($request->major)
-		->whereClassNumber($request->class_number)
-		->count();
-
-		if( $cek == 0 )
-		{
-
+  
     	$classes = DB::table('classes')
 		->join('users','class_id','=','usr_id') 
 		->where('class_id',$class_id)
@@ -435,13 +394,8 @@ class AdminController extends Controller
     	'class_number'   => $request->input('class_number')
     		
    		]); 
-    		if ($classes) {
-				return redirect('/admin/list-class');
-			}		
-		} else {
-			return back()->with('message', 'Nik, No Telp, Atau Kelas Sudah Terpakai');	
-		}
-	}
+    	return redirect('admin/list-class');
+    }
 
 public function hapusClass($id)
 	{

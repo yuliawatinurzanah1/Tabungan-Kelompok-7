@@ -50,7 +50,7 @@
                        
                         </tbody>
                     </table>
-
+{{ $students->links() }}
                 </div> <!-- end card body-->
             </div> <!-- end card -->
         </div><!-- end col-->

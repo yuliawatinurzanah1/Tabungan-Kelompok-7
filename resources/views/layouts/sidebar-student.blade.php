@@ -19,32 +19,14 @@
 
                 
                 <li>
-                	<?php
-
-						use App\Saving;
-
-						$saving = Saving::join('students','savings.sav_stu_id','=','students.stu_id')
-										  ->join('users','students.stu_usr_id','=','users.usr_id')
-										  ->where('students.stu_usr_id',Auth::user()->usr_id);
-
-					?>
-                    
+                    <a href="{{ URL::to('student/detail', Auth::user()->usr_id) }}">
                         <i class="la la-edit"></i>
                         <span> Tabungan Siswa </span>
                     </a>
                 </li>
 
                  <li>
-                 	<?php
-
-						use App\Saving_usage;
-
-						$saving_usage = Saving_usage::join('students','saving_usages.usa_stu_id','=','students.stu_id')
-										  ->join('users','students.stu_usr_id','=','users.usr_id')
-										  ->where('students.stu_usr_id',Auth()->user()->usr_id)->first();
-
-					?>
-                    
+                    <a href="{{URL::to('/student/list-pengambilan/detail', Auth::user()->usr_id)}}">
                         <i class="la la-edit"></i>
                         <span> Pengambilan Tabungan </span>
                     </a>

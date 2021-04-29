@@ -7,6 +7,11 @@
 @section('content')
     <div class="row">
         <div class="col-12">
+        @if($message = Session::get('message')) 
+                    <div class="alert alert-warning">
+                        <p> {{ $message }} </p>
+                    </div>
+        @endif
             <div class="card">
 
                 
@@ -23,9 +28,9 @@
                                     <label for="simpleinput">Kelas</label>
                                     <select type="number" id="simpleinput" name="grade" class="form-control" required>
                                         <option value="{{$classes->grade_id}}">{{$classes->grade_name}}</option>
-                                            @foreach($class as $data)
-                                            <option value="{{$data->grade_id}}">{{$data->grade_name}}</option>
-                                            @endforeach    
+                                            <option value="X">X</option>
+                                            <option value="XI">XI</option>
+                                            <option value="XII">XII</option>
                                     </select>                                   
                                 </div>
                             </div>
@@ -35,9 +40,9 @@
                                     <label for="simpleinput">Jurusan</label>
                                     <select type="number" id="simpleinput" name="major" class="form-control" required>
                                         <option value="{{$classes->major_id}}">{{$classes->major_name}}</option>
-                                            @foreach($class as $data)
-                                            <option value="{{$data->major_id}}">{{$data->major_name}}</option>
-                                            @endforeach    
+                                        <option value="Rekayasa Perangkat Lunak">Rekayasa Perangkat Lunak</option>
+                                        <option value="Multi Media">Multi Media</option>
+
                                     </select>                                   
                                 </div>
                             </div>

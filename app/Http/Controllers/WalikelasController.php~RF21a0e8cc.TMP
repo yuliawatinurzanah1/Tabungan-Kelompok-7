@@ -99,7 +99,6 @@ class WalikelasController extends Controller
 	{
 		$user = Auth()->user();		
 		$teachers = Teacher::where('tcr_usr_id', $user->usr_id)->first();
-		$user= DB::table('users')->get();
 		$students = Student::join('users','users.usr_id','students.stu_usr_id')
 			->where('stu_class_id', $teachers->tcr_class_id)
 			->groupBy('usr_name')
@@ -119,14 +118,18 @@ class WalikelasController extends Controller
 
 	public function saveTabungan(Request $request)
 	{
-		$saving = new Saving;
-			$saving->sav_stu_id       = $request->sav_stu_id;
-			$saving->sav_class_id     = $request->sav_class_id;
-			$saving->sav_amount       = $request->sav_amount;
-			$saving->sav_date		   = $request->sav_date;
-			$saving->save();
+
+
+		//dd($request->stu_id);
+  		$saving = new Saving;
+		$saving->sav_stu_id       = $request->stu_id;
+		$saving->sav_class_id     = '-';
+		$saving->sav_amount       = $request->sav_amount;
+		$saving->sav_date		    = $request->sav_date;	
+	
+				
+         //mengirim data siswa ke view index
 		return redirect('walikelas/list-tabungan');
-		
 	}
 	
 		public function editTabungan($id)

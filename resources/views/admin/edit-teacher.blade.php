@@ -7,6 +7,12 @@
 @section('content')
     <div class="row">
         <div class="col-12">
+        
+                        @if($message = Session::get('message')) 
+                    <div class="alert alert-warning">
+                        <p> {{ $message }} </p>
+                    </div>
+                        @endif
             <div class="card">
 
             	
@@ -14,7 +20,7 @@
                     <h4 class="header-title">Edit Guru</h4>
                    
 
-                    <form action="{{ url('admin/update/'.$teacher->tcr_id) }}" method="post">
+                    <form action="{{ url('/admin/update-teacher/'.$teacher->tcr_id) }}" method="post">
                         @csrf
                         <div class="row">
 

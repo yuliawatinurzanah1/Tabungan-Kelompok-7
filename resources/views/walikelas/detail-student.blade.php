@@ -38,19 +38,7 @@
                                  <tr>
                                     <td>Kelas</td>
                                     <td>:</td>
-                                    <td>{{$student->grade_name}}</td>
-                                </tr>
-
-                                 <tr>
-                                    <td>Jurusan</td>
-                                    <td>:</td>
-                                    <td>{{$student->major_name}}</td>
-                                </tr>
-
-                                 <tr>
-                                    <td>Nomor Kelas</td>
-                                    <td>:</td>
-                                    <td>{{$student->class_number}}</td>
+                                    <td>{{$student->grade_name.' '.$student->major_name.' '.$student->class_number}}</td>
                                 </tr>
 
                                 <tr>

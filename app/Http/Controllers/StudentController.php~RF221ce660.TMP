@@ -64,11 +64,11 @@ class StudentController extends Controller
 
 		//dd(Auth()->user()->usr_id);
 		//$saving_usage = DB::table('saving_usages')->get();
-		$saving_usage = Saving_usage::where('usa_stu_id', Auth::user()->usr_id)
+		$saving_usage = Saving_usage::where('usa_stu_id',$student->stu_id)
 		->sum('usa_amount');
 
 		//$saving_usage = "Rp " . number_format($saving_usage,2,',','.');
-		$hasil = $saving -= $saving_usage;
+		$hasil = $saving - $saving_usage;
 		$hasil = "Rp " . number_format($hasil,2,',','.');
 
 			//dd($hasil);
@@ -115,26 +115,27 @@ class StudentController extends Controller
 	public function savePengambilan(Request $request)
 	{
 
-		$cek_user = DB::table('users')->where('usr_name', $request->usa_stu_id)->first();
+			$cek_user = DB::table('users')->where('usr_name', $request->usa_stu_id)->first();
 
-				//dd($student->stu_id);
-		$saving = Saving::where('sav_stu_id', $cek_user->usr_id)
-		->sum('sav_amount');
+
+		$saving = Saving_usage::where('usa_stu_id', $cek_user->usr_id)
+		->where('usa_class_id', $request->usa_class_id)
+		->sum('usa_amount');
 
 		$total_amount = $saving -= $request->usa_amount;
+
+		dd($saving, $total_amount);
 		if ($saving > $request->usa_amount) {
 			  $insert =   DB::table('saving_usages')->insert([
 	        	'usa_stu_id'          => $cek_user->usr_id,
 	        	'usa_class_id' 	=> $request->usa_class_id,
-	        	'usa_amount'    => $request->usa_amount,
+	        	'usa_amount'    => $total_amount,
 	        	'usa_date'      => $request->usa_date,
 	        	'usa_information'      => $request->usa_information
 
 	          ]);
 	          if ($insert) {
-	          	$update = Saving::where('sav_stu_id', $cek_user->usr_id)->first();
-	          	$update->sav_amount = $total_amount;
-	          	$update->save();
+	          	
 			return redirect('student/saldo');
 		
 	          }

@@ -6,10 +6,15 @@
 
 @section('content')
     <div class="row">
+
+                  @if($message = Session::get('message')) 
+                    <div class="alert alert-warning">
+                        <p> {{ $message }} </p>
+                    </div>
+                  @endif
         <div class="col-12">
             <div class="card">
 
-            	
                 <div class="card-body">
                     <h4 class="header-title">Tambah Guru</h4>
                    

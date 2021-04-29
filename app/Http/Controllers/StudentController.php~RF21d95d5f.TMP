@@ -9,7 +9,7 @@ use App\Classes;
 use App\Grade;
 use App\Major;
 use Session;
-use Auth;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Student;
@@ -31,8 +31,6 @@ class StudentController extends Controller
 
 	public function detailTabungan($id)
 	{
-		$user= DB::table('users')->get();
-
 		$savings = Saving::join('students','savings.sav_stu_id','=','students.stu_usr_id')
 		->join('classes','savings.sav_class_id','=','classes.class_id') 
 		->join('users','students.stu_usr_id','=','users.usr_id')
@@ -42,6 +40,7 @@ class StudentController extends Controller
 
 		->get();
 
+			dd($savings);
 		$count=0;
 		return view ('student.detail-tabungan',['savings'=>$savings,'count'=>$count]);
 	}
@@ -64,11 +63,11 @@ class StudentController extends Controller
 
 		//dd(Auth()->user()->usr_id);
 		//$saving_usage = DB::table('saving_usages')->get();
-		$saving_usage = Saving_usage::where('usa_stu_id', Auth::user()->usr_id)
+		$saving_usage = Saving_usage::where('usa_stu_id',$student->stu_id)
 		->sum('usa_amount');
 
 		//$saving_usage = "Rp " . number_format($saving_usage,2,',','.');
-		$hasil = $saving -= $saving_usage;
+		$hasil = $saving - $saving_usage;
 		$hasil = "Rp " . number_format($hasil,2,',','.');
 
 			//dd($hasil);
@@ -79,17 +78,16 @@ class StudentController extends Controller
 
 	public function detailPengambilan($id)
 	{
-
-		$saving_usages = Saving_usage::join('students','saving_usages.usa_stu_id','=','students.stu_usr_id')
+		$user= DB::table('users')->get();
+		$saving_usages = Saving_usage::join('students','saving_usages.usa_stu_id','=','students.stu_id')
 		->join('classes','saving_usages.usa_class_id','=','classes.class_id') 
 		->join('users','students.stu_usr_id','=','users.usr_id')
 		->join('grades','classes.class_grade_id','=','grades.grade_id')
 		->join('majors','classes.class_major_id','=','majors.major_id')
+		
 		->where('saving_usages.usa_stu_id',$id)
 
 		->get();
-
-
 		$count=0;
 		return view ('student.detail-pengambilan',['saving_usages'=>$saving_usages,'count'=>$count]);
 	}
@@ -114,36 +112,17 @@ class StudentController extends Controller
 
 	public function savePengambilan(Request $request)
 	{
+	
+				$saving_usage = new Saving_usage;
+				$saving_usage->usa_stu_id       = $request->usr_name;
+				$saving_usage->usa_class_id     = $request->grade;
+				$saving_usage->usa_amount       = $request->usa_amount;
+				$saving_usage->usa_date		    = $request->usa_date;
+				$saving_usage->usa_information  = $request->usa_information;
+				$saving_usage->save();	
 
-		$cek_user = DB::table('users')->where('usr_name', $request->usa_stu_id)->first();
-
-				//dd($student->stu_id);
-		$saving = Saving::where('sav_stu_id', $cek_user->usr_id)
-		->sum('sav_amount');
-
-		$total_amount = $saving -= $request->usa_amount;
-		if ($saving > $request->usa_amount) {
-			  $insert =   DB::table('saving_usages')->insert([
-	        	'usa_stu_id'          => $cek_user->usr_id,
-	        	'usa_class_id' 	=> $request->usa_class_id,
-	        	'usa_amount'    => $request->usa_amount,
-	        	'usa_date'      => $request->usa_date,
-	        	'usa_information'      => $request->usa_information
-
-	          ]);
-	          if ($insert) {
-	          	$update = Saving::where('sav_stu_id', $cek_user->usr_id)->first();
-	          	$update->sav_amount = $total_amount;
-	          	$update->save();
-			return redirect('student/saldo');
-		
-	          }
-	          
-		} else {
-			return redirect('student/saldo');
-		}
-		
 				
+				return redirect('student/add-pengambilan');
 			
 
 			

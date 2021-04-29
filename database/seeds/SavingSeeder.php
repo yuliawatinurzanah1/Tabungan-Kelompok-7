@@ -174,7 +174,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '10',
          	'sav_class_id'   => '3',
          	'sav_amount'     => '20000',
-         	'sav_date'       => '2021-02-022021'        	
+         	'sav_date'       => '2021-02-02'        	
           ]);
 
 
@@ -188,7 +188,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '11',
          	'sav_class_id'   => '1',
          	'sav_amount'     => '15000',
-         	'sav_date'       => '01-01-2020'        	
+         	'sav_date'       => '2020-01-01'        	
           ]);
 
            DB::table('savings')->insert([
@@ -196,7 +196,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '12',
          	'sav_class_id'   => '1',
          	'sav_amount'     => '40000',
-         	'sav_date'       => '01-01-2020'        	
+         	'sav_date'       => '2020-01-01'        	
           ]);
 
           DB::table('savings')->insert([
@@ -204,7 +204,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '13',
          	'sav_class_id'   => '1',
          	'sav_amount'     => '50000',
-         	'sav_date'       => '02-02-2020'        	
+         	'sav_date'       => '2020-02-02'        	
           ]);
 
            DB::table('savings')->insert([
@@ -212,7 +212,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '14',
          	'sav_class_id'   => '1',
          	'sav_amount'     => '30000',
-         	'sav_date'       => '02-02-2020'        	
+         	'sav_date'       => '2020-02-02'        	
           ]);
 
            DB::table('savings')->insert([
@@ -220,7 +220,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '15',
          	'sav_class_id'   => '1',
          	'sav_amount'     => '20000',
-         	'sav_date'       => '02-02-2020'        	
+         	'sav_date'       => '2020-02-02'        	
           ]);
 
             DB::table('savings')->insert([
@@ -228,7 +228,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '11',
          	'sav_class_id'   => '1',
          	'sav_amount'     => '15000',
-         	'sav_date'       => '01-01-2021'        	
+         	'sav_date'       => '2021-01-01'        	
           ]);
 
            DB::table('savings')->insert([
@@ -236,7 +236,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '12',
          	'sav_class_id'   => '1',
          	'sav_amount'     => '40000',
-         	'sav_date'       => '01-01-2021'        	
+         	'sav_date'       => '2021-01-01'        	
           ]);
 
           DB::table('savings')->insert([
@@ -244,7 +244,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '13',
          	'sav_class_id'   => '1',
          	'sav_amount'     => '50000',
-         	'sav_date'       => '02-02-2021'        	
+         	'sav_date'       => '2021-02-02'        	
           ]);
 
            DB::table('savings')->insert([
@@ -252,7 +252,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '14',
          	'sav_class_id'   => '1',
          	'sav_amount'     => '30000',
-         	'sav_date'       => '02-02-2021'        	
+         	'sav_date'       => '2021-02-02'        	
           ]);
 
            DB::table('savings')->insert([
@@ -260,7 +260,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '15',
          	'sav_class_id'   => '1',
          	'sav_amount'     => '20000',
-         	'sav_date'       => '02-02-2021'        	
+         	'sav_date'       => '2021-02-02'        	
           ]);
 
 
@@ -273,7 +273,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '16',
          	'sav_class_id'   => '4',
          	'sav_amount'     => '15000',
-         	'sav_date'       => '01-01-2019'        	
+         	'sav_date'       => '2019-01-01'        	
           ]);
 
            DB::table('savings')->insert([
@@ -281,7 +281,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '17',
          	'sav_class_id'   => '4',
          	'sav_amount'     => '40000',
-         	'sav_date'       => '01-01-2019'        	
+         	'sav_date'       => '2019-01-01'        	
           ]);
 
           DB::table('savings')->insert([
@@ -289,7 +289,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '18',
          	'sav_class_id'   => '4',
          	'sav_amount'     => '50000',
-         	'sav_date'       => '02-02-2019'        	
+         	'sav_date'       => '2019-02-02'        	
           ]);
 
            DB::table('savings')->insert([
@@ -297,7 +297,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '19',
          	'sav_class_id'   => '4',
          	'sav_amount'     => '30000',
-         	'sav_date'       => '02-02-2019'        	
+         	'sav_date'       => '2019-02-02'        	
           ]);
 
            DB::table('savings')->insert([
@@ -305,7 +305,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '20',
          	'sav_class_id'   => '4',
          	'sav_amount'     => '20000',
-         	'sav_date'       => '02-02-2019'        	
+         	'sav_date'       => '2019-02-02'        	
           ]);
 
             DB::table('savings')->insert([
@@ -313,7 +313,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '16',
          	'sav_class_id'   => '4',
          	'sav_amount'     => '15000',
-         	'sav_date'       => '01-01-2020'        	
+         	'sav_date'       => '2020-01-01'        	
           ]);
 
            DB::table('savings')->insert([
@@ -321,7 +321,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '17',
          	'sav_class_id'   => '4',
          	'sav_amount'     => '40000',
-         	'sav_date'       => '01-01-2020'        	
+         	'sav_date'       => '2020-01-01'        	
           ]);
 
           DB::table('savings')->insert([
@@ -329,7 +329,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '18',
          	'sav_class_id'   => '4',
          	'sav_amount'     => '50000',
-         	'sav_date'       => '02-02-2020'        	
+         	'sav_date'       => '2020-02-02'        	
           ]);
 
            DB::table('savings')->insert([
@@ -337,7 +337,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '19',
          	'sav_class_id'   => '4',
          	'sav_amount'     => '30000',
-         	'sav_date'       => '02-02-2020'        	
+         	'sav_date'       => '2020-02-02'        	
           ]);
 
            DB::table('savings')->insert([
@@ -345,7 +345,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '20',
          	'sav_class_id'   => '4',
          	'sav_amount'     => '20000',
-         	'sav_date'       => '02-02-2020'        	
+         	'sav_date'       => '2020-02-02'        	
           ]);
 
 
@@ -357,7 +357,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '21',
          	'sav_class_id'   => '5',
          	'sav_amount'     => '15000',
-         	'sav_date'       => '01-01-2019'        	
+         	'sav_date'       => '2019-01-01'        	
           ]);
 
            DB::table('savings')->insert([
@@ -365,7 +365,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '22',
          	'sav_class_id'   => '5',
          	'sav_amount'     => '40000',
-         	'sav_date'       => '01-01-2019'        	
+         	'sav_date'       => '2019-01-01'        	
           ]);
 
           DB::table('savings')->insert([
@@ -373,7 +373,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '23',
          	'sav_class_id'   => '5',
          	'sav_amount'     => '50000',
-         	'sav_date'       => '02-02-2019'        	
+         	'sav_date'       => '2019-02-02'        	
           ]);
 
            DB::table('savings')->insert([
@@ -381,7 +381,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '24',
          	'sav_class_id'   => '5',
          	'sav_amount'     => '30000',
-         	'sav_date'       => '02-02-2019'        	
+         	'sav_date'       => '2019-02-02'        	
           ]);
 
            DB::table('savings')->insert([
@@ -389,7 +389,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '25',
          	'sav_class_id'   => '5',
          	'sav_amount'     => '20000',
-         	'sav_date'       => '02-02-2019'        	
+         	'sav_date'       => '2019-02-02'        	
           ]);
 
             DB::table('savings')->insert([
@@ -397,7 +397,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '21',
          	'sav_class_id'   => '5',
          	'sav_amount'     => '15000',
-         	'sav_date'       => '01-01-2020'        	
+         	'sav_date'       => '2020-01-01'        	
           ]);
 
            DB::table('savings')->insert([
@@ -405,7 +405,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '22',
          	'sav_class_id'   => '5',
          	'sav_amount'     => '40000',
-         	'sav_date'       => '01-01-2020'        	
+         	'sav_date'       => '2020-01-01'        	
           ]);
 
           DB::table('savings')->insert([
@@ -413,7 +413,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '23',
          	'sav_class_id'   => '5',
          	'sav_amount'     => '50000',
-         	'sav_date'       => '02-02-2020'        	
+         	'sav_date'       => '2020-02-02'        	
           ]);
 
            DB::table('savings')->insert([
@@ -421,7 +421,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '24',
          	'sav_class_id'   => '5',
          	'sav_amount'     => '30000',
-         	'sav_date'       => '02-02-2020'        	
+         	'sav_date'       => '2020-02-02'        	
           ]);
 
            DB::table('savings')->insert([
@@ -429,7 +429,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '25',
          	'sav_class_id'   => '5',
          	'sav_amount'     => '20000',
-         	'sav_date'       => '02-02-2020'        	
+         	'sav_date'       => '2020-02-02'        	
           ]);
 
 
@@ -441,7 +441,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '26',
          	'sav_class_id'   => '6',
          	'sav_amount'     => '15000',
-         	'sav_date'       => '01-01-2019'        	
+         	'sav_date'       => '2019-01-01'        	
           ]);
 
            DB::table('savings')->insert([
@@ -449,7 +449,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '27',
          	'sav_class_id'   => '6',
          	'sav_amount'     => '40000',
-         	'sav_date'       => '01-01-2019'        	
+         	'sav_date'       => '2019-01-01'        	
           ]);
 
           DB::table('savings')->insert([
@@ -457,7 +457,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '28',
          	'sav_class_id'   => '6',
          	'sav_amount'     => '50000',
-         	'sav_date'       => '02-02-2019'        	
+         	'sav_date'       => '2019-02-02'        	
           ]);
 
            DB::table('savings')->insert([
@@ -465,7 +465,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '29',
          	'sav_class_id'   => '6',
          	'sav_amount'     => '30000',
-         	'sav_date'       => '02-02-2019'        	
+         	'sav_date'       => '2019-02-02'        	
           ]);
 
            DB::table('savings')->insert([
@@ -473,7 +473,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '30',
          	'sav_class_id'   => '6',
          	'sav_amount'     => '20000',
-         	'sav_date'       => '02-02-2019'        	
+         	'sav_date'       => '2019-02-02'        	
           ]);
 
             DB::table('savings')->insert([
@@ -481,7 +481,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '26',
          	'sav_class_id'   => '6',
          	'sav_amount'     => '15000',
-         	'sav_date'       => '01-01-2020'        	
+         	'sav_date'       => '2020-01-01'        	
           ]);
 
            DB::table('savings')->insert([
@@ -489,7 +489,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '27',
          	'sav_class_id'   => '6',
          	'sav_amount'     => '40000',
-         	'sav_date'       => '01-01-2020'        	
+         	'sav_date'       => '2020-01-01'        	
           ]);
 
           DB::table('savings')->insert([
@@ -497,7 +497,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '28',
          	'sav_class_id'   => '6',
          	'sav_amount'     => '50000',
-         	'sav_date'       => '02-02-2020'        	
+         	'sav_date'       => '2020-02-02'        	
           ]);
 
            DB::table('savings')->insert([
@@ -505,7 +505,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '29',
          	'sav_class_id'   => '6',
          	'sav_amount'     => '30000',
-         	'sav_date'       => '02-02-2020'        	
+         	'sav_date'       => '2020-02-02'        	
           ]);
 
            DB::table('savings')->insert([
@@ -513,7 +513,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '30',
          	'sav_class_id'   => '6',
          	'sav_amount'     => '20000',
-         	'sav_date'       => '02-02-2020'        	
+         	'sav_date'       => '2020-02-02'        	
           ]);
 
 
@@ -526,7 +526,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '31',
          	'sav_class_id'   => '9',
          	'sav_amount'     => '15000',
-         	'sav_date'       => '01-01-2018'        	
+         	'sav_date'       => '2018-01-01'        	
           ]);
 
            DB::table('savings')->insert([
@@ -534,7 +534,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '32',
          	'sav_class_id'   => '9',
          	'sav_amount'     => '40000',
-         	'sav_date'       => '01-01-2018'        	
+         	'sav_date'       => '2018-01-01'        	
           ]);
 
           DB::table('savings')->insert([
@@ -542,7 +542,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '33',
          	'sav_class_id'   => '9',
          	'sav_amount'     => '50000',
-         	'sav_date'       => '02-02-2018'        	
+         	'sav_date'       => '2018-02-02'        	
           ]);
 
            DB::table('savings')->insert([
@@ -550,7 +550,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '34',
          	'sav_class_id'   => '9',
          	'sav_amount'     => '30000',
-         	'sav_date'       => '02-02-2018'        	
+         	'sav_date'       => '2018-02-02'        	
           ]);
 
            DB::table('savings')->insert([
@@ -558,7 +558,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '34',
          	'sav_class_id'   => '9',
          	'sav_amount'     => '20000',
-         	'sav_date'       => '02-02-2018'        	
+         	'sav_date'       => '2018-02-02'        	
           ]);
 
             DB::table('savings')->insert([
@@ -566,7 +566,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '31',
          	'sav_class_id'   => '9',
          	'sav_amount'     => '15000',
-         	'sav_date'       => '01-01-2019'        	
+         	'sav_date'       => '2019-01-01'        	
           ]);
 
            DB::table('savings')->insert([
@@ -574,7 +574,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '32',
          	'sav_class_id'   => '9',
          	'sav_amount'     => '40000',
-         	'sav_date'       => '01-01-2019'        	
+         	'sav_date'       => '2019-01-01'        	
           ]);
 
           DB::table('savings')->insert([
@@ -582,7 +582,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '33',
          	'sav_class_id'   => '9',
          	'sav_amount'     => '50000',
-         	'sav_date'       => '02-02-2019'        	
+         	'sav_date'       => '2019-02-02'        	
           ]);
 
            DB::table('savings')->insert([
@@ -590,7 +590,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '34',
          	'sav_class_id'   => '9',
          	'sav_amount'     => '30000',
-         	'sav_date'       => '02-02-2019'        	
+         	'sav_date'       => '2019-02-02'        	
           ]);
 
            DB::table('savings')->insert([
@@ -598,7 +598,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '35',
          	'sav_class_id'   => '9',
          	'sav_amount'     => '20000',
-         	'sav_date'       => '02-02-2019'        	
+         	'sav_date'       => '2019-02-02'        	
           ]);
 
 
@@ -613,7 +613,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '36',
          	'sav_class_id'   => '7',
          	'sav_amount'     => '15000',
-         	'sav_date'       => '01-01-2018'        	
+         	'sav_date'       => '2018-01-01'        	
           ]);
 
            DB::table('savings')->insert([
@@ -621,7 +621,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '37',
          	'sav_class_id'   => '7',
          	'sav_amount'     => '40000',
-         	'sav_date'       => '01-01-2018'        	
+         	'sav_date'       => '2018-01-01'        	
           ]);
 
           DB::table('savings')->insert([
@@ -629,7 +629,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '38',
          	'sav_class_id'   => '7',
          	'sav_amount'     => '50000',
-         	'sav_date'       => '02-02-2018'        	
+         	'sav_date'       => '2018-02-02'        	
           ]);
 
            DB::table('savings')->insert([
@@ -637,7 +637,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '39',
          	'sav_class_id'   => '7',
          	'sav_amount'     => '30000',
-         	'sav_date'       => '02-02-2018'        	
+         	'sav_date'       => '2018-02-02'        	
           ]);
 
            DB::table('savings')->insert([
@@ -645,7 +645,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '40',
          	'sav_class_id'   => '7',
          	'sav_amount'     => '20000',
-         	'sav_date'       => '02-02-2018'        	
+         	'sav_date'       => '2018-02-02'        	
           ]);
 
             DB::table('savings')->insert([
@@ -653,7 +653,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '36',
          	'sav_class_id'   => '7',
          	'sav_amount'     => '15000',
-         	'sav_date'       => '01-01-2019'        	
+         	'sav_date'       => '2019-01-01'        	
           ]);
 
            DB::table('savings')->insert([
@@ -661,7 +661,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '37',
          	'sav_class_id'   => '7',
          	'sav_amount'     => '40000',
-         	'sav_date'       => '01-01-2019'        	
+         	'sav_date'       => '2019-01-01'        	
           ]);
 
           DB::table('savings')->insert([
@@ -669,7 +669,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '38',
          	'sav_class_id'   => '7',
          	'sav_amount'     => '50000',
-         	'sav_date'       => '02-02-2019'        	
+         	'sav_date'       => '2019-02-02'        	
           ]);
 
            DB::table('savings')->insert([
@@ -677,7 +677,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '39',
          	'sav_class_id'   => '7',
          	'sav_amount'     => '30000',
-         	'sav_date'       => '02-02-2019'        	
+         	'sav_date'       => '2019-02-02'        	
           ]);
 
            DB::table('savings')->insert([
@@ -685,7 +685,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '40',
          	'sav_class_id'   => '7',
          	'sav_amount'     => '20000',
-         	'sav_date'       => '02-02-2019'        	
+         	'sav_date'       => '2019-02-02'        	
           ]);
 
 
@@ -698,7 +698,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '41',
          	'sav_class_id'   => '8',
          	'sav_amount'     => '15000',
-         	'sav_date'       => '01-01-2018'        	
+         	'sav_date'       => '2018-01-01'        	
           ]);
 
            DB::table('savings')->insert([
@@ -706,7 +706,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '42',
          	'sav_class_id'   => '8',
          	'sav_amount'     => '40000',
-         	'sav_date'       => '01-01-2018'        	
+         	'sav_date'       => '2018-01-01'        	
           ]);
 
           DB::table('savings')->insert([
@@ -714,7 +714,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '43',
          	'sav_class_id'   => '8',
          	'sav_amount'     => '50000',
-         	'sav_date'       => '02-02-2018'        	
+         	'sav_date'       => '2018-02-02'        	
           ]);
 
            DB::table('savings')->insert([
@@ -722,7 +722,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '44',
          	'sav_class_id'   => '8',
          	'sav_amount'     => '30000',
-         	'sav_date'       => '02-02-2018'        	
+         	'sav_date'       => '2018-02-02'        	
           ]);
 
            DB::table('savings')->insert([
@@ -730,7 +730,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '41',
          	'sav_class_id'   => '8',
          	'sav_amount'     => '20000',
-         	'sav_date'       => '02-02-2018'        	
+         	'sav_date'       => '2018-02-02'        	
           ]);
 
             DB::table('savings')->insert([
@@ -738,7 +738,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '4',
          	'sav_class_id'   => '8',
          	'sav_amount'     => '15000',
-         	'sav_date'       => '01-01-2019'        	
+         	'sav_date'       => '2019-01-01'        	
           ]);
 
            DB::table('savings')->insert([
@@ -746,7 +746,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '42',
          	'sav_class_id'   => '8',
          	'sav_amount'     => '40000',
-         	'sav_date'       => '01-01-2019'        	
+         	'sav_date'       => '2019-01-01'        	
           ]);
 
           DB::table('savings')->insert([
@@ -754,7 +754,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '43',
          	'sav_class_id'   => '8',
          	'sav_amount'     => '50000',
-         	'sav_date'       => '02-02-2019'        	
+         	'sav_date'       => '2019-02-02'        	
           ]);
 
            DB::table('savings')->insert([
@@ -762,7 +762,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '44',
          	'sav_class_id'   => '8',
          	'sav_amount'     => '30000',
-         	'sav_date'       => '02-02-2019'        	
+         	'sav_date'       => '2019-02-02'        	
           ]);
 
            DB::table('savings')->insert([
@@ -770,7 +770,7 @@ class SavingSeeder extends Seeder
          	'sav_stu_id'     => '45',
          	'sav_class_id'   => '8',
          	'sav_amount'     => '20000',
-         	'sav_date'       => '02-02-2019'        	
+         	'sav_date'       => '2019-02-02'        	
           ]);
 
 

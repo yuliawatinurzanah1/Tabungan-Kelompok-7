@@ -71,7 +71,7 @@ Route::group(['middleware' => ['role:admin']], function () {
     Route::post('/admin/create-teacher' , 'AdminController@saveTeacher');
     
     Route::get('/admin/edit-teacher/{id}' , 'AdminController@editTeacher');
-    Route::post('/admin/update/{id}' , 'AdminController@updateTeacher');
+    Route::post('/admin/update-teacher/{id}' , 'AdminController@updateTeacher');
 
  	Route::get('/admin/teacher/hapus/{tcr_id}' , 'AdminController@hapusTeacher');
    
